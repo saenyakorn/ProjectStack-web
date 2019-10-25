@@ -1,10 +1,14 @@
 import React from 'react';
 import './css/style.scss'
+import $ from 'jquery'; 
 
 function App() {
+
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <div className="ui input">
+        <input type="text" placeholder="Search..."/>
+      </div>
     </div>
   );
 }
