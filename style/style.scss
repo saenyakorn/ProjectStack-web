@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 20px;
+}
+
+*:not(i) {
+    font-family: 'Mitr'!important;
 }
 
 @font-face {
@@ -50,9 +55,4 @@
     src: url('../fonts/Mitr/Mitr-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Mitr/Mitr-Light.woff2') format('woff2'), url('../fonts/Mitr/Mitr-Light.woff') format('woff'), url('../fonts/Mitr/Mitr-Light.ttf') format('truetype'), url('../fonts/Mitr/Mitr-Light.svg#Mitr-Light') format('svg');
     font-weight: 300;
     font-style: normal;
-}
-
-body {
-    font-family: Mitr;
-    font-size: 20px;
 }

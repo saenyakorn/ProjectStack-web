@@ -1,0 +1,174 @@
+/*general flex box*/
+.flex, .flex-between, .col, .col-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.col, .col-start {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.col-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.center {
+  text-align: center;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/*register page style*/
+.signup {
+  position: relative;
+  height: auto;
+  background-color: #333333;
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+.signup h1.head {
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 4rem 0;
+}
+
+.signup .formbox {
+  z-index: 1;
+  background: white;
+  width: 800px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 3rem 3rem 0 0;
+}
+
+.signup .formbox .form {
+  padding: 4rem 0;
+}
+
+.signup .formbox .form h3 {
+  margin-top: 15px;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.signup .formbox .form input {
+  height: 2.5rem;
+  width: 500px;
+  max-width: 80vw;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  border: none;
+  border-bottom: 1px solid #333333;
+  -webkit-transition: border-bottom 0.3s linear;
+  transition: border-bottom 0.3s linear;
+}
+
+.signup .formbox .form input:focus:invalid {
+  border-bottom: 1px solid #FB5F5F;
+}
+
+.signup .formbox .form input:focus:valid {
+  border-bottom: 1px solid #38ADEF;
+}
+
+.signup .formbox .form ::-webkit-input-placeholder {
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.signup .formbox .form :-ms-input-placeholder {
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.signup .formbox .form ::-ms-input-placeholder {
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.signup .formbox .form ::placeholder {
+  opacity: 0.5;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.signup .formbox .form .first {
+  margin-right: 30px;
+}
+
+.signup .formbox .form .half > input {
+  width: 235px;
+  max-width: 37.5vw;
+}
+
+.signup .button-bottom {
+  z-index: 1;
+  color: white;
+  background: #66BB6A;
+  width: 800px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 0 0 3rem 3rem;
+  padding: 1rem;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+.signup .button-bottom:hover {
+  background: #76CB7A;
+}
+
+.signup .button-bottom:active {
+  opacity: 0.8;
+}
+
+.signup::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 860px;
+  background: url("../images/wire.svg") no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: 20px;
+  top: 0;
+}
+
+.signup::after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 860px;
+  background: url("../images/wire.svg") no-repeat;
+  right: 20px;
+  bottom: 0;
+}
+/*# sourceMappingURL=anos_style.css.map */
