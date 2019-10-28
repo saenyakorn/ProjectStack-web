@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mitr';
+}
+
+@font-face {
+  font-family: 'Mitr';
+  src: url("../fonts/Mitr/Mitr-Medium.eot");
+  src: url("../fonts/Mitr/Mitr-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Mitr/Mitr-Medium.woff2") format("woff2"), url("../fonts/Mitr/Mitr-Medium.woff") format("woff"), url("../fonts/Mitr/Mitr-Medium.ttf") format("truetype"), url("../fonts/Mitr/Mitr-Medium.svg#Mitr-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  src: url("../fonts/Mitr/Mitr-Regular.eot");
+  src: url("../fonts/Mitr/Mitr-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Mitr/Mitr-Regular.woff2") format("woff2"), url("../fonts/Mitr/Mitr-Regular.woff") format("woff"), url("../fonts/Mitr/Mitr-Regular.ttf") format("truetype"), url("../fonts/Mitr/Mitr-Regular.svg#Mitr-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  src: url("../fonts/Mitr/Mitr-Bold.eot");
+  src: url("../fonts/Mitr/Mitr-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Mitr/Mitr-Bold.woff2") format("woff2"), url("../fonts/Mitr/Mitr-Bold.woff") format("woff"), url("../fonts/Mitr/Mitr-Bold.ttf") format("truetype"), url("../fonts/Mitr/Mitr-Bold.svg#Mitr-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  src: url("../fonts/Mitr/Mitr-ExtraLight.eot");
+  src: url("../fonts/Mitr/Mitr-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Mitr/Mitr-ExtraLight.woff2") format("woff2"), url("../fonts/Mitr/Mitr-ExtraLight.woff") format("woff"), url("../fonts/Mitr/Mitr-ExtraLight.ttf") format("truetype"), url("../fonts/Mitr/Mitr-ExtraLight.svg#Mitr-ExtraLight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  src: url("../fonts/Mitr/Mitr-SemiBold.eot");
+  src: url("../fonts/Mitr/Mitr-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Mitr/Mitr-SemiBold.woff2") format("woff2"), url("../fonts/Mitr/Mitr-SemiBold.woff") format("woff"), url("../fonts/Mitr/Mitr-SemiBold.ttf") format("truetype"), url("../fonts/Mitr/Mitr-SemiBold.svg#Mitr-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  src: url("../fonts/Mitr/Mitr-Light.eot");
+  src: url("../fonts/Mitr/Mitr-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Mitr/Mitr-Light.woff2") format("woff2"), url("../fonts/Mitr/Mitr-Light.woff") format("woff"), url("../fonts/Mitr/Mitr-Light.ttf") format("truetype"), url("../fonts/Mitr/Mitr-Light.svg#Mitr-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+/*# sourceMappingURL=style.css.map */

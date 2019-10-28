@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Semantic-UI-CSS-master/semantic.min.css">
+    <link rel="stylesheet" href="../style/get-css.css">
+    <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
+    <title>Project Stack</title>
+
+    <script>
+        $('#login-click-here').click(function() {
+            var allinput = [];
+            $('.user').each(function() {
+                allinput.push(this.value);
+            })
+            const data = {
+                username: allinput[0],
+                password: allinput[1],
+            }
+            $.ajax({
+                url: "https://asia-east2-cunex-vote-uat.cloudfunctions.net/api/vote",
+                type: "POST",
+                data: data,
+                dataType: "json",
+                success: function(result) {
+                    console.log(result);
+                    location.replace("https://www.w3schools.com");
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class='Page_Login'>
+        <div class='Left-picture'>
+            <div class='Left-picture-then'></div>
+        </div>
+        <div class='Login-form'>
+            <div class='Login-input'>
+                <div class='Login_image'>
+                    <p>Login</p>
+                </div>
+
+                <div class='Login_username'> <input type='text' class='user' placeholder="USERNAME" /></div>
+                <div class='Login_password'><input type='password' class='user' placeholder="PASSWORD" /></div>
+
+
+            </div>
+            <div class='Login-button'>
+                <div class='button signup'>
+                    <p> <a href="regist-compelete.html">sign-up</a> </p>
+                </div>
+                <div class='button login'>
+                    <p id='login-click-here'>log-in</p>
+                </div>
+            </div>
+            <div class='forgot-password'>
+
+                <p>forgot password?</p>
+
+            </div>
+        </div>
+
+
+        <div class='Right-picture'>
+            <div class="Right-picture-then"></div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

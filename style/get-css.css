@@ -1,0 +1,250 @@
+div.regist-compelete {
+  background-color: #333333;
+  color: white;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.regist-compelete .regist-compelete-title {
+  font-size: 1em;
+}
+
+div.regist-compelete .regist-compelete-subtitle {
+  font-size: 0.8em;
+}
+
+div.regist-compelete .regist-compelete-button {
+  padding: 0 1em;
+  margin-top: 1em;
+  background: #F2BB13;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+div.regist-compelete .regist-compelete-button:hover {
+  background-color: #3e8e41;
+}
+
+div.Page_Login {
+  background-color: #333333;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.Page_Login .Left-picture {
+  justify-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+div.Page_Login .Left-picture .Left-picture-then {
+  width: 32vw;
+  height: 32vw;
+  background-image: url(../page/wire2.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+div.Page_Login .Login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: 50%;
+  min-height: 50vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.Page_Login .Login-form .Login-input {
+  background-color: white;
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  min-height: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+div.Page_Login .Login-form .Login-input .Login_image {
+  font-size: 3vw;
+}
+
+div.Page_Login .Login-form .Login-input .Login_username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-size: 1em;
+  margin-top: 1.5em;
+}
+
+div.Page_Login .Login-form .Login-input .Login_username input[type=text] {
+  font-size: 1vw;
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+div.Page_Login .Login-form .Login-input .Login_password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  font-size: 2vw;
+  font-size: 1em;
+  margin-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+div.Page_Login .Login-form .Login-input .Login_password input[type=password] {
+  font-size: 1vw;
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+div.Page_Login .Login-form .Login-button {
+  width: 100%;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+div.Page_Login .Login-form .Login-button .button {
+  font-size: 1.5vw;
+  color: white;
+  padding: 0 1em;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  width: 50%;
+  height: 2em;
+}
+
+div.Page_Login .Login-form .Login-button .signup:hover {
+  background-color: darkgoldenrod;
+}
+
+div.Page_Login .Login-form .Login-button .login:hover {
+  background-color: darkred;
+}
+
+div.Page_Login .Login-form .Login-button .signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #F2BB13;
+  border-radius: 0 0 0 30px;
+}
+
+div.Page_Login .Login-form .Login-button a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+div.Page_Login .Login-form .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FB5F5F;
+  border-radius: 0 0 30px 0;
+}
+
+div.Page_Login .forgot-password {
+  padding-top: 1em;
+  font-size: 1vw;
+  cursor: pointer;
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  justify-self: flex-start;
+}
+
+div.Page_Login .forgot-password:hover {
+  color: gray;
+}
+
+.Right-picture {
+  justify-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.Right-picture .Right-picture-then {
+  width: 32vw;
+  height: 32vw;
+  background-image: url(../page/wire.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/*# sourceMappingURL=get-css.css.map */
