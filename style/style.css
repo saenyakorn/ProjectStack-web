@@ -3,7 +3,18 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+<<<<<<< HEAD
   font-family: 'Mitr';
+=======
+<<<<<<< HEAD
+=======
+  font-size: 20px;
+}
+
+*:not(i) {
+  font-family: "Mitr" !important;
+>>>>>>> 8237152808cd647df7d588287f0200be77e34e64
+>>>>>>> cd9fefb4c77e368b1327b40507f501bd811386d3
 }
 
 @font-face {
@@ -53,4 +64,15 @@
   font-weight: 300;
   font-style: normal;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+body {
+  font-family: Mitr;
+  font-size: 20px;
+}
+=======
+>>>>>>> 8237152808cd647df7d588287f0200be77e34e64
+>>>>>>> cd9fefb4c77e368b1327b40507f501bd811386d3
 /*# sourceMappingURL=style.css.map */

@@ -7,13 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Semantic-UI-CSS-master/semantic.min.css">
+<<<<<<< HEAD:test.html
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/get-css.css">
+=======
+    <link rel="stylesheet" href="./style/ustyle.css">
+>>>>>>> cd9fefb4c77e368b1327b40507f501bd811386d3:index.html
     <script src="./Semantic-UI-CSS-master/semantic.min.js"></script>
     <title>Project Stack</title>
 </head>
 
 <body>
+<<<<<<< HEAD:test.html
     <!-- You must create new page in 'page' folder  -->
     <!-- You must copy <head> content and change a path -->
     <!-- You must install vscode extension 'live sass' to render .scss file -->
@@ -27,8 +32,149 @@
     <div class="ui two bottom attached buttons">
         <div class="ui button">One</div>
         <div class="ui button">Two</div>
+=======
+
+    <div class="ui grid menu">
+
+        <div class="computer only row">
+            <div class="column">
+                <div class="ui menu">
+                    <a class="item left"><i class="home icon"></i></i></a>
+                    <a class="item nohover">
+                        <div class="ui category search">
+                            <div class="ui icon input">
+                                <i class="search icon"></i>
+                                <input class="prompt" type="text" placeholder="Search...">
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </a>
+                    <a class="item"><i class="bell icon"></i></a>
+                    <a class="item"><i class="user icon"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tablet mobile only row">
+            <div class="column">
+                <div class="ui menu">
+                    <a id="mobile_item" class="item left"><i class="bars icon"></i></a>
+                    <a class="item"><i class="bell icon"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ui pushable segment">
+        <div class="ui sidebar vertical menu">
+            <a class="item"><i class="home icon"></i> Home</a>
+            <a class="item"><i class="search icon"></i>Search</a>
+            <a class="item"><i class="user icon"></i>Account</a>
+        </div>
+        <div class="pusher">
+            <div id="content" class="ui segment">
+                <div class="ui grid">
+
+                    <!-- project container -->
+                    <div class="ui eleven wide computer sixteen wide mobile column container">
+                        <div class="ui segment noframe" id="project-container">
+
+                            <!-- One example card -->
+                            <div class="ui segment project-card">
+                                <div class="project-content">
+                                    <div class="item project-name">
+                                        <p>Project Name</p>
+                                    </div>
+                                    <div class="item project-owner">
+                                        <p>/Owner</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- trending container -->
+                    <div class="ui five wide column computer only container">
+                        <div class="ui segment">
+                            <h1 class="ui header">Trending</h1>
+                            <div id="trending-generator">
+
+                                <!-- One Card Example -->
+                                <div class="ui segment trending-card">
+                                    <div class="trending-content">
+                                        <div class="item trending-name">
+                                            <p>Project Name</p>
+                                        </div>
+                                        <div class="item trending-owner">
+                                            <p>/Owner</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+>>>>>>> cd9fefb4c77e368b1327b40507f501bd811386d3:index.html
     </div>
 
 </body>
+
+<script>
+    $('.ui.sidebar').sidebar({
+        context: $('.ui.pushable.segment'),
+        transition: 'overlay'
+    }).sidebar('attach events', '#mobile_item');
+
+    $('.ui.search').search({
+        type: 'category',
+        source: categoryContent
+    });
+    var categoryContent = [{
+        category: 'South America',
+        title: 'Brazil'
+    }, {
+        category: 'South America',
+        title: 'Peru'
+    }, {
+        category: 'North America',
+        title: 'Canada'
+    }, {
+        category: 'Asia',
+        title: 'South Korea'
+    }, {
+        category: 'Asia',
+        title: 'Japan'
+    }, {
+        category: 'Asia',
+        title: 'China'
+    }, {
+        category: 'Europe',
+        title: 'Denmark'
+    }, {
+        category: 'Europe',
+        title: 'England'
+    }, {
+        category: 'Europe',
+        title: 'France'
+    }, {
+        category: 'Europe',
+        title: 'Germany'
+    }, {
+        category: 'Africa',
+        title: 'Ethiopia'
+    }, {
+        category: 'Africa',
+        title: 'Nigeria'
+    }, {
+        category: 'Africa',
+        title: 'Zimbabwe'
+    }, ];
+</script>
 
 </html>

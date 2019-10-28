@@ -1,0 +1,136 @@
+/*general flex box*/
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    @extend .flex;
+    justify-content: space-between;
+}
+
+.col {
+    @extend .flex;
+    flex-direction: column;
+}
+
+.col-start {
+    @extend .col;
+    align-items: flex-start;
+}
+
+.center {
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+$red: #FB5F5F;
+$green: #66BB6A;
+$aqua: #38ADEF;
+$yellow: #F2BB13;
+$black: #333333;
+
+/*register page style*/
+
+.signup {
+    position: relative;
+    height: auto;
+    background-color: $black;
+    overflow: auto;
+    padding-bottom: 100px;
+    h1.head {
+        color: white;
+        font-size: 3rem;
+        font-weight: 400;
+        margin: 4rem 0;
+    }
+    .formbox {
+        z-index: 1;
+        background: white;
+        width: 800px;
+        max-width: 90%;
+        height: auto;
+        border-radius: 3rem 3rem 0 0;
+        .form {
+            padding: 4rem 0;
+            h3 {
+                margin-top: 15px;
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+            input {
+                height: 2.5rem;
+                width: 500px;
+                max-width: 80vw;
+                font-weight: 300;
+                margin-bottom: 3rem;
+                border: none;
+                border-bottom: 1px solid $black;
+                transition: border-bottom 0.3s linear;
+            }
+            input:focus:invalid {
+                border-bottom: 1px solid $red;
+            }
+            input:focus:valid {
+                border-bottom: 1px solid $aqua;
+            }
+             ::placeholder {
+                opacity: 0.5;
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+            .first {
+                margin-right: 30px;
+            }
+            .half>input {
+                width: 235px;
+                max-width: 37.5vw;
+            }
+        }
+    }
+    .button-bottom {
+        z-index: 1;
+        color: white;
+        background: $green;
+        width: 800px;
+        max-width: 90%;
+        height: auto;
+        border-radius: 0 0 3rem 3rem;
+        padding: 1rem;
+        transition: background-color 0.2s;
+        border: none;
+    }
+    .button-bottom:hover {
+        background: #76CB7A;
+    }
+    .button-bottom:active {
+        opacity: 0.8;
+    }
+}
+
+@mixin wire {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 860px;
+    background: url('../images/wire.svg') no-repeat;
+}
+
+.signup::before {
+    @include wire;
+    transform: rotate(180deg);
+    left: 20px;
+    top: 0;
+}
+
+.signup::after {
+    @include wire;
+    right: 20px;
+    bottom: 0;
+}

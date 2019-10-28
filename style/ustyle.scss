@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ui.grid {
+    padding: 0 !important;
+    margin: 0!important;
+}
+
+.ui.grid {
+    border: 0;
+    .row {
+        padding: 0;
+        .column {
+            padding: 0;
+            .ui.menu {
+                border-radius: 0;
+                background: #333333;
+                .item {
+                    color: #ffffff;
+                    border-radius: 0;
+                }
+                .item:hover {
+                    background: #F2BB13;
+                }
+                .item.nohover:hover {
+                    background: #333333;
+                }
+            }
+            .bars.icon,
+            .bell.icon,
+            .user.icon,
+            .home.icon {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.pushable.segment {
+    margin: 0 !important;
+}
+
+div.homepage {
+    width: 100vw;
+    min-height: 93vh;
+    background: #eeeeee;
+    position: relative;
+}
+
+div.segment.noframe {
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+i.icon {
+    font-size: 1.3em;
+}
+
+div.ui.search {
+    i.icon {
+        font-size: 0.9em;
+    }
+    .prompt {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+}
+
+div.ui.segment.trending-card {
+    background: #333333;
+    color: #ffffff;
+    .trending-content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        .item {
+            margin-right: 0.5em;
+            &.trending-name {
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+            &.trending-owner {
+                color: #BFBFBF;
+            }
+        }
+    }
+}

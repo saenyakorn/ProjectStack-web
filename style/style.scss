@@ -2,8 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
     font-family: 'Mitr';
     // font-size: 20px;
+=======
+    font-size: 20px;
+}
+
+*:not(i) {
+    font-family: 'Mitr'!important;
+>>>>>>> cd9fefb4c77e368b1327b40507f501bd811386d3
 }
 
 @font-face {
