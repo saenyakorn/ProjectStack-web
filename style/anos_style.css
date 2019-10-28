@@ -40,6 +40,34 @@
   cursor: pointer;
 }
 
+.inline {
+  display: inline-block;
+}
+
+.d-none {
+  display: none;
+}
+
+.font-red {
+  color: #FB5F5F;
+}
+
+.font-green {
+  color: #66BB6A;
+}
+
+.font-aqua {
+  color: #38ADEF;
+}
+
+.font-yellow {
+  color: #F2BB13;
+}
+
+.font-black {
+  color: #333333;
+}
+
 /*register page style*/
 .signup {
   position: relative;
@@ -69,22 +97,23 @@
   padding: 4rem 0;
 }
 
-.signup .formbox .form h3 {
-  margin-top: 15px;
-  font-size: 1.6rem;
-  font-weight: 500;
+.signup .formbox .form h2 {
+  margin: 1rem 0;
 }
 
 .signup .formbox .form input {
   height: 2.5rem;
   width: 500px;
   max-width: 80vw;
-  font-weight: 300;
   margin-bottom: 3rem;
   border: none;
   border-bottom: 1px solid #333333;
   -webkit-transition: border-bottom 0.3s linear;
   transition: border-bottom 0.3s linear;
+}
+
+.signup .formbox .form input:focus {
+  outline: none;
 }
 
 .signup .formbox .form input:focus:invalid {
@@ -96,36 +125,34 @@
 }
 
 .signup .formbox .form ::-webkit-input-placeholder {
-  opacity: 0.5;
-  font-size: 1.2rem;
-  font-weight: 400;
+  color: #CCCCCC;
 }
 
 .signup .formbox .form :-ms-input-placeholder {
-  opacity: 0.5;
-  font-size: 1.2rem;
-  font-weight: 400;
+  color: #CCCCCC;
 }
 
 .signup .formbox .form ::-ms-input-placeholder {
-  opacity: 0.5;
-  font-size: 1.2rem;
-  font-weight: 400;
+  color: #CCCCCC;
 }
 
 .signup .formbox .form ::placeholder {
-  opacity: 0.5;
-  font-size: 1.2rem;
-  font-weight: 400;
+  color: #CCCCCC;
 }
 
 .signup .formbox .form .first {
   margin-right: 30px;
 }
 
-.signup .formbox .form .half > input {
+.signup .formbox .form .half input {
   width: 235px;
   max-width: 37.5vw;
+}
+
+.signup .formbox .valid,
+.signup .formbox .invalid {
+  margin-top: -4.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .signup .button-bottom {
@@ -134,7 +161,6 @@
   background: #66BB6A;
   width: 800px;
   max-width: 90%;
-  height: auto;
   border-radius: 0 0 3rem 3rem;
   padding: 1rem;
   -webkit-transition: background-color 0.2s;
@@ -170,5 +196,10 @@
   background: url("../images/wire.svg") no-repeat;
   right: 20px;
   bottom: 0;
+}
+
+.newpost {
+  min-width: 100vw;
+  background: #EEEEEE;
 }
 /*# sourceMappingURL=anos_style.css.map */
