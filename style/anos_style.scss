@@ -7,9 +7,24 @@
     flex-wrap: wrap;
 }
 
+.flex-reverse {
+    @extend .flex;
+    flex-direction: row-reverse;
+}
+
+.flex-end {
+    @extend .flex;
+    justify-content: flex-end;
+}
+
 .flex-between {
     @extend .flex;
     justify-content: space-between;
+}
+
+.flex-center {
+    @extend .flex;
+    justify-content: center;
 }
 
 .col {
@@ -22,8 +37,12 @@
     align-items: flex-start;
 }
 
-.center {
+.text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left!important;
 }
 
 .cursor {
@@ -38,11 +57,20 @@
     display: none;
 }
 
+.fixed-bottom {
+    position: fixed;
+    bottom: 10px;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+}
+
 $red: #FB5F5F;
 $green: #66BB6A;
 $aqua: #38ADEF;
 $yellow: #F2BB13;
 $black: #333333;
+$grey: #999999;
 .font-red {
     color: $red;
 }
@@ -165,7 +193,63 @@ $black: #333333;
     bottom: 0;
 }
 
-.newpost {
-    min-width: 100vw;
-    background: #EEEEEE;
+.pusher {
+    background-color: #EEEEEE!important;
+    padding: 10px;
+    #content {
+        #project-name {
+            text-align: center;
+            width: 500px;
+            height: 50px;
+            margin: 1rem;
+            border-bottom: 1px solid $black !important;
+        }
+        .positive.button {
+            width: 120px;
+        }
+        .edit {
+            min-height: 50vh;
+            margin: 2rem 10vw!important;
+        }
+        .title {
+            margin: 2rem 0;
+            input {
+                font-size: 1.5rem;
+                border-bottom: 1px solid $grey !important;
+            }
+        }
+        .paragraph {
+            .field {
+                @extend .flex-end;
+                padding: 0;
+                width: 100%;
+            }
+        }
+        .picture {
+            margin: 2rem 0;
+            width: 100%;
+            .field {
+                @extend .flex-end;
+                padding: 0;
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            #project-name {
+                width: 250px;
+            }
+            .positive.button {
+                width: auto;
+            }
+            .edit {
+                max-width: 500px;
+                margin: 2rem 0!important;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        #content {
+            padding: 4rem 4rem;
+        }
+    }
 }
