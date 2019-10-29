@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 div.regist-compelete {
   background-color: #333333;
   color: white;
@@ -63,7 +70,7 @@ div.Page_Login .Left-picture {
 div.Page_Login .Left-picture .Left-picture-then {
   width: 32vw;
   height: 32vw;
-  background-image: url(../page/wire2.png);
+  background-image: url(../get-images/wire2.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -242,9 +249,139 @@ div.Page_Login .forgot-password:hover {
 .Right-picture .Right-picture-then {
   width: 32vw;
   height: 32vw;
-  background-image: url(../page/wire.svg);
+  background-image: url(../get-images/wire.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.ui.grid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ui.grid {
+  border: 0;
+}
+
+.ui.grid .row {
+  padding: 0;
+}
+
+.ui.grid .row .column {
+  padding: 0;
+}
+
+.ui.grid .row .column .ui.menu {
+  border-radius: 0;
+  background: #333333;
+}
+
+.ui.grid .row .column .ui.menu .item {
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.ui.grid .row .column .ui.menu .item:hover {
+  background: #F2BB13;
+}
+
+.ui.grid .row .column .ui.menu .item.nohover:hover {
+  background: #333333;
+}
+
+.ui.grid .row .column .bars.icon,
+.ui.grid .row .column .bell.icon,
+.ui.grid .row .column .user.icon,
+.ui.grid .row .column .home.icon {
+  margin: 0;
+}
+
+.pushable.segment {
+  margin: 0 !important;
+}
+
+div.homepage {
+  width: 100vw;
+  min-height: 93vh;
+  background: #eeeeee;
+  position: relative;
+}
+
+div.segment.noframe {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+i.icon {
+  font-size: 1.3em;
+}
+
+div.ui.search i.icon {
+  font-size: 0.9em;
+}
+
+div.ui.search .prompt {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.profile-data .profile-image {
+  text-align: center;
+}
+
+.profile-data .profile-image .get-image {
+  width: 150px;
+  height: 150px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.profile-data .output {
+  margin: 1em 2em 2.5em 1.5em;
+}
+
+.profile-data .title {
+  height: 0.3em;
+  margin-left: 2em;
+  z-index: 10;
+  color: white;
+  margin-bottom: 0;
+  border-radius: 8%;
+}
+
+.profile-data .title-project {
+  background-color: #F2BB13;
+}
+
+.profile-data .data {
+  margin-top: -1em;
+}
+
+.profile-data .title-information.ui.placeholder.segment {
+  border-radius: 5%;
+}
+
+.profile-data .title-information {
+  background-color: #F2BB13;
+  font-size: 1em;
+}
+
+.profile-data .text-information {
+  width: 100%;
+  background-color: #ffffff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.profile-data .title-resume {
+  background-color: #F2BB13;
+  font-size: 1em;
 }
 /*# sourceMappingURL=get-css.css.map */
