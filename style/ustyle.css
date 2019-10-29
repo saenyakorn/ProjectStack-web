@@ -108,4 +108,30 @@ div.ui.segment.trending-card .trending-content .item.trending-name {
 div.ui.segment.trending-card .trending-content .item.trending-owner {
   color: #BFBFBF;
 }
+
+div.ui.segment.project-card .project-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+div.ui.segment.project-card .project-row .item {
+  margin-right: 0.5em;
+}
+
+div.ui.segment.project-card .project-row .item.project-name {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+div.ui.segment.project-card .project-row .item.project-owner {
+  color: #BFBFBF;
+  font-size: 1.5em;
+}
 /*# sourceMappingURL=ustyle.css.map */

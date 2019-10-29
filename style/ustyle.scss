@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 
+
+/* semantic ui custom edit */
+
 .ui.grid {
     padding: 0 !important;
     margin: 0!important;
-}
-
-.ui.grid {
     border: 0;
     .row {
         padding: 0;
@@ -42,6 +42,9 @@
 .pushable.segment {
     margin: 0 !important;
 }
+
+
+/* end of  semantic ui custom edit */
 
 div.homepage {
     width: 100vw;
@@ -86,6 +89,25 @@ div.ui.segment.trending-card {
             }
             &.trending-owner {
                 color: #BFBFBF;
+            }
+        }
+    }
+}
+
+div.ui.segment.project-card {
+    .project-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        .item {
+            margin-right: 0.5em;
+            &.project-name {
+                font-size: 2em;
+                font-weight: 500;
+            }
+            &.project-owner {
+                color: #BFBFBF;
+                font-size: 1.5em;
             }
         }
     }

@@ -14,6 +14,7 @@
 
 <body>
 
+    <!-- Navigation Bar -->
     <div class="ui grid menu">
 
         <div class="computer only row">
@@ -62,7 +63,7 @@
 
                             <!-- One example card -->
                             <div class="ui segment project-card">
-                                <div class="project-content">
+                                <div class="project-row">
                                     <div class="item project-name">
                                         <p>Project Name</p>
                                     </div>
@@ -70,7 +71,20 @@
                                         <p>/Owner</p>
                                     </div>
                                 </div>
+                                <div class="ui grid">
+                                    <div class="ten wide column">
+                                        <div class="content">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima quas alias libero quae. Commodi atque ratione voluptatum maxime minima! Eos velit ipsam saepe! Ut assumenda soluta eius! Quia, doloribus deleniti.
+                                        </div>
+                                    </div>
+                                    <div class="six wide column">
+                                        <div class="content">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima quas alias libero quae. Commodi atque ratione voluptatum maxime minima! Eos velit ipsam saepe! Ut assumenda soluta eius! Quia, doloribus deleniti.
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                     <!-- trending container -->
@@ -104,56 +118,12 @@
 
 </body>
 
+<script src="./script/index.js"></script>
 <script>
     $('.ui.sidebar').sidebar({
         context: $('.ui.pushable.segment'),
         transition: 'overlay'
     }).sidebar('attach events', '#mobile_item');
-
-    $('.ui.search').search({
-        type: 'category',
-        source: categoryContent
-    });
-    var categoryContent = [{
-        category: 'South America',
-        title: 'Brazil'
-    }, {
-        category: 'South America',
-        title: 'Peru'
-    }, {
-        category: 'North America',
-        title: 'Canada'
-    }, {
-        category: 'Asia',
-        title: 'South Korea'
-    }, {
-        category: 'Asia',
-        title: 'Japan'
-    }, {
-        category: 'Asia',
-        title: 'China'
-    }, {
-        category: 'Europe',
-        title: 'Denmark'
-    }, {
-        category: 'Europe',
-        title: 'England'
-    }, {
-        category: 'Europe',
-        title: 'France'
-    }, {
-        category: 'Europe',
-        title: 'Germany'
-    }, {
-        category: 'Africa',
-        title: 'Ethiopia'
-    }, {
-        category: 'Africa',
-        title: 'Nigeria'
-    }, {
-        category: 'Africa',
-        title: 'Zimbabwe'
-    }, ];
 </script>
 
 </html>
