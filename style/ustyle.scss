@@ -43,6 +43,20 @@
     margin: 0 !important;
 }
 
+i.icon {
+    font-size: 1.3em;
+}
+
+div.ui.search {
+    i.icon {
+        font-size: 0.9em;
+    }
+    .prompt {
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+}
+
 
 /* end of  semantic ui custom edit */
 
@@ -58,20 +72,6 @@ div.segment.noframe {
     border: 0;
     padding: 0;
     margin: 0;
-}
-
-i.icon {
-    font-size: 1.3em;
-}
-
-div.ui.search {
-    i.icon {
-        font-size: 0.9em;
-    }
-    .prompt {
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
-    }
 }
 
 div.ui.segment.trending-card {
