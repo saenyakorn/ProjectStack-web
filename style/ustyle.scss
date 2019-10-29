@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+$red: #FB5F5F;
+$green: #66BB6A;
+$aqua: #38ADEF;
+$yellow: #F2BB13;
+$black: #333333;
+$darkgray: #A1A1A1;
+$lightgray: #BFBFBF;
+$white: #ffffff;
 
 /* semantic ui custom edit */
 
@@ -17,16 +25,16 @@
             padding: 0;
             .ui.menu {
                 border-radius: 0;
-                background: #333333;
+                background: $black;
                 .item {
-                    color: #ffffff;
+                    color: $white;
                     border-radius: 0;
                 }
                 .item:hover {
-                    background: #F2BB13;
+                    background: $yellow;
                 }
                 .item.nohover:hover {
-                    background: #333333;
+                    background: $black;
                 }
             }
             .bars.icon,
@@ -75,20 +83,30 @@ div.segment.noframe {
 }
 
 div.ui.segment.trending-card {
-    background: #333333;
-    color: #ffffff;
+    background: $black;
+    color: $white;
     .trending-content {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        .item {
-            margin-right: 0.5em;
-            &.trending-name {
-                font-size: 1.5em;
-                font-weight: 500;
+        .item.trending-name {
+            margin-right: 0.3em;
+            font-size: 1.2em;
+            font-weight: 500;
+            a {
+                color: $white;
             }
-            &.trending-owner {
-                color: #BFBFBF;
+            a:hover {
+                color: $aqua;
+            }
+        }
+        .item.trending-owner {
+            font-size: 0.8em;
+            a {
+                color: $lightgray;
+            }
+            a:hover {
+                color: $aqua;
             }
         }
     }
@@ -99,15 +117,38 @@ div.ui.segment.project-card {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        .item {
-            margin-right: 0.5em;
-            &.project-name {
-                font-size: 2em;
-                font-weight: 500;
+        margin: 0 1rem;
+        &.top {
+            margin-top: 1rem;
+        }
+        .item.project-name {
+            margin-right: 0.3em;
+            font-size: 2.2em;
+            font-weight: 500;
+            a {
+                color: $black;
             }
-            &.project-owner {
-                color: #BFBFBF;
-                font-size: 1.5em;
+            a:hover {
+                color: $aqua;
+            }
+        }
+        .item.project-owner {
+            font-size: 1.2em;
+            a {
+                color: $darkgray;
+            }
+            a:hover {
+                color: $aqua;
+            }
+        }
+        .tag-container {
+            display: flex;
+            .item {
+                margin-right: 1rem;
+                color: $white;
+                background: $yellow;
+                padding: .2rem 1.2rem;
+                border-radius: 2rem;
             }
         }
     }
