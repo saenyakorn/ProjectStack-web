@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../Semantic-UI-CSS-master/semantic.min.css">
-    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/anos_style.css">
-    <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--script src="../Semantic-UI-CSS-master/semantic.min.js"></script-->
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
     <title>Project Stack</title>
 </head>
 
@@ -18,59 +18,98 @@
         <h1 class="head">Registration</h1>
         <div class="formbox col">
             <form class="form col-start">
-                <h3>Username</h3>
+                <h2>Username</h2>
                 <input class="user" type="text" name="Username" placeholder="Username" aria-required="true" data-ok="false" required/>
-                <h3>Title</h3>
+                <div class="d-none invalid font-red" id="username-invalid">
+                    <i class="close icon"></i>
+                    <h5 class="inline">Invalid username</h5>
+                </div>
+                <div class="d-none valid font-green" id="username-valid">
+                    <i class="check icon"></i>
+                    <h5 class="inline">Valid username</h5>
+                </div>
+                <h2>Gender</h2>
                 <div class="ui dropdown" style="margin-bottom: 2rem">
                     <input class="user" name="gender" type="hidden" required/>
-                    <div class="default text">Gender</div>
+                    <div class="default text placeholder">Gender</div>
                     <div class="menu">
                         <div class="item" data-value="male">Male</div>
                         <div class="item" data-value="female">Female</div>
+                        <div class="item" data-value="none">Prefer not to disclose</div>
                     </div>
                     <i class="dropdown icon"></i>
                 </div>
                 <div class="flex">
                     <div class="first half">
-                        <h3>Name</h3>
+                        <h2>Name</h2>
                         <input class="user" type="text" name="FirstName" placeholder="Name" required/>
                     </div>
                     <div class="half">
-                        <h3>Surname</h3>
+                        <h2>Surname</h2>
                         <input class="user" type="text" name="SurName" placeholder="Surname" required/>
                     </div>
                 </div>
                 <div class="flex">
-                    <div class="half">
-                        <h3>Birthdate</h3>
-                        <input class="user" id="date" type="date" name="Birthdate" placeholder="dd/mm/yyyy" required/>
+                    <div class="first half">
+                        <h2>Birthdate</h2>
+                        <div class="calendar" id="date">
+                            <input class="user" type="text" placeholder="month dd, yyyy" required/>
+                        </div>
                     </div>
                 </div>
-                <h3>Email</h3>
+                <h2>Email</h2>
                 <input class="user" type="email" name="Email" placeholder="example@gmail.com" required/>
-                <h3>Telephone</h3>
-                <input class="user" type="tel" name="Tel" placeholder="098-492-6445" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
-                <h3>Status</h3>
-                <input class="user" type="text" name="Status" placeholder="Student / Worker / Manager" required/>
-                <h3>Work at</h3>
-                <input class="user" type="text" name="Work" placeholder="Apple.inc / Line" required/>
-                <h3>Password</h3>
+                <div class="d-none invalid font-red" id="email-invalid">
+                    <i class="close icon"></i>
+                    <h5 class="inline">Invalid email</h5>
+                </div>
+                <div class="d-none valid font-green" id="email-valid">
+                    <i class="check icon"></i>
+                    <h5 class="inline">Valid email</h5>
+                </div>
+                <h2>Telephone</h2>
+                <input class="user" type="tel" name="Tel" placeholder="08X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+                <h2>Status</h2>
+                <input class="user" type="text" name="Status" placeholder="Student / Worker / Manager" />
+                <h2>Work at</h2>
+                <input class="user" type="text" name="Work" placeholder="Apple.inc / Line" />
+                <h2>Password</h2>
                 <input class="user" type="password" name="Password" placeholder="Password" required/>
-                <h3>Confirm Password</h3>
+                <h2>Confirm Password</h2>
                 <input class="user" type="password" name="ConfirmPassword" placeholder="Confirm Password" required/>
+                <div class="d-none invalid font-red" id="password-length">
+                    <i class="close icon"></i>
+                    <h5 class="inline">Password length is less than 8 characters</h5>
+                </div>
+                <div class="d-none invalid font-red" id="password-noupper">
+                    <i class="close icon"></i>
+                    <h5 class="inline">Password must have at least one uppercase letter</h5>
+                </div>
+                <div class="d-none invalid font-red" id="password-nolower">
+                    <i class="close icon"></i>
+                    <h5 class="inline">Password must have at least one lowercase letter</h5>
+                </div>
+                <div class="d-none invalid font-red" id="password-unmatch">
+                    <i class="close icon"></i>
+                    <h5 class="inline">Password doesn't match</h5>
+                </div>
+                <div class="d-none valid font-green" id="password-valid">
+                    <i class="check icon"></i>
+                    <h5 class="inline">Valid password</h5>
+                </div>
             </form>
         </div>
         <button class="button-bottom center cursor" type="submit" id="input-submit">
-            <p>Submit</p>
+            <h3>Submit</h3>
         </button>
     </div>
 </body>
 
 <script>
     $('.ui.dropdown').dropdown();
-    /*$('#date').calendar({
+    $('#date').calendar({
         type: 'date'
-    });*/
+    });
     $('#input-submit').click(function() {
         var allinput = [];
         var valid = true;

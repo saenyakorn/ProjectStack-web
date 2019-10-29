@@ -30,11 +30,39 @@
     cursor: pointer;
 }
 
+.inline {
+    display: inline-block;
+}
+
+.d-none {
+    display: none;
+}
+
 $red: #FB5F5F;
 $green: #66BB6A;
 $aqua: #38ADEF;
 $yellow: #F2BB13;
 $black: #333333;
+.font-red {
+    color: $red;
+}
+
+.font-green {
+    color: $green;
+}
+
+.font-aqua {
+    color: $aqua;
+}
+
+.font-yellow {
+    color: $yellow;
+}
+
+.font-black {
+    color: $black;
+}
+
 
 /*register page style*/
 
@@ -59,20 +87,20 @@ $black: #333333;
         border-radius: 3rem 3rem 0 0;
         .form {
             padding: 4rem 0;
-            h3 {
-                margin-top: 15px;
-                font-size: 1.6rem;
-                font-weight: 500;
+            h2 {
+                margin: 1rem 0;
             }
             input {
                 height: 2.5rem;
                 width: 500px;
                 max-width: 80vw;
-                font-weight: 300;
                 margin-bottom: 3rem;
                 border: none;
                 border-bottom: 1px solid $black;
                 transition: border-bottom 0.3s linear;
+            }
+            input:focus {
+                outline: none;
             }
             input:focus:invalid {
                 border-bottom: 1px solid $red;
@@ -81,17 +109,20 @@ $black: #333333;
                 border-bottom: 1px solid $aqua;
             }
              ::placeholder {
-                opacity: 0.5;
-                font-size: 1.2rem;
-                font-weight: 400;
+                color: #CCCCCC;
             }
             .first {
                 margin-right: 30px;
             }
-            .half>input {
+            .half input {
                 width: 235px;
                 max-width: 37.5vw;
             }
+        }
+        .valid,
+        .invalid {
+            margin-top: -4.5rem;
+            margin-bottom: 1.5rem;
         }
     }
     .button-bottom {
@@ -100,7 +131,6 @@ $black: #333333;
         background: $green;
         width: 800px;
         max-width: 90%;
-        height: auto;
         border-radius: 0 0 3rem 3rem;
         padding: 1rem;
         transition: background-color 0.2s;
@@ -133,4 +163,9 @@ $black: #333333;
     @include wire;
     right: 20px;
     bottom: 0;
+}
+
+.newpost {
+    min-width: 100vw;
+    background: #EEEEEE;
 }
