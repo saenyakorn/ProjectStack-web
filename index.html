@@ -14,6 +14,7 @@
 
 <body>
 
+    <!-- Navigation Bar -->
     <div class="ui grid menu">
 
         <div class="computer only row">
@@ -58,21 +59,46 @@
 
                     <!-- project container -->
                     <div class="ui eleven wide computer sixteen wide mobile column container">
-                        <div class="ui segment noframe" id="project-container">
+                        <div class="ui segment noframe" id="project-generator">
 
                             <!-- One example card -->
                             <div class="ui segment project-card">
-                                <div class="project-content">
-                                    <div class="item project-name">
-                                        <p>Project Name</p>
+                                <div class="project-row top">
+                                    <p>
+                                        <span class="item project-name"><a href="#">Project Name</a></span>
+                                        <span class="item project-owner"><a href="#">/Owner</a></span>
+                                    </p>
+                                </div>
+                                <div class="ui grid project-content">
+                                    <div class="twelve wide column">
+                                        <div class="content">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tristique senectus et netus et. Sagittis purus sit amet volutpat. Dictumst quisque sagittis purus sit. Mi ipsum faucibus
+                                            vitae aliquet nec ullamcorper sit amet risus. Purus sit amet luctus venenatis lectus magna fringilla urna porttitor. Sit amet consectetur adipiscing elit duis. Consectetur a erat nam at. Lectus urna duis convallis
+                                            convallis tellus id interdum. Aliquam sem fringilla ut morbi tincidunt augue. Amet mattis vulputate enim nulla aliquet porttitor lacus. Elit pellentesque habitant morbi tristique senectus et. Sed egestas egestas
+                                        </div>
                                     </div>
-                                    <div class="item project-owner">
-                                        <p>/Owner</p>
+                                    <div class="four wide column">
+                                        <div class="image">
+                                            <div class="ui placeholder">
+                                                <div class="square image"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project-row">
+                                    <div class="tag-container">
+                                        <div class="item">tag 1</div>
+                                        <div class="item">tag 2</div>
+                                        <div class="item">tag 3</div>
+                                        <div class="item">tag 4</div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- end of example card -->
+
                         </div>
                     </div>
+
                     <!-- trending container -->
                     <div class="ui five wide column computer only container">
                         <div class="ui segment">
@@ -82,14 +108,13 @@
                                 <!-- One Card Example -->
                                 <div class="ui segment trending-card">
                                     <div class="trending-content">
-                                        <div class="item trending-name">
-                                            <p>Project Name</p>
-                                        </div>
-                                        <div class="item trending-owner">
-                                            <p>/Owner</p>
-                                        </div>
+                                        <p>
+                                            <span class="item trending-name"><a href="#">Project Name</a></span>
+                                            <span class="item trending-owner"><a href="#">/Owner</a></span>
+                                        </p>
                                     </div>
                                 </div>
+                                <!-- End of example card -->
 
                             </div>
 
@@ -99,61 +124,11 @@
                 </div>
             </div>
         </div>
-
     </div>
+
 
 </body>
 
-<script>
-    $('.ui.sidebar').sidebar({
-        context: $('.ui.pushable.segment'),
-        transition: 'overlay'
-    }).sidebar('attach events', '#mobile_item');
-
-    $('.ui.search').search({
-        type: 'category',
-        source: categoryContent
-    });
-    var categoryContent = [{
-        category: 'South America',
-        title: 'Brazil'
-    }, {
-        category: 'South America',
-        title: 'Peru'
-    }, {
-        category: 'North America',
-        title: 'Canada'
-    }, {
-        category: 'Asia',
-        title: 'South Korea'
-    }, {
-        category: 'Asia',
-        title: 'Japan'
-    }, {
-        category: 'Asia',
-        title: 'China'
-    }, {
-        category: 'Europe',
-        title: 'Denmark'
-    }, {
-        category: 'Europe',
-        title: 'England'
-    }, {
-        category: 'Europe',
-        title: 'France'
-    }, {
-        category: 'Europe',
-        title: 'Germany'
-    }, {
-        category: 'Africa',
-        title: 'Ethiopia'
-    }, {
-        category: 'Africa',
-        title: 'Nigeria'
-    }, {
-        category: 'Africa',
-        title: 'Zimbabwe'
-    }, ];
-</script>
+<script src="./script/index.js"></script>
 
 </html>

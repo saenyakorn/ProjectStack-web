@@ -5,12 +5,10 @@
           box-sizing: border-box;
 }
 
+/* semantic ui custom edit */
 .ui.grid {
   padding: 0 !important;
   margin: 0 !important;
-}
-
-.ui.grid {
   border: 0;
 }
 
@@ -51,6 +49,20 @@
   margin: 0 !important;
 }
 
+i.icon {
+  font-size: 1.3em;
+}
+
+div.ui.search i.icon {
+  font-size: 0.9em;
+}
+
+div.ui.search .prompt {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+/* end of  semantic ui custom edit */
 div.homepage {
   width: 100vw;
   min-height: 93vh;
@@ -64,19 +76,6 @@ div.segment.noframe {
   border: 0;
   padding: 0;
   margin: 0;
-}
-
-i.icon {
-  font-size: 1.3em;
-}
-
-div.ui.search i.icon {
-  font-size: 0.9em;
-}
-
-div.ui.search .prompt {
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
 }
 
 div.ui.segment.trending-card {
@@ -96,16 +95,123 @@ div.ui.segment.trending-card .trending-content {
           align-items: flex-end;
 }
 
-div.ui.segment.trending-card .trending-content .item {
-  margin-right: 0.5em;
-}
-
 div.ui.segment.trending-card .trending-content .item.trending-name {
-  font-size: 1.5em;
+  margin-right: 0.3em;
+  font-size: 1.2em;
   font-weight: 500;
 }
 
+div.ui.segment.trending-card .trending-content .item.trending-name a {
+  color: #ffffff;
+}
+
+div.ui.segment.trending-card .trending-content .item.trending-name a:hover {
+  color: #38ADEF;
+}
+
 div.ui.segment.trending-card .trending-content .item.trending-owner {
+  font-size: 0.8em;
+}
+
+div.ui.segment.trending-card .trending-content .item.trending-owner a {
   color: #BFBFBF;
+}
+
+div.ui.segment.trending-card .trending-content .item.trending-owner a:hover {
+  color: #38ADEF;
+}
+
+div.ui.segment.project-card {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+}
+
+div.ui.segment.project-card .project-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 1rem;
+}
+
+div.ui.segment.project-card .project-row.top {
+  margin-top: 1rem;
+}
+
+div.ui.segment.project-card .project-row .item.project-name {
+  margin-right: 0.3em;
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+div.ui.segment.project-card .project-row .item.project-name a {
+  color: #333333;
+}
+
+div.ui.segment.project-card .project-row .item.project-name a:hover {
+  color: #38ADEF;
+}
+
+div.ui.segment.project-card .project-row .item.project-owner {
+  font-size: 1.2em;
+}
+
+div.ui.segment.project-card .project-row .item.project-owner a {
+  color: #A1A1A1;
+}
+
+div.ui.segment.project-card .project-row .item.project-owner a:hover {
+  color: #38ADEF;
+}
+
+div.ui.segment.project-card .project-row .tag-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.ui.segment.project-card .project-row .tag-container .item {
+  margin-right: 1rem;
+  color: #ffffff;
+  background: #F2BB13;
+  padding: .2rem 1.2rem;
+  border-radius: 2rem;
+}
+
+a.ui.segment.detail-button {
+  margin-top: 0;
+  color: #ffffff;
+  background: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  margin-bottom: 2rem;
+}
+
+a.ui.segment.detail-button div {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+a.ui.segment.detail-button:hover {
+  color: #F2BB13;
 }
 /*# sourceMappingURL=ustyle.css.map */
