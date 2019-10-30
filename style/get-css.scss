@@ -1,301 +1,411 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        div.regist-compelete {
-            background-color: #333333;
-            color: white;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            .regist-compelete-title {
-                font-size: 1em;
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-            .regist-compelete-subtitle {
-                font-size: 0.8em;
+            
+            div.regist-compelete {
+                background-color: #333333;
+                color: white;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .regist-compelete-title {
+                    font-size: 1em;
+                }
+                .regist-compelete-subtitle {
+                    font-size: 0.8em;
+                }
+                .regist-compelete-button {
+                    padding: 0 1em;
+                    margin-top: 1em;
+                    background: #F2BB13;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: all 1s ease;
+                }
+                .regist-compelete-button:hover {
+                    background-color: #3e8e41;
+                }
             }
-            .regist-compelete-button {
-                padding: 0 1em;
-                margin-top: 1em;
-                background: #F2BB13;
-                border-radius: 20px;
-                cursor: pointer;
-                transition: all 1s ease;
+            
+            div.Page_Login {
+                background-color: #333333;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .Left-picture {
+                    /////////////////////////////////////
+                    justify-self: flex-start;
+                    align-self: flex-start;
+                    .Left-picture-then {
+                        width: 16*2vw;
+                        height: 16*2vw;
+                        background-image: url(../get-images/wire2.png);
+                        background-position: 50% 50%;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                }
+                .Login-form {
+                    display: flex;
+                    width: 70%;
+                    height: 50%;
+                    min-height: 50vh;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    .Login-input {
+                        background-color: white;
+                        border-radius: 30px 30px 0 0;
+                        width: 100%;
+                        min-height: 20vw;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        .Login_image {
+                            font-size: 3vw;
+                        }
+                        .Login_username {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            font-size: 1em;
+                            margin-top: 1.5em;
+                            input[type=text] {
+                                font-size: 1vw;
+                                width: 50%;
+                                border: none;
+                                border-bottom: 1px solid black;
+                            }
+                        }
+                        .Login_password {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            font-size: 2vw;
+                            font-size: 1em;
+                            margin-top: 1.5em;
+                            padding-bottom: 1em;
+                            input[type=password] {
+                                font-size: 1vw;
+                                width: 50%;
+                                border: none;
+                                border-bottom: 1px solid black;
+                            }
+                        }
+                    }
+                    .Login-button {
+                        width: 100%;
+                        min-height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        .button {
+                            font-size: 1.5vw;
+                            color: white;
+                            padding: 0 1em;
+                            cursor: pointer;
+                            transition: all 1s ease;
+                            width: 50%;
+                            height: 2em;
+                        }
+                        .signup:hover {
+                            background-color: darkgoldenrod;
+                        }
+                        .login:hover {
+                            background-color: darkred;
+                        }
+                        .signup {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #F2BB13;
+                            border-radius: 0 0 0 30px;
+                        }
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                    .login {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #FB5F5F;
+                        border-radius: 0 0 30px 0;
+                    }
+                }
+                .forgot-password {
+                    padding-top: 1em;
+                    font-size: 1vw;
+                    cursor: pointer;
+                    color: white;
+                    align-self: center;
+                    justify-self: flex-start;
+                }
+                .forgot-password:hover {
+                    color: gray;
+                }
             }
-            .regist-compelete-button:hover {
-                background-color: #3e8e41;
-            }
-        }
-        
-        div.Page_Login {
-            background-color: #333333;
-            width: 100%;
-            min-height: 100vh;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            .Left-picture {
-                /////////////////////////////////////
-                justify-self: flex-start;
-                align-self: flex-start;
-                .Left-picture-then {
+            
+            .Right-picture {
+                justify-self: flex-end;
+                align-self: flex-end;
+                .Right-picture-then {
                     width: 16*2vw;
                     height: 16*2vw;
-                    background-image: url(../get-images/wire2.png);
+                    background-image: url(../get-images/wire.svg);
                     background-position: 50% 50%;
                     background-repeat: no-repeat;
                     background-size: contain;
                 }
             }
-            .Login-form {
-                display: flex;
-                width: 70%;
-                height: 50%;
-                min-height: 50vh;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                .Login-input {
-                    background-color: white;
-                    border-radius: 30px 30px 0 0;
-                    width: 100%;
-                    min-height: 20vw;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    .Login_image {
-                        font-size: 3vw;
-                    }
-                    .Login_username {
-                        display: flex;
-                        justify-content: center;
-                        width: 100%;
-                        font-size: 1em;
-                        margin-top: 1.5em;
-                        input[type=text] {
-                            font-size: 1vw;
-                            width: 50%;
-                            border: none;
-                            border-bottom: 1px solid black;
-                        }
-                    }
-                    .Login_password {
-                        display: flex;
-                        justify-content: center;
-                        width: 100%;
-                        font-size: 2vw;
-                        font-size: 1em;
-                        margin-top: 1.5em;
-                        padding-bottom: 1em;
-                        input[type=password] {
-                            font-size: 1vw;
-                            width: 50%;
-                            border: none;
-                            border-bottom: 1px solid black;
-                        }
-                    }
-                }
-                .Login-button {
-                    width: 100%;
-                    min-height: 40px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-start;
-                    .button {
-                        font-size: 1.5vw;
-                        color: white;
-                        padding: 0 1em;
-                        cursor: pointer;
-                        transition: all 1s ease;
-                        width: 50%;
-                        height: 2em;
-                    }
-                    .signup:hover {
-                        background-color: darkgoldenrod;
-                    }
-                    .login:hover {
-                        background-color: darkred;
-                    }
-                    .signup {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: #F2BB13;
-                        border-radius: 0 0 0 30px;
-                    }
-                    a:visited {
-                        color: white;
-                        text-decoration: none;
-                    }
-                }
-                .login {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: #FB5F5F;
-                    border-radius: 0 0 30px 0;
-                }
+            
+            // .ui.inverted.menu {
+            //     border-radius: 0;
+            //     height: auto;
+            //     width: 100%;
+            //     background-color: #333333;
+            //     justify-content: center;
+            //     .menu-search-part1 {
+            //         width: 100%;
+            //         display: flex;
+            //     }
+            //     .menu-search-part2 {
+            //         width: 100%;
+            //         justify-content: flex-end;
+            //         display: flex;
+            //     }
+            // }
+            //เนฟบ---------------------------------------------------------------------------------------------------------------
+            .ui.grid {
+                padding: 0 !important;
+                margin: 0!important;
             }
-            .forgot-password {
-                padding-top: 1em;
-                font-size: 1vw;
-                cursor: pointer;
-                color: white;
-                align-self: center;
-                justify-self: flex-start;
-            }
-            .forgot-password:hover {
-                color: gray;
-            }
-        }
-        
-        .Right-picture {
-            justify-self: flex-end;
-            align-self: flex-end;
-            .Right-picture-then {
-                width: 16*2vw;
-                height: 16*2vw;
-                background-image: url(../get-images/wire.svg);
-                background-position: 50% 50%;
-                background-repeat: no-repeat;
-                background-size: contain;
-            }
-        }
-        
-        // .ui.inverted.menu {
-        //     border-radius: 0;
-        //     height: auto;
-        //     width: 100%;
-        //     background-color: #333333;
-        //     justify-content: center;
-        //     .menu-search-part1 {
-        //         width: 100%;
-        //         display: flex;
-        //     }
-        //     .menu-search-part2 {
-        //         width: 100%;
-        //         justify-content: flex-end;
-        //         display: flex;
-        //     }
-        // }
-        /////////////////////////////////////////////////////////////เนฟบา
-        .ui.grid {
-            padding: 0 !important;
-            margin: 0!important;
-        }
-        
-        .ui.grid {
-            border: 0;
-            .row {
-                padding: 0;
-                .column {
+            
+            .ui.grid {
+                border: 0;
+                .row {
                     padding: 0;
-                    .ui.menu {
-                        border-radius: 0;
-                        background: #333333;
-                        .item {
-                            color: #ffffff;
+                    .column {
+                        padding: 0;
+                        .ui.menu {
                             border-radius: 0;
-                        }
-                        .item:hover {
-                            background: #F2BB13;
-                        }
-                        .item.nohover:hover {
                             background: #333333;
+                            .item {
+                                color: #ffffff;
+                                border-radius: 0;
+                            }
+                            .item:hover {
+                                background: #F2BB13;
+                            }
+                            .item.nohover:hover {
+                                background: #333333;
+                            }
+                        }
+                        .bars.icon,
+                        .bell.icon,
+                        .user.icon,
+                        .home.icon {
+                            margin: 0;
                         }
                     }
-                    .bars.icon,
-                    .bell.icon,
-                    .user.icon,
-                    .home.icon {
-                        margin: 0;
+                }
+            }
+            
+            .pushable.segment {
+                margin: 0 !important;
+            }
+            
+            div.homepage {
+                width: 100vw;
+                min-height: 93vh;
+                background: #eeeeee;
+                position: relative;
+            }
+            
+            div.segment.noframe {
+                box-shadow: none;
+                border: 0;
+                padding: 0;
+                margin: 0;
+            }
+            
+            i.icon {
+                font-size: 1.3em;
+            }
+            
+            div.ui.search {
+                //แถบย่อเพราะตัวนี้
+                i.icon {
+                    font-size: 0.9em;
+                }
+                .prompt {
+                    padding-top: 0.2em;
+                    padding-bottom: 0.2em;
+                }
+            }
+            
+            //เนฟบา---------------------------------------------------------------------------------------------------------------------
+            //other-profile.html
+            .profile-data {
+                .profile-image {
+                    text-align: center;
+                    .get-image {
+                        width: 150px;
+                        height: 150px;
+                        border: 10px solid #fff;
+                        border-radius: 50%;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
                     }
                 }
-            }
-        }
-        
-        .pushable.segment {
-            margin: 0 !important;
-        }
-        
-        div.homepage {
-            width: 100vw;
-            min-height: 93vh;
-            background: #eeeeee;
-            position: relative;
-        }
-        
-        div.segment.noframe {
-            box-shadow: none;
-            border: 0;
-            padding: 0;
-            margin: 0;
-        }
-        
-        i.icon {
-            font-size: 1.3em;
-        }
-        
-        div.ui.search {
-            //แถบย่อเพราะตัวนี้
-            i.icon {
-                font-size: 0.9em;
-            }
-            .prompt {
-                padding-top: 0.2em;
-                padding-bottom: 0.2em;
-            }
-        }
-        
-        //////////////////////////////////////////////////////////////////////////เนฟบา
-        .profile-data {
-            .profile-image {
-                text-align: center;
-                .get-image {
-                    width: 150px;
-                    height: 150px;
-                    border: 10px solid #fff;
-                    border-radius: 50%;
-                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                .output {
+                    margin: 1em 2em 2.5em 1.5em;
+                }
+                .title {
+                    height: 1.5em;
+                    margin-left: 2em;
+                    z-index: 10;
+                    color: white;
+                    margin-bottom: 0;
+                    border-radius: 8%;
+                }
+                .title-project {
+                    background-color: #F2BB13;
+                }
+                .data {
+                    margin-top: -1em;
+                }
+                .title-information.ui.placeholder.segment {
+                    border-radius: 5%;
+                }
+                .title-information {
+                    background-color: #F2BB13;
+                    font-size: 1em;
+                }
+                .text-information {
+                    width: 100%;
+                    background-color: #ffffff;
+                    align-self: center;
+                }
+                .title-resume {
+                    background-color: #F2BB13;
+                    font-size: 1em;
                 }
             }
-            .output {
-                margin: 1em 2em 2.5em 1.5em;
+            
+            //otherprofile new
+            .profile-data-new {
+                .title {
+                    z-index: 10;
+                    color: white;
+                    margin-bottom: 0;
+                    margin-top: 1em;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    background-color: #F2BB13;
+                }
+                .title-information.ui.placeholder.segment {
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+                .profile-image {
+                    text-align: center;
+                    .get-image {
+                        width: 10vw;
+                        height: 10vw;
+                        border: 10px solid #fff;
+                        border-radius: 50%;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    }
+                }
+                .username-under-image {
+                    font-size: 1.2em;
+                }
+                .output {
+                    margin: 1em 2em 2.5em 1.5em;
+                }
+                .ui.grid>.column:not(.row) {
+                    padding-top: 0rem;
+                    padding-bottom: 0rem;
+                }
+                .text-title-information {
+                    margin-bottom: 1.5em;
+                }
             }
-            .title {
-                height: 0.3em;
-                margin-left: 2em;
-                z-index: 10;
-                color: white;
-                margin-bottom: 0;
-                border-radius: 8%;
+            
+            //otherprofile new
+            // myprofile
+            .myprofile-data-new {
+                .title {
+                    z-index: 10;
+                    color: white;
+                    margin-bottom: 0;
+                    margin-top: 1em;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    background-color: #F2BB13;
+                }
+                .title-information.ui.placeholder.segment {
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+                .profile-image {
+                    text-align: center;
+                    .user-image {
+                        width: 10vw;
+                        height: 10vw;
+                        border: 10px solid #fff;
+                        border-radius: 50%;
+                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    }
+                }
+                .username-under-image {
+                    font-size: 1.2em;
+                }
+                .output {
+                    margin: 1em 2em 2.5em 1.5em;
+                }
+                .ui.grid>.column:not(.row) {
+                    padding-top: 0rem;
+                    padding-bottom: 0rem;
+                }
+                .text-title-information {
+                    margin-bottom: 1.5em;
+                }
             }
-            .title-project {
-                background-color: #F2BB13;
+            
+            div.edit.edit-resume.output {
+                margin-left: 90%;
+                margin-right: 0;
+                ;
             }
-            .data {
-                margin-top: -1em;
+            
+            div.edit.edit-profile.output {
+                margin-left: 90%;
+                margin-right: 0;
+                ;
             }
-            .title-information.ui.placeholder.segment {
-                border-radius: 5%;
+            
+            .edit-profile-image {
+                .ui.olive.button {
+                    border-radius: 10%;
+                    font-size: 0.7em;
+                }
             }
-            .title-information {
-                background-color: #F2BB13;
-                font-size: 1em;
+            
+            input[type=text] {
+                font-size: 1vw;
+                width: 50%;
+                border: none;
+                border-bottom: 1px solid black;
             }
-            .text-information {
-                width: 100%;
-                background-color: #ffffff;
-                align-self: center;
-            }
-            .title-resume {
-                background-color: #F2BB13;
-                font-size: 1em;
-            }
-        }
+            
+            // myprofile
