@@ -123,6 +123,9 @@ div.ui.segment.trending-card .trending-content .item.trending-owner a:hover {
 
 div.ui.segment.project-card {
   margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
 }
 
 div.ui.segment.project-card .project-row {
@@ -182,7 +185,7 @@ div.ui.segment.project-card .project-row .tag-container .item {
   border-radius: 2rem;
 }
 
-div.ui.segment.detail-button {
+a.ui.segment.detail-button {
   margin-top: 0;
   color: #ffffff;
   background: #333333;
@@ -198,11 +201,17 @@ div.ui.segment.detail-button {
   padding: 0.5em 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-top: 0;
+  margin-bottom: 2rem;
 }
 
-div.ui.segment.detail-button a {
+a.ui.segment.detail-button div {
   text-decoration: none;
   color: inherit;
   font-size: 1.2rem;
+}
+
+a.ui.segment.detail-button:hover {
+  color: #F2BB13;
 }
 /*# sourceMappingURL=ustyle.css.map */
