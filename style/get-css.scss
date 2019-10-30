@@ -343,7 +343,7 @@
             
             //otherprofile new
             // myprofile
-            .myprofile-data-new {
+            .editprofile-data-new {
                 .title {
                     z-index: 10;
                     color: white;
@@ -397,11 +397,19 @@
             .edit-profile-image {
                 .ui.olive.button {
                     border-radius: 10%;
-                    font-size: 0.7em;
+                    font-size: 1.5em;
+                }
+            }
+            
+            .submit-edit-profile-image {
+                .ui.olive.button {
+                    border-radius: 10%;
+                    font-size: 1.5em;
                 }
             }
             
             input[type=text] {
+                background-color: #f9fafb;
                 font-size: 1vw;
                 width: 50%;
                 border: none;

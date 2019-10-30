@@ -430,7 +430,7 @@ div.ui.search .prompt {
   margin-bottom: 1.5em;
 }
 
-.myprofile-data-new .title {
+.editprofile-data-new .title {
   z-index: 10;
   color: white;
   margin-bottom: 0;
@@ -440,16 +440,16 @@ div.ui.search .prompt {
   background-color: #F2BB13;
 }
 
-.myprofile-data-new .title-information.ui.placeholder.segment {
+.editprofile-data-new .title-information.ui.placeholder.segment {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.myprofile-data-new .profile-image {
+.editprofile-data-new .profile-image {
   text-align: center;
 }
 
-.myprofile-data-new .profile-image .user-image {
+.editprofile-data-new .profile-image .user-image {
   width: 10vw;
   height: 10vw;
   border: 10px solid #fff;
@@ -458,20 +458,20 @@ div.ui.search .prompt {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.myprofile-data-new .username-under-image {
+.editprofile-data-new .username-under-image {
   font-size: 1.2em;
 }
 
-.myprofile-data-new .output {
+.editprofile-data-new .output {
   margin: 1em 2em 2.5em 1.5em;
 }
 
-.myprofile-data-new .ui.grid > .column:not(.row) {
+.editprofile-data-new .ui.grid > .column:not(.row) {
   padding-top: 0rem;
   padding-bottom: 0rem;
 }
 
-.myprofile-data-new .text-title-information {
+.editprofile-data-new .text-title-information {
   margin-bottom: 1.5em;
 }
 
@@ -487,10 +487,16 @@ div.edit.edit-profile.output {
 
 .edit-profile-image .ui.olive.button {
   border-radius: 10%;
-  font-size: 0.7em;
+  font-size: 1.5em;
+}
+
+.submit-edit-profile-image .ui.olive.button {
+  border-radius: 10%;
+  font-size: 1.5em;
 }
 
 input[type=text] {
+  background-color: #f9fafb;
   font-size: 1vw;
   width: 50%;
   border: none;

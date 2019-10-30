@@ -53,7 +53,7 @@
             <a class="item"><i class="user icon"></i>Account</a>
         </div>
         <div class="pusher">
-            <div id="my-profile" class="myprofile-data-new ui segment" style="background-color: #EEEEEE;">
+            <div id="orther-profile" class="profile-data-new ui segment" style="background-color: #EEEEEE;">
 
                 <div class="ui grid ">
                     <div class="eleven wide column centered  ">
@@ -72,7 +72,7 @@
 
                                 <div class="ui eight wide computer sixteen wide mobile column continer">
                                     <div class='profile-image'>
-                                        <img class='user-image' src="../get-images/profile-image.jpg">
+                                        <img class='get-image' src="../get-images/user-profile.png">
                                     </div>
                                     <div class="username-under-image">
                                         <p style="text-align: center;"><b>username</b></p>
@@ -86,28 +86,23 @@
 
 
                                 <div class=" ui eight wide computer sixteen wide mobile column continer">
-                                    <div class='name output '>
-                                        <p> <b>Name:</b><input type='text' class='user' value="xxx"> </p>
+                                    <div class='name output'>
+                                        <p> <b>Name:</b> {{Name}}</p>
                                     </div>
                                     <div class=' full-name output '>
-                                        <p><b>Full name: </b><input type='text' class='user' value="xxx"></p>
+                                        <p><b>Full name:</b> {{Full-name}}</p>
                                     </div>
                                     <div class='email-n output '>
-                                        <p><b>Email: </b><input type='text' class='user' value="xxx"></p>
+                                        <p><b>Email:</b> {{Email}}</p>
                                     </div>
                                     <div class="tel output">
-                                        <p><b>Tel: </b><input type='text' class='user' value="xxx"></p>
+                                        <p><b>Tel:</b> {{Tel}}</p>
                                     </div>
                                     <div class="url output">
-                                        <p><b>url: </b><input type='text' class='user' value="xxx"></p>
+                                        <p><b>url:</b> {{url}}</p>
                                     </div>
                                     <div class='status output '>
-                                        <p><b>Status:</b><input type='text' class='user' value="xxx"></p>
-                                    </div>
-                                    <div class='edit edit-profile output'>
-                                        <button class="ui icon button">
-                                                    <i class="edit outline icon"></i>
-                                            </button>
+                                        <p><b>Status:</b> {{Status}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -135,25 +130,21 @@
                     <div class="eleven wide column centered box-image1  ">
                         <div class="title-information ui placeholder segment data">
                             <div class='resume1 output'>
-                                <p> <b>- one: </b><input type='text' class='user' value="xxx"> </p>
+                                <p> <b>one: </b> {{resume1}} </p>
                             </div>
                             <div class='resume2 output'>
-                                <p><b>- two: </b><input type='text' class='user' value="xxx"></p>
+                                <p><b>two: </b>{{resume2}}</p>
                             </div>
                             <div class='resume3 output'>
-                                <p><b>- three: </b><input type='text' class='user' value="xxx"></p>
+                                <p><b>three: </b> {{resume3}}</p>
                             </div>
                             <div class="resume4 output">
-                                <p><b>- four: </b><input type='text' class='user' value="xxx"></p>
+                                <p><b>four: </b> {{resume4}} </p>
                             </div>
                             <div class="link-resume output">
-                                <p><b> link: </b><input type='text' class='user' value="xxx"></p>
+                                <p><b> link: </b> {{link}} </p>
                             </div>
-                            <div class='edit edit-resume output'>
-                                <button class="ui icon button">
-                                                <i class="edit outline icon"></i>
-                                        </button>
-                            </div>
+
 
                         </div>
                     </div>
@@ -175,13 +166,13 @@
                         <div class="title-information ui placeholder segment data">
 
                             <div class="project-name output">
-                                <p><b> project: </b></p>
+                                <p><b> project: </b> {{project1}} </p>
                             </div>
                             <div class="project-name output">
-                                <p><b> project: </b></p>
+                                <p><b> project: </b>{{project2}} </p>
                             </div>
                             <div class="project-name output">
-                                <p><b> project: </b></p>
+                                <p><b> project: </b>{{project3}}</p>
                             </div>
                         </div>
                     </div>
@@ -191,18 +182,9 @@
 
         </div>
     </div>
-
 </body>
-<script>
-    $('.ui.sidebar ').sidebar({
-        context: $('.ui.pushable.segment '),
-        transition: 'overlay '
-    }).sidebar('attach events ', '#mobile_item ');
 
-    $('.ui.search ').search({
-        type: 'category ',
-        source: categoryContent
-    });
-</script>
+<script src="../script/index.js"></script>
+
 
 </html>
