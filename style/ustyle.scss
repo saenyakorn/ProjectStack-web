@@ -179,3 +179,81 @@ a.ui.segment.detail-button {
         color: $yellow;
     }
 }
+
+div.ui.segment {
+    .project-detail {
+        width: 100%;
+        margin: 0rem auto;
+        margin-bottom: 0;
+        padding: 2em 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 0;
+        .ui.header.centered {
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+        .ui.sub.header.centered {
+            font-size: 1rem;
+            margin-top: 0.4em;
+            margin-bottom: 0rem;
+            color: $darkgray;
+        }
+        .tag-container {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .tag {
+                font-size: 1rem;
+                color: $white;
+                padding: 0 1.3rem;
+                background: $yellow;
+                border-radius: 1rem;
+            }
+        }
+        .ui.centered.Huge.image {
+            margin: 3rem auto;
+        }
+        .project-detail-container {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            .title {
+                font-size: 1.5em;
+            }
+            .paragraph {
+                font-size: 1em;
+            }
+            .ui.fluid.image {
+                margin-top: 1.5em;
+            }
+        }
+    }
+    a.ui.segment.project-detail-button {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        padding: 1em 0;
+        color: $white;
+        background: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5em 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: 0;
+        margin-bottom: 2rem;
+        div {
+            text-decoration: none;
+            color: inherit;
+            font-size: 1.2rem;
+        }
+        &:hover {
+            color: $black;
+        }
+    }
+}

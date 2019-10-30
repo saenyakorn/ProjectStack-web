@@ -214,4 +214,104 @@ a.ui.segment.detail-button div {
 a.ui.segment.detail-button:hover {
   color: #F2BB13;
 }
+
+div.ui.segment .project-detail {
+  width: 100%;
+  margin: 0rem auto;
+  margin-bottom: 0;
+  padding: 2em 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+}
+
+div.ui.segment .project-detail .ui.header.centered {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+div.ui.segment .project-detail .ui.sub.header.centered {
+  font-size: 1rem;
+  margin-top: 0.4em;
+  margin-bottom: 0rem;
+  color: #A1A1A1;
+}
+
+div.ui.segment .project-detail .tag-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.ui.segment .project-detail .tag-container .tag {
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0 1.3rem;
+  background: #F2BB13;
+  border-radius: 1rem;
+}
+
+div.ui.segment .project-detail .ui.centered.Huge.image {
+  margin: 3rem auto;
+}
+
+div.ui.segment .project-detail .project-detail-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.ui.segment .project-detail .project-detail-container .title {
+  font-size: 1.5em;
+}
+
+div.ui.segment .project-detail .project-detail-container .paragraph {
+  font-size: 1em;
+}
+
+div.ui.segment .project-detail .project-detail-container .ui.fluid.image {
+  margin-top: 1.5em;
+}
+
+div.ui.segment a.ui.segment.project-detail-button {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding: 1em 0;
+  color: #ffffff;
+  background: #66BB6A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  margin-bottom: 2rem;
+}
+
+div.ui.segment a.ui.segment.project-detail-button div {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+div.ui.segment a.ui.segment.project-detail-button:hover {
+  color: #333333;
+}
 /*# sourceMappingURL=ustyle.css.map */
