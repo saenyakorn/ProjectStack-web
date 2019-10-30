@@ -51,12 +51,13 @@
             <a class="item"><i class="user icon"></i>Account</a>
         </div>
         <div class="pusher">
-            <div id="content" class="ui segment">
+            <div id="content" class="ui segment newpost">
                 <!--content-->
                 <div class="ui grid edit">
+                    <!--project name-->
                     <div class="ui centered row">
                         <div class="ui massive transparent input">
-                            <input id="project-name" class="text-center" type="text" placeholder="Your Project Name">
+                            <input id="project-name" class="text-center name" type="text" placeholder="Your Project Name">
                         </div>
                     </div>
                     <!--div class="centered column row grid">
@@ -67,10 +68,12 @@
                         </div>
                     </div-->
                     <div class="row">
-                        <div class="ui selection dropdown" id="tag">
+                        <div class="ui selection dropdown left icon" id="tag">
                             <input name="tag" type="hidden">
                             <i class="dropdown icon"></i>
-                            <div class="default text">tag</div>
+                            <div class="default text">
+                                <i class="tag icon"></i>tag
+                            </div>
                             <div class="menu"></div>
                         </div>
                     </div>
@@ -99,11 +102,11 @@
                             <i class="close link red icon"></i>
                         </div>
                         <div class="ui placeholder column">
-                            <div class="image"></div>
+                            <div class="image" style="width: 200px; height: 200px"></div>
                         </div>
                     </div>
-                    <!--responsive ?-->
-                    <div class="mobile only row ui three column grid">
+                    <!--responsive mobile-->
+                    <div class="mobile only tablet only row ui three column grid">
                         <div class="column">
                             <button class="ui positive button center" id="add-text">
                                 <i class="icon plus"></i>
@@ -123,7 +126,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="tablet only computer only row ui six column grid">
+                    <!--responsive computer-->
+                    <div class="computer only row ui six column grid">
                         <div class="column">
                             <button class="ui positive button" id="add-text">
                                 <i class="icon plus"></i>

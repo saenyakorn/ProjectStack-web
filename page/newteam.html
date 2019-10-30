@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Semantic-UI-CSS-master/semantic.min.css">
+    <link rel="stylesheet" href="../style/ustyle.css">
+    <link rel="stylesheet" href="../style/anos_style.css">
+    <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
+    <title>Project Stack</title>
+</head>
+
+<body>
+    <div class="ui grid">
+        <div class="computer only row">
+            <div class="column">
+                <div class="ui menu">
+                    <a class="item left"><i class="home icon"></i></a>
+                    <a class="item nohover">
+                        <div class="ui category search">
+                            <div class="ui icon input">
+                                <i class="search icon"></i>
+                                <input class="prompt" type="text" placeholder="Search...">
+                            </div>
+                            <div class="results"></div>
+                        </div>
+                    </a>
+                    <a class="item"><i class="bell icon"></i></a>
+                    <a class="item"><i class="user icon"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tablet mobile only row">
+            <div class="column">
+                <div class="ui menu">
+                    <a id="mobile_item" class="item left"><i class="bars icon"></i></a>
+                    <a class="item"><i class="bell icon"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui pushable segment">
+        <div class="ui sidebar vertical menu">
+            <a class="item"><i class="home icon"></i> Home</a>
+            <a class="item"><i class="search icon"></i>Search</a>
+            <a class="item"><i class="user icon"></i>Account</a>
+        </div>
+        <div class="pusher">
+            <div id="content" class="ui segment newteam">
+                <!--content-->
+                <div class="ui grid">
+                    <div class="ui centered row">
+                        <div class="ui massive transparent input">
+                            <input id="project-name" class="name text-center" type="text" placeholder="Team Name">
+                        </div>
+                    </div>
+                    <div class="equal width row">
+                        <div class="computer only four wide column"></div>
+                        <div class="tablet only three wide column"></div>
+                        <div class="column">
+                            <h2 class="header">Leader</h2>
+                            <div class="ui secondary segment">
+                                <div class="ui middle aligned equal width grid">
+                                    <div class="four wide text-center column">
+                                        <!--div class="ui active inline loader"></div-->
+                                        <img id="leader-pic" class="ui circular image">
+                                    </div>
+                                    <div class="column">
+                                        <div class="ui grid">
+                                            <div class="row">
+                                                <h2 id="leader-name">Seanyakorn Seangsanor</h2>
+                                            </div>
+                                            <div class="row">
+                                                <p id="leader-email">Email : Seanyakorn@pornhub.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2 class="header">Member</h2>
+                            <div class="ui secondary segment">
+                                <div class="ui middle aligned equal width grid">
+                                    <div class="four wide text-center column">
+                                        <!--div class="ui active inline loader"></div-->
+                                        <img id="leader-pic" class="ui circular image">
+                                    </div>
+                                    <div class="column">
+                                        <div class="ui grid">
+                                            <div class="row">
+                                                <h2>Seanyakorn Seangsanor</h2>
+                                            </div>
+                                            <div class="row">
+                                                <p>Email : Seanyakorn@pornhub.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="red link close icon"></i>
+                                </div>
+                            </div>
+                            <div class="ui secondary segment">
+                                <div class="ui middle aligned equal width grid">
+                                    <div class="four wide text-center column">
+                                        <!--div class="ui active inline loader"></div-->
+                                        <img id="leader-pic" class="ui circular image">
+                                    </div>
+                                    <div class="column">
+                                        <div class="ui grid">
+                                            <div class="row">
+                                                <h2>Seanyakorn Seangsanor</h2>
+                                            </div>
+                                            <div class="row">
+                                                <p>Email : Seanyakorn@pornhub.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="red link close icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="ui secondary segment">
+                                <div class="ui middle aligned equal width grid">
+                                    <div class="four wide text-center column">
+                                        <!--div class="ui active inline loader"></div-->
+                                        <img id="leader-pic" class="ui circular image">
+                                    </div>
+                                    <div class="column">
+                                        <div class="ui grid">
+                                            <div class="row">
+                                                <h2>Seanyakorn Seangsanor</h2>
+                                            </div>
+                                            <div class="row">
+                                                <p>Email : Seanyakorn@pornhub.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <i class="red link close icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="ui secondary search text-center segment">
+                                <h2>New Member</h2>
+                                <div class="ui icon input">
+                                    <input class="prompt" type="text" placeholder="Search by username">
+                                    <i class="plus link icon"></i>
+                                </div>
+                                <div class="results"></div>
+                            </div>
+                        </div>
+                        <div class="computer only six wide column"></div>
+                        <div class="tablet only three wide column"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--save button-->
+    <div class="ui right fixed-bottom flex-between">
+        <button class="large ui button">Cancel</button>
+        <button class="large ui blue button" id="create">Create</button>
+    </div>
+
+</body>
+
+<script>
+    $('.ui.dropdown').dropdown();
+    $('.ui.sidebar').sidebar({
+        context: $('.ui.pushable.segment'),
+        transition: 'overlay'
+    }).sidebar('attach events', '#mobile_item');
+
+    var content = [{
+            title: 'Andorra'
+        }, {
+            title: 'United Arab Emirates'
+        }, {
+            title: 'Afghanistan'
+        }, {
+            title: 'Antigua'
+        }, {
+            title: 'Anguilla'
+        }, {
+            title: 'Albania'
+        }, {
+            title: 'Armenia'
+        }, {
+            title: 'Netherlands Antilles'
+        }, {
+            title: 'Angola'
+        }, {
+            title: 'Argentina'
+        }, {
+            title: 'American Samoa'
+        }, {
+            title: 'Austria'
+        }, {
+            title: 'Australia'
+        }, {
+            title: 'Aruba'
+        }, {
+            title: 'Aland Islands'
+        }, {
+            title: 'Azerbaijan'
+        }, {
+            title: 'Bosnia'
+        }, {
+            title: 'Barbados'
+        }, {
+            title: 'Bangladesh'
+        }, {
+            title: 'Belgium'
+        }, {
+            title: 'Burkina Faso'
+        }, {
+            title: 'Bulgaria'
+        }, {
+            title: 'Bahrain'
+        }, {
+            title: 'Burundi'
+        }
+        // etc
+    ];
+    $('.ui.search').search({
+        source: content
+    });
+</script>
+
+</html>

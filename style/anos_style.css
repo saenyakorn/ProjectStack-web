@@ -1,5 +1,5 @@
 /*general flex box*/
-.flex, .flex-reverse, .flex-end, .pusher #content .paragraph .field, .pusher #content .picture .field, .flex-between, .flex-center, .col, .col-start {
+.flex, .flex-reverse, .flex-end, .pusher #content .edit .paragraph .field, .pusher #content .edit .picture .field, .flex-between, .flex-center, .col, .col-start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +20,7 @@
           flex-direction: row-reverse;
 }
 
-.flex-end, .pusher #content .paragraph .field, .pusher #content .picture .field {
+.flex-end, .pusher #content .edit .paragraph .field, .pusher #content .edit .picture .field {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -74,9 +74,9 @@
 .fixed-bottom {
   position: fixed;
   bottom: 10px;
-  width: 200px;
+  width: 220px;
   left: 50%;
-  margin-left: -100px;
+  margin-left: -110px;
 }
 
 .font-red {
@@ -229,48 +229,58 @@
   bottom: 0;
 }
 
+.pushable {
+  max-height: calc(100vh - 53px);
+}
+
 .pusher {
   background-color: #EEEEEE !important;
   padding: 10px;
 }
 
-.pusher #content #project-name {
+.pusher #content .name {
   text-align: center;
-  width: 500px;
+  width: 400px;
   height: 50px;
   margin: 1rem;
   border-bottom: 1px solid #333333 !important;
 }
 
 .pusher #content .positive.button {
+  margin: 2rem 0;
   width: 120px;
 }
 
 .pusher #content .edit {
   min-height: 50vh;
-  margin: 2rem 10vw !important;
 }
 
-.pusher #content .title {
+.pusher #content .edit #tag {
+  margin: 2rem 0;
+  max-height: 38px;
+}
+
+.pusher #content .edit .title {
   margin: 2rem 0;
 }
 
-.pusher #content .title input {
+.pusher #content .edit .title input {
+  max-width: 80vw;
   font-size: 1.5rem;
   border-bottom: 1px solid #999999 !important;
 }
 
-.pusher #content .paragraph .field {
+.pusher #content .edit .paragraph .field {
   padding: 0;
   width: 100%;
 }
 
-.pusher #content .picture {
+.pusher #content .edit .picture {
   margin: 2rem 0;
   width: 100%;
 }
 
-.pusher #content .picture .field {
+.pusher #content .edit .picture .field {
   padding: 0;
   width: 100%;
 }
@@ -288,9 +298,30 @@
   }
 }
 
+.pusher .newteam {
+  padding: 2rem 1rem 25rem;
+}
+
+.pusher .newteam .header {
+  margin: 2rem 0;
+}
+
+.pusher .newteam .image {
+  width: 50px;
+  height: 50px;
+  background: #F2BB13;
+}
+
 @media (min-width: 768px) {
-  .pusher #content {
-    padding: 4rem 4rem;
+  .pusher .newpost {
+    padding: 4rem 8rem;
+  }
+  .pusher .newteam {
+    padding: 4rem 8rem 25rem;
+  }
+  .pusher .newteam .image {
+    width: 60px;
+    height: 60px;
   }
 }
 /*# sourceMappingURL=anos_style.css.map */
