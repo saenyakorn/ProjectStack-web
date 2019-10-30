@@ -23,6 +23,7 @@
 .ui.grid .row .column .ui.menu {
   border-radius: 0;
   background: #333333;
+  padding: 0 1em;
 }
 
 .ui.grid .row .column .ui.menu .item {
@@ -185,6 +186,13 @@ div.ui.segment.project-card .project-row .tag-container .item {
   border-radius: 2rem;
 }
 
+.ui.icon.top.left.pointing.dropdown.button.proflie {
+  color: #ffffff;
+  border-radius: 0;
+  background: none;
+  padding: 0;
+}
+
 a.ui.segment.detail-button {
   margin-top: 0;
   color: #ffffff;
@@ -313,5 +321,23 @@ div.ui.segment a.ui.segment.project-detail-button div {
 
 div.ui.segment a.ui.segment.project-detail-button:hover {
   color: #333333;
+}
+
+div.button-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+div.button-container div {
+  margin: 1em;
+  background: #66BB6A;
+  border-radius: 50em;
+}
+
+div.button-container div i {
+  color: #ffffff;
+  margin: 0;
+  font-size: 2em;
 }
 /*# sourceMappingURL=ustyle.css.map */

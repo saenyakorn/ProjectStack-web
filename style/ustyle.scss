@@ -26,6 +26,7 @@ $white: #ffffff;
             .ui.menu {
                 border-radius: 0;
                 background: $black;
+                padding: 0 1em;
                 .item {
                     color: $white;
                     border-radius: 0;
@@ -158,6 +159,13 @@ div.ui.segment.project-card {
     }
 }
 
+.ui.icon.top.left.pointing.dropdown.button.proflie {
+    color: $white;
+    border-radius: 0;
+    background: none;
+    padding: 0;
+}
+
 a.ui.segment.detail-button {
     margin-top: 0;
     color: $white;
@@ -254,6 +262,22 @@ div.ui.segment {
         }
         &:hover {
             color: $black;
+        }
+    }
+}
+
+div.button-container {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    div {
+        margin: 1em;
+        background: $green;
+        border-radius: 50em;
+        i {
+            color: $white;
+            margin: 0;
+            font-size: 2em;
         }
     }
 }
