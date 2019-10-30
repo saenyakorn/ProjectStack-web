@@ -1,0 +1,29 @@
+<div class="ui segment project-card">
+    <div class="project-row top">
+        <p>
+            <span class="item project-name"><a href="/project/{{projectid}}">{{projectname}}</a></span>
+            <span class="item project-owner"><a href="/profile/{{ownerusername}}">/{{ownerusername}}</a></span>
+        </p>
+    </div>
+    <div class="ui grid project-content">
+        <div class="twelve wide column">
+            <div class="content">
+                {{content}}
+            </div>
+        </div>
+        <div class="four wide column">
+            <img class="ui fluid image" src="{{imageURL}}">
+        </div>
+    </div>
+    <div class="project-row">
+        <div class="tag-container">
+            <a href="#" class="item">tag 1</a>
+            <a href="#" class="item">tag 2</a>
+            <a href="#" class="item">tag 3</a>
+            <a href="#" class="item">tag 4</a>
+        </div>
+    </div>
+</div>
+<a href="#" class="ui segment detail-button">
+    <div>see more</div>
+</a>
