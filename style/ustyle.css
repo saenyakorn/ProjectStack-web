@@ -121,6 +121,10 @@ div.ui.segment.trending-card .trending-content .item.trending-owner a:hover {
   color: #38ADEF;
 }
 
+div.ui.segment.project-card {
+  margin-bottom: 0;
+}
+
 div.ui.segment.project-card .project-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,5 +180,29 @@ div.ui.segment.project-card .project-row .tag-container .item {
   background: #F2BB13;
   padding: .2rem 1.2rem;
   border-radius: 2rem;
+}
+
+div.ui.segment.detail-button {
+  margin-top: 0;
+  color: #ffffff;
+  background: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5em 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+div.ui.segment.detail-button a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=ustyle.css.map */

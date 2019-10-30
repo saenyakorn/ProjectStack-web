@@ -113,6 +113,7 @@ div.ui.segment.trending-card {
 }
 
 div.ui.segment.project-card {
+    margin-bottom: 0;
     .project-row {
         display: flex;
         justify-content: flex-start;
@@ -151,5 +152,22 @@ div.ui.segment.project-card {
                 border-radius: 2rem;
             }
         }
+    }
+}
+
+div.ui.segment.detail-button {
+    margin-top: 0;
+    color: $white;
+    background: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.2rem;
     }
 }
