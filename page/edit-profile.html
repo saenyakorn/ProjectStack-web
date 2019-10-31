@@ -112,7 +112,7 @@
                                 <div class=" ui eight wide computer sixteen wide mobile column continer">
                                     <div class='name output '>
 
-                                        <p> <b>User name:</b><input type='text' class='user' value="{{Username}}" required> </p>
+                                        <p> <b>User name:</b>{{Username}} </p>
                                     </div>
                                     <div class=' full-name output '>
 
@@ -220,15 +220,24 @@
                     <div class="eleven wide computer sixteen wide mobile column centered   ">
                         <div class="title-information ui placeholder segment data">
 
+                            {{#projects}}
                             <div class="project-name output">
-                                <p><b> project: </b>{{project1}}</p>
+                                <p>
+                                    <span>
+                                        <b> Project Name: </b>{{projectName}}
+                                    </span>
+                                    <span class="darkgrey">
+                                        <a href="/profile/{{ownerID}}"> /{{ownerUsername}}</a>
+                                    </span>
+                                </p>
                             </div>
+                            {{/projects}} {{^projects}}
                             <div class="project-name output">
-                                <p><b> project: </b>{{project2}}</p>
+                                <p>
+                                    <b>Not currently in a project</b>
+                                </p>
                             </div>
-                            <div class="project-name output">
-                                <p><b> project: </b>{{project3}}</p>
-                            </div>
+                            {{/projects}}
                         </div>
                     </div>
                 </div>
