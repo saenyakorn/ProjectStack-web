@@ -85,7 +85,7 @@ $("#plus-member").click(function() {
         });
         $("#new-member-name").value() = null;
     } else {
-        $("#new-member-name").value() = null
+        $("#new-member-name").value() = null;
     }
 });
 $("#create").click(function() {
@@ -119,5 +119,5 @@ $("#create").click(function() {
 });
 
 $(".delete-but").click(function() {
-    $("#member-generator").remove($(this).parentNode.parentNode)
+    $("#member-generator").remove($(this).parentNode.parentNode);
 });
