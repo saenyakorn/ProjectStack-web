@@ -89,19 +89,21 @@
                         <div class="tablet only three wide column"></div>
                         <div class="column">
                             <h2 class="header">Leader</h2>
-                            <div class="ui secondary segment">
-                                <div class="ui middle aligned equal width grid">
-                                    <div class="four wide text-center column">
-                                        <!--div class="ui active inline loader"></div-->
-                                        <img id="leader-pic" class="ui circular image">
-                                    </div>
-                                    <div class="column">
-                                        <div class="ui grid">
-                                            <div class="row">
-                                                <h2 id="leader-name">Seanyakorn Seangsanor</h2>
-                                            </div>
-                                            <div class="row">
-                                                <p id="leader-email">Email : Seanyakorn@pornhub.com</p>
+                            <div id="leader-generator">
+                                <div class="ui secondary segment">
+                                    <div class="ui middle aligned equal width grid">
+                                        <div class="four wide text-center column">
+                                            <!--div class="ui active inline loader"></div-->
+                                            <img id="leader-pic" class="ui circular image">
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui grid">
+                                                <div class="row">
+                                                    <h2 id="leader-name">Seanyakorn Seangsanor</h2>
+                                                </div>
+                                                <div class="row">
+                                                    <p id="leader-email">Email : Seanyakorn@pornhub.com</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -109,68 +111,32 @@
                             </div>
 
                             <h2 class="header">Member</h2>
-                            <div class="ui secondary segment">
-                                <div class="ui middle aligned equal width grid">
-                                    <div class="four wide text-center column">
-                                        <!--div class="ui active inline loader"></div-->
-                                        <img id="leader-pic" class="ui circular image">
-                                    </div>
-                                    <div class="column">
-                                        <div class="ui grid">
-                                            <div class="row">
-                                                <h2>Seanyakorn Seangsanor</h2>
-                                            </div>
-                                            <div class="row">
-                                                <p>Email : Seanyakorn@pornhub.com</p>
+                            <div id="member-generator">
+                                <div class="ui secondary segment">
+                                    <div class="ui middle aligned equal width grid">
+                                        <div class="four wide text-center column">
+                                            <!--div class="ui active inline loader"></div-->
+                                            <img id="leader-pic" class="ui circular image">
+                                        </div>
+                                        <div class="column">
+                                            <div class="ui grid">
+                                                <div class="row">
+                                                    <h2>Seanyakorn Seangsanor</h2>
+                                                </div>
+                                                <div class="row">
+                                                    <p>Email : Seanyakorn@pornhub.com</p>
+                                                </div>
                                             </div>
                                         </div>
+                                        <i class="red link close icon"></i>
                                     </div>
-                                    <i class="red link close icon"></i>
-                                </div>
-                            </div>
-                            <div class="ui secondary segment">
-                                <div class="ui middle aligned equal width grid">
-                                    <div class="four wide text-center column">
-                                        <!--div class="ui active inline loader"></div-->
-                                        <img id="leader-pic" class="ui circular image">
-                                    </div>
-                                    <div class="column">
-                                        <div class="ui grid">
-                                            <div class="row">
-                                                <h2>Seanyakorn Seangsanor</h2>
-                                            </div>
-                                            <div class="row">
-                                                <p>Email : Seanyakorn@pornhub.com</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <i class="red link close icon"></i>
-                                </div>
-                            </div>
-                            <div class="ui secondary segment">
-                                <div class="ui middle aligned equal width grid">
-                                    <div class="four wide text-center column">
-                                        <!--div class="ui active inline loader"></div-->
-                                        <img id="leader-pic" class="ui circular image">
-                                    </div>
-                                    <div class="column">
-                                        <div class="ui grid">
-                                            <div class="row">
-                                                <h2>Seanyakorn Seangsanor</h2>
-                                            </div>
-                                            <div class="row">
-                                                <p>Email : Seanyakorn@pornhub.com</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <i class="red link close icon"></i>
                                 </div>
                             </div>
 
                             <div class="ui secondary search text-center segment">
                                 <h2>New Member</h2>
                                 <div class="ui icon input">
-                                    <input class="prompt" type="text" placeholder="Search by username">
+                                    <input class="prompt" type="text" placeholder="Search by username" id="new-member-name">
                                     <i class="plus link icon" id="plus-member"></i>
                                 </div>
                                 <div class="results"></div>
@@ -184,7 +150,7 @@
         </div>
     </div>
     <!--save button-->
-    <div class="ui right fixed-bottom flex-between">
+    <div class="right fixed-bottom flex-center">
         <button class="large ui button">Cancel</button>
         <button class="large ui blue button" id="create">Create</button>
     </div>
