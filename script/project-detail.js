@@ -76,7 +76,7 @@ function TrendingCard() {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             result.forEach((val, inx, arr) => {
                 $.get('../generator/trending-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
@@ -85,7 +85,7 @@ function TrendingCard() {
             })
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -101,7 +101,7 @@ function TeamCard() {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             result.teams.forEach((val, inx, arr) => {
                 $.get('../generator/team-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
@@ -110,7 +110,7 @@ function TeamCard() {
             })
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -125,7 +125,7 @@ function ProjectDetail() {
         data: data,
         dataType: "json",
         success: async function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             $('.projectName').html(result.projectName);
             $('div.ownerID').html(result.ownerID)
             $('a.ownerID').attr('href', '/profile/' + result.ownerID);
@@ -162,7 +162,7 @@ function ProjectDetail() {
             $('.ui.active.dimmer').css("display", "none");
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -179,12 +179,12 @@ function clickRequestIndiv(username, accept) {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             var url = window.location.href;
             window.location.href = url;
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -201,12 +201,12 @@ function clickRequestTeam(teamID, accept) {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             var url = window.location.href;
             window.location.href = url;
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -222,12 +222,12 @@ function JoinIndiv() {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             var url = window.location.href;
             window.location.href = url;
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -243,12 +243,12 @@ function JoinAsTeam(teamID) {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             var url = window.location.href;
             window.location.href = url;
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -275,7 +275,7 @@ if (!("username" in cookie)) {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             if (result.ownerID == cookie.username) {
                 $('.edit').css('display', 'block');
                 $('.request').css('display', 'block');
@@ -295,7 +295,7 @@ if (!("username" in cookie)) {
             }
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 
@@ -303,4 +303,4 @@ if (!("username" in cookie)) {
 TeamCard();
 TrendingCard();
 ProjectDetail();
-console.log(getProjectID());
+//console.log(getProjectID());

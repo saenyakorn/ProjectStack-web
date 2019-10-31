@@ -31,17 +31,17 @@ function getcookie() {
 function addMoreCard() {
     $('.ui.active.dimmer').css("display", "flex");
     data = {
-        currentsize: '' + $('.ui.segment.project-card').length,
-        batch: "5"
-    }
-    console.log(data.currentsize, data.batch);
+            currentsize: $('.ui.segment.project-card').length,
+            batch: 5
+        }
+        //console.log(data.currentsize, data.batch);
     $.ajax({
         url: "https://projectstack.now.sh/project/all",
         type: "POST",
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             result.forEach(async(val, inx, arr) => {
                 await $.get('./generator/project-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
@@ -54,7 +54,7 @@ function addMoreCard() {
             }
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -67,7 +67,7 @@ function TrendingCard() {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             result.forEach((val, inx, arr) => {
                 $.get('./generator/trending-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
@@ -77,7 +77,7 @@ function TrendingCard() {
             $('.ui.active.dimmer').css("display", "none");
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
