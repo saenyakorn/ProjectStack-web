@@ -121,3 +121,7 @@ $("#create").click(function() {
 $(".delete-but").click(function() {
     $("#member-generator").remove($(this).parentNode.parentNode);
 });
+
+$("#cancel").click(function() {
+    window.history.back();
+})

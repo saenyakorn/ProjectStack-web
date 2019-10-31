@@ -144,3 +144,6 @@ $("#post-button").click(function() {
         });
     })
 });
+$("#cancel-button").click(function() {
+    window.history.back();
+});
