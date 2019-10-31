@@ -116,7 +116,12 @@ div.Page_Login .Login-form .Login-input {
 }
 
 div.Page_Login .Login-form .Login-input .Login_image {
+  width: 100%;
   font-size: 3vw;
+}
+
+div.Page_Login .Login-form .Login-input .Login_image .logo-black {
+  text-align: center;
 }
 
 div.Page_Login .Login-form .Login-input .Login_username {
@@ -128,7 +133,7 @@ div.Page_Login .Login-form .Login-input .Login_username {
           justify-content: center;
   width: 100%;
   font-size: 1em;
-  margin-top: 1.5em;
+  margin-top: 2em;
 }
 
 div.Page_Login .Login-form .Login-input .Login_username input[type=text] {
@@ -178,8 +183,8 @@ div.Page_Login .Login-form .Login-button .button {
   color: white;
   padding: 0 1em;
   cursor: pointer;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
   width: 50%;
   height: 2em;
 }
