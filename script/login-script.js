@@ -3,9 +3,9 @@ $('#login-click-here').click(function() {
     var allinput = [];
     var valid = true;
     $('.user').each(function() {
-        if ($(this).prop('required') && $(this).value == null)
+        if ($(this).prop('required') && $(this).val() == null)
             valid = false;
-        allinput.push(this.value);
+        allinput.push($(this).val());
     });
     if (!valid) return;
     const data = {

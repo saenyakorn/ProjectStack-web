@@ -76,30 +76,30 @@ $.ajax({
 
 //nut
 $("#plus-member").click(function() {
-    if ($("#new-member-name").value() in obj_username) {
-        var nmn = $("#new-member-name").value()
+    if ($("#new-member-name").val() in obj_username) {
+        var nmn = $("#new-member-name").val()
         var val = { username: nmn, email: obj_username[nmn].email, p_pic_url: obj_username[nmn].profilepic_url };
         $.get('../generator/member-card-mustache.html', (html) => {
             var output = Mustache.render(html, val);
             $('#member-generator').append(output);
         });
-        $("#new-member-name").value() = null;
+        $("#new-member-name").val() = null;
     } else {
-        $("#new-member-name").value() = null;
+        $("#new-member-name").val() = null;
     }
 });
 $("#create").click(function() {
     var valid = true;
-    if ($('#team-name').value() == null) return;
+    if ($('#team-name').val() == null) return;
 
     var members_array = [];
     $('.member-username').each(function() {
-        members_array.push($(this).value());
+        members_array.push($(this).val());
     });
 
     const team_info = {
-        teamName: $('#team-name').value(),
-        leaderID: $('#leader-name').value(),
+        teamName: $('#team-name').val(),
+        leaderID: $('#leader-name').val(),
         members: members_array
     };
     $.ajax({

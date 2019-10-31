@@ -100,7 +100,17 @@ $(".close.link.red.icon").click(function() {
 });
 
 $("#post-button").click(function() {
-    if ($('#project-name').value() == null) return;
-    if ($('#description').value() == null) return;
-    var
+    if ($('#project-name').val() == null) return;
+    if ($('#description').val() == null) return;
+    var content = [];
+    $(".all-content").each(function() {
+        if ($(this).hasClass("title")) {
+
+        } else if ($(this).hasClass("paragraph")) {
+
+        } else {
+
+        }
+
+    });
 });
