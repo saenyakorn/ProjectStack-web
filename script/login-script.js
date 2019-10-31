@@ -20,7 +20,7 @@ $('#login-click-here').click(function() {
         success: function(result) {
             console.log(result);
             if (result.success) {
-                window.location.href("https://projectstack.now.sh/");
+                window.location.href = "https://projectstack.now.sh/";
             } else {
                 $(".invalid").addClass("d-none");
                 if (402 in result.val) {

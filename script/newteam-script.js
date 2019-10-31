@@ -109,7 +109,7 @@ $("#create").click(function() {
         datatype: "json",
         success: function(result) {
             console.log(result);
-            window.location.href("https://projectstack.no.sh")
+            window.location.href = "https://projectstack.no.sh"
         },
         error: function(error) {
             console.log(error);

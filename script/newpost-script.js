@@ -136,7 +136,7 @@ $("#post-button").click(function() {
             datatype: "json",
             success: function(result) {
                 console.log(result);
-                window.location.href("https://projectstack.now.sh/project/" + result.projectID)
+                window.location.href = "https://projectstack.now.sh/project/" + result.projectID;
             },
             error: function(error) {
                 console.log(error);
