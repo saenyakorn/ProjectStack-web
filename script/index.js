@@ -19,7 +19,9 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 /* end of setting semantic ui */
 
 function addMoreCard() {
+    $('.ui.active.dimmer').css("display", "flex");
     data = {
+        currentsize: $('.ui.segment.project-card').length,
         batch: 5
     }
     $.ajax({
@@ -29,11 +31,12 @@ function addMoreCard() {
         dataType: "json",
         success: function(result) {
             console.log("success", result)
-            result.forEach((val, inx, arr) => {
-                $.get('./generator/project-card-mustache.html', (html) => {
+            result.forEach(async(val, inx, arr) => {
+                await $.get('./generator/project-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
                     $('#project-generator').append(output);
                 })
+                $('.ui.active.dimmer').css("display", "none");
             })
         },
         error: function(error) {

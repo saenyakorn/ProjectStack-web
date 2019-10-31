@@ -34,45 +34,51 @@ function getQueryStringArgs() {
     return args;
 }
 
+function getProjectID() {
+    var url = "https://projectstack.now.sh/project/pvJRlOA7i7uZ9ZIAmEEi";
+    var items = url.split('/');
+    var last = items[items.length - 1];
+    if (last.includes('?')) {
+        last = last.split('?')[0]
+    }
+    return last
+}
+
+function getcookie() {
+    var x = document.cookie.split(";");
+    var y = {}
+    for (var i = 0; i < x.length; i++) {
+        var z = x[i].split("=");
+        y[z[0]] = z[1];
+    }
+    return y;
+};
+
 /* end of setting semantic ui */
 
 function modalshow() {
-    $('.ui.modal').modal('show');
+    $('.ui.modal.join').modal('show');
 }
 
-$('#trending-generator').html("");
+function modalshowrequest() {
+    $('.ui.modal.request').modal('show');
+}
+
 $('#team-generator').html("");
+$('#trending-generator').html("");
 $('#collaborator-generator').html("");
-
-$.get('../generator/trending-card.html', (result) => {
-    for (var i = 0; i < 5; i++) {
-        $('#trending-generator').append(result);
-    }
-});
-
-$.get('../generator/team-card.html', (result) => {
-    for (var i = 0; i < 5; i++) {
-        $('#team-generator').append(result);
-    }
-});
-
-$.get('../generator/collaborator-card.html', (result) => {
-    for (var i = 0; i < 5; i++) {
-        $('#collaborator-generator').append(result);
-    }
-});
 
 function TrendingCard() {
     data = {}
     $.ajax({
-        url: "https://projectstack.now.sh/",
+        url: "https://projectstack.now.sh/project/all/trending",
         type: "POST",
         data: data,
         dataType: "json",
         success: function(result) {
             console.log("success", result)
             result.forEach((val, inx, arr) => {
-                $.get('./generator/treding-card-mustache.html', (html) => {
+                $.get('../generator/trending-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
                     $('#trending-generator').append(output);
                 })
@@ -85,16 +91,19 @@ function TrendingCard() {
 }
 
 function TeamCard() {
-    data = {}
+    data = {
+        username: cookie.username,
+        fields: ['username', 'email', 'teams']
+    }
     $.ajax({
-        url: "https://projectstack.now.sh/user/all",
+        url: "https://projectstack.now.sh/user/info",
         type: "POST",
         data: data,
         dataType: "json",
         success: function(result) {
             console.log("success", result)
-            result.forEach((val, inx, arr) => {
-                $.get('./generator/team-card-mustache.html', (html) => {
+            result.teams.forEach((val, inx, arr) => {
+                $.get('../generator/team-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
                     $('#team-generator').append(output);
                 })
@@ -106,47 +115,50 @@ function TeamCard() {
     })
 }
 
-function CollaboratorCard() {
-    data = {
-
-    }
-    $.ajax({
-        url: "https://projectstack.now.sh/user/all",
-        type: "POST",
-        data: data,
-        dataType: "json",
-        success: function(result) {
-            console.log("success", result)
-            result.forEach((val, inx, arr) => {
-                $.get('./generator/collaborator-card-mustache.html', (html) => {
-                    var output = Mustache.render(html, val);
-                    $('#collaborator-generator').append(output);
-                })
-            })
-        },
-        error: function(error) {
-            console.log("error", error)
-        }
-    })
-}
-
 function ProjectDetail() {
     data = {
-
+        projectID: "pvJRlOA7i7uZ9ZIAmEEi"
     }
     $.ajax({
-        url: "https://projectstack.now.sh/user/all",
+        url: "https://projectstack.now.sh/project/info",
         type: "POST",
         data: data,
         dataType: "json",
-        success: function(result) {
+        success: async function(result) {
             console.log("success", result)
-            result.forEach((val, inx, arr) => {
-                $.get('../page/project-detail.html', (html) => {
-                    var output = Mustache.render(html, val);
-                    $('body').append(output);
+            $('.projectName').html(result.projectName);
+            $('div.ownerID').html(result.ownerID)
+            $('a.ownerID').attr('href', '/profile/' + result.ownerID);
+            temp = result.members;
+            for (var i = 0; i < temp.length; i++) {
+                const val = temp[i];
+                await $.get('../generator/collaborator-card-mustache.html', (html) => {
+                    var output = Mustache.render(html, { username: val });
+                    $('#collaborator-generator').append(output);
                 })
-            })
+            }
+            temp = result.content;
+            for (var i = 0; i < temp.length; i++) {
+                const val = temp[i];
+                if ("title" in val) {
+                    await $.get('../generator/project-detail-title-mustache.html', (html) => {
+                        var output = Mustache.render(html, { title: val.title });
+                        $('#project-detail-container').append(output);
+                    })
+
+                } else if ("paragraph" in val) {
+                    await $.get('../generator/project-detail-paragraph-mustache.html', (html) => {
+                        var output = Mustache.render(html, { paragraph: val.paragraph });
+                        $('#project-detail-container').append(output);
+                    })
+                } else if ("img_url" in val) {
+                    await $.get('../generator/project-detail-image-mustache.html', (html) => {
+                        var output = Mustache.render(html, { img_url: val.img_url });
+                        $('#project-detail-container').append(output);
+                    })
+                }
+            }
+            temp = result.requests;
             $('.ui.active.dimmer').css("display", "none");
         },
         error: function(error) {
@@ -154,3 +166,103 @@ function ProjectDetail() {
         }
     })
 }
+
+function clickRequestIndiv(username, accept) {
+    data = {
+        accept: accept,
+        username: username,
+        projectID: projectID
+    }
+    $.ajax({
+        url: "https://projectstack.now.sh/project/resolverequest",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            console.log("success", result)
+            var url = window.location.href;
+            window.location.href = url;
+        },
+        error: function(error) {
+            console.log("error", error)
+        }
+    })
+}
+
+function clickRequestTeam(teamID, accept) {
+    data = {
+        accept: accept,
+        teamID: teamID,
+        projectID: projectID
+    }
+    $.ajax({
+        url: "https://projectstack.now.sh/project/resolverequest",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            console.log("success", result)
+            var url = window.location.href;
+            window.location.href = url;
+        },
+        error: function(error) {
+            console.log("error", error)
+        }
+    })
+}
+
+function JoinIndiv() {
+    data = {
+        username: cookie.username,
+        projectID: projectID
+    }
+    $.ajax({
+        url: "https://projectstack.now.sh/project/join",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            console.log("success", result)
+            var url = window.location.href;
+            window.location.href = url;
+        },
+        error: function(error) {
+            console.log("error", error)
+        }
+    })
+}
+
+function JoinAsTeam(teamID) {
+    data = {
+        teamID: teamID,
+        projectID: projectID
+    }
+    $.ajax({
+        url: "https://projectstack.now.sh/project/joinasteam",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            console.log("success", result)
+            var url = window.location.href;
+            window.location.href = url;
+        },
+        error: function(error) {
+            console.log("error", error)
+        }
+    })
+}
+
+const projectID = getProjectID()
+const cookie = getcookie();
+if (!("username" in cookie)) {
+    $('.guest').css('display', 'flex');
+    $('.logged-in').css('display', 'none');
+} else {
+    $('.guest').css('display', 'none');
+    $('.logged-in').css('display', 'flex');
+}
+TeamCard();
+TrendingCard();
+ProjectDetail();
+console.log(getProjectID());
