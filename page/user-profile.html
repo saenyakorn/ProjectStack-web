@@ -83,7 +83,7 @@
                     <div class="eleven wide computer sixteen wide mobile column centered   ">
                         <div class=" title-information ui segment title">
                             <div style="text-align: center;">
-                                <p><b>Information</b></p>
+                                <p><b>General Information</b></p>
                             </div>
                         </div>
                     </div>
@@ -96,37 +96,40 @@
 
                                 <div class="ui eight wide computer sixteen wide mobile column continer">
                                     <div class='profile-image'>
-                                        <img class='ui small circular image get-image centered' src="../get-images/user-profile.png">
+                                        <img class='ui small circular image get-image centered' src="{{profilepic_url}}">
                                     </div>
                                     <div class="username-under-image">
-                                        <p style="text-align: center;"><b>username</b></p>
+                                        <p style="text-align: center;"><b>{{username}}</b></p>
                                     </div>
                                     <br>
+
+                                    {{#isCurrentUser}}
                                     <div id='edit' class='edit-profile-image'>
                                         <button id='button-edit' class="ui olive button">edit</button>
-
                                     </div>
+                                    {{/isCurrentUser}}
+
                                 </div>
 
 
                                 <div class=" ui eight wide computer sixteen wide mobile column continer">
                                     <div class='name output'>
-                                        <p> <b>Name:</b> {{Name}}</p>
+                                        <p> <b>Username:</b> {{username}}</p>
                                     </div>
                                     <div class=' full-name output '>
-                                        <p><b>Full name:</b> {{Fullname}}</p>
+                                        <p><b>Full name:</b> {{firstName}} {{lastName}}</p>
                                     </div>
                                     <div class='email-n output '>
-                                        <p><b>Email:</b> {{Email}}</p>
+                                        <p><b>Email:</b> {{email}}</p>
                                     </div>
                                     <div class="tel output">
-                                        <p><b>Tel:</b> {{Tel}}</p>
+                                        <p><b>Tel:</b> {{tel}}</p>
                                     </div>
                                     <div class="url output">
-                                        <p><b>url:</b> {{url}}</p>
+                                        <p><b>Url:</b> {{url}}</p>
                                     </div>
                                     <div class='status output '>
-                                        <p><b>Status:</b> {{Status}}</p>
+                                        <p><b>Occupation:</b> {{job}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +146,7 @@
                     <div class="eleven wide computer sixteen wide mobile column centered ">
                         <div class=" resume-information ui segment title">
                             <div style="text-align: center;">
-                                <p><b>Resume</b></p>
+                                <p><b>Past Experiences</b></p>
                             </div>
                         </div>
                     </div>
@@ -158,27 +161,27 @@
                                     <div class="item">
 
                                         <div class="content">
-                                            {{resume1}}
+                                            resume1
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="content">
-                                            {{resume2}}
+                                            resume2
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="content">
-                                            {{resume3}}
+                                            resume3
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="content">
-                                            {{resume4}}
+                                            resume4
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="content">
-                                            {{resume5}}
+                                            resume5
                                         </div>
                                     </div>
 
@@ -199,7 +202,7 @@
                     <div class="eleven wide computer sixteen wide mobile column centered  ">
                         <div class=" project-information ui segment title">
                             <div style="text-align: center;">
-                                <p><b>Project</b></p>
+                                <p><b>Projects</b></p>
                             </div>
                         </div>
                     </div>
@@ -210,15 +213,26 @@
                     <div class="eleven wide computer sixteen wide mobile column centered   ">
                         <div class="title-information ui placeholder segment data">
 
+                            {{#projects}}
+                                <div class="project-name output">
+                                    <p>
+                                        <span>
+                                            <b> Project Name: </b>{{projectName}}
+                                        </span> 
+                                        <span style="color:$darkgray">
+                                            <a href="/profile/{{ownerID}}"> /{{ownerUsername}}</a>
+                                        </span>
+                                    </p>
+                                </div> 
+                            {{/projects}}
+
+                            {{^projects}}
                             <div class="project-name output">
-                                <p><b> project: </b> {{project1}} </p>
-                            </div>
-                            <div class="project-name output">
-                                <p><b> project: </b>{{project2}} </p>
-                            </div>
-                            <div class="project-name output">
-                                <p><b> project: </b>{{project3}}</p>
-                            </div>
+                                <p>
+                                    <b>Not currently in a project</b>
+                                </p>
+                            </div> 
+                            {{/projects}}
                         </div>
                     </div>
                 </div>
