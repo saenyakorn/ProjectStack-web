@@ -258,9 +258,47 @@ const cookie = getcookie();
 if (!("username" in cookie)) {
     $('.guest').css('display', 'flex');
     $('.logged-in').css('display', 'none');
+    $('.ui.grid.button-container').css('display', 'none');
+    $('.edit').css('display', 'none');
+    $('.request').css('display', 'none');
 } else {
     $('.guest').css('display', 'none');
     $('.logged-in').css('display', 'flex');
+    const ownerID = ""
+    data = {
+        projectID: projectID,
+        fields: ['ownerID', 'requests', 'members']
+    }
+    $.ajax({
+        url: "https://projectstack.now.sh/project/info",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            console.log("success", result)
+            if (result.ownerID == cookie.username) {
+                $('.edit').css('display', 'block');
+                $('.request').css('display', 'block');
+                $('.ui.grid.button-container').css('display', 'none');
+            } else if (cookie.username in result.members) {
+                $('.edit').css('display', 'none');
+                $('.request').css('display', 'none');
+                $('.ui.grid.button-container').css('display', 'none');
+            } else if (cookie.username in requests) {
+                $('.edit').css('display', 'none');
+                $('.request').css('display', 'none');
+                $('.ui.grid.button-container').css('display', 'none');
+            } else {
+                $('.edit').css('display', 'none');
+                $('.request').css('display', 'none');
+                $('.ui.grid.button-container').css('display', 'block');
+            }
+        },
+        error: function(error) {
+            console.log("error", error)
+        }
+    })
+
 }
 TeamCard();
 TrendingCard();
