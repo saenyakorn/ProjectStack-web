@@ -19,13 +19,9 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 
 $('#button-submit').click(function() {
     var allinput = [];
-    var valid = true;
     $('.user').each(function() {
-        if ($(this).prop('required') && $(this).value == null)
-            valid = false;
         allinput.push(this.value);
     })
-    if (!valid) return;
     const data = {
         Name: allinput[0],
         Fullname: allinput[1],

@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+.d-none {
+  display: none;
+}
+
 div.regist-compelete {
   background-color: #333333;
   color: white;
@@ -516,5 +520,9 @@ input[type=text] {
 
 .ui.segment {
   border: 0;
+}
+
+.ui.placeholder.segment {
+  min-height: 1rem;
 }
 /*# sourceMappingURL=get-css.css.map */
