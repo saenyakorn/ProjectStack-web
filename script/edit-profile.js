@@ -19,11 +19,15 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 
 $('#button-submit').click(function() {
     var allinput = [];
+    var valid = true;
     $('.user').each(function() {
-        allinput.push(this.value);
+        if ($(this).prop("required") && $(this).val() == null);
+        valid = false;
+        allinput.push($(this).val());
     })
+    if (!valid) return;
     const data = {
-        Name: allinput[0],
+        Username: allinput[0],
         Fullname: allinput[1],
         Email: allinput[2],
         Tel: allinput[3],
@@ -37,12 +41,13 @@ $('#button-submit').click(function() {
         link: allinput[11],
     };
     $.ajax({
-        url: "https://projectstack.now.sh/",
+        url: "https://projectstack.now.sh/user/edit",
         type: "POST",
         data: data,
         dataType: "json",
         success: function(result) {
             console.log(result);
+            window.location.href("https://projectstack.now.sh/user/edit")
         },
         error: function(error) {
             console.log(error);
