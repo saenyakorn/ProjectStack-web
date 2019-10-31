@@ -90,3 +90,26 @@
 <script src="../script/index.js"></script>
 
 </html>
+
+
+
+
+
+{{#projects}}
+<div class="project-name output">
+    <p>
+        <span>
+            <b> Project Name: </b>{{projectName}}
+        </span>
+        <span class="darkgrey">
+            <a href="/profile/{{ownerID}}"> /{{ownerUsername}}</a>
+        </span>
+    </p>
+</div>
+{{/projects}} {{^projects}}
+<div class="project-name output">
+    <p>
+        <b>Not currently in a project</b>
+    </p>
+</div>
+{{/projects}}

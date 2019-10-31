@@ -79,11 +79,28 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 //after
 
 $("#add-text").click(function() {
-
+    $.get('../generator/post-generator/paragraph-card.html', (html) => {
+        $('#content-column').append(html);
+    });
 });
 $("#add-title").click(function() {
-
+    $.get('../generator/post-generator/title-card.html', (html) => {
+        $('#content-column').append(html)
+    });
 });
-$("#add-image").click(function() {
 
+$("#add-image").click(function() {
+    $.get('../generator/post-generator/image-card.html', (html) => {
+        $('#content-column').append(html);
+    });
+});
+
+$(".close.link.red.icon").click(function() {
+    $("#content-column").remove($(this).parentNode.parentNode);
+});
+
+$("#post-button").click(function() {
+    if ($('#project-name').value() == null) return;
+    if ($('#description').value() == null) return;
+    var
 });
