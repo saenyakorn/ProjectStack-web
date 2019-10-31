@@ -6,6 +6,7 @@ $('.ui.sidebar').sidebar({
 }).sidebar('attach events', '#mobile_item');
 //nut-script
 var content = [];
+var obj_name_email = {};
 $.ajax({
     url: "https://projectstack.no.sh/user/all",
     type: "POST",
@@ -14,13 +15,15 @@ $.ajax({
     success: function(result) {
         console.log(result);
         $.each(result, function(i, user_obj) {
-            contact.push(user_obj);
+            content.push({ title: user_obj.username });
+            obj_name_email[user_obj.username] = user_obj.email;
         });
     },
     error: function(error) {
         console.log(error);
     }
 });
+
 //anos
 $('.ui.search').search({
     source: content
