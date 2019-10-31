@@ -18,14 +18,6 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 
 /* end of setting semantic ui */
 
-$('#project-generator').html("");
-$('#trending-generator').html("");
-$.get('./generator/trending-card.html', (result) => {
-    for (var i = 0; i < 5; i++) {
-        $('#trending-generator').append(result);
-    }
-});
-
 function addMoreCard() {
     data = {
         batch: 5
@@ -52,22 +44,21 @@ function addMoreCard() {
 }
 
 function TrendingCard() {
-    data = {
-        batch: 5
-    }
+    data = {}
     $.ajax({
-        url: "https://projectstack.now.sh/trending/all",
+        url: "https://projectstack.now.sh/project/all/trending",
         type: "POST",
         data: data,
         dataType: "json",
         success: function(result) {
             console.log("success", result)
-            for (var i = 0; i < result.length; i++) {
+            result.forEach((val, inx, arr) => {
                 $.get('./generator/trending-card-mustache.html', (html) => {
-                    var output = Mustache.render(html, result[i]);
+                    var output = Mustache.render(html, val);
                     $('#trending-generator').append(output);
-                });
-            }
+                })
+            })
+            $('.ui.active.dimmer').css("display", "none");
         },
         error: function(error) {
             console.log("error", error)
@@ -76,3 +67,4 @@ function TrendingCard() {
 }
 
 addMoreCard();
+TrendingCard();
