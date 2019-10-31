@@ -127,7 +127,7 @@ $("#create").click(function() {
 });
 
 $(".delete-but").click(function() {
-    $("#member-generator").remove($(this).parentNode.parentNode);
+    $("#member-generator").remove($(this).parent().parent());
 });
 
 $("#cancel").click(function() {

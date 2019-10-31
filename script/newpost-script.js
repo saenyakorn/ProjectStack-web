@@ -116,7 +116,7 @@ $("#add-image").click(function() {
 });
 
 $(".close.link.red.icon").click(function() {
-    $("#content-column").remove($(this).parentNode.parentNode);
+    $("#content-column").remove($(this).parent().parent());
 });
 $("#post-button").click(function() {
     if ($('#project-name').val() == null) return;
@@ -124,11 +124,11 @@ $("#post-button").click(function() {
     var content = [];
     $(".all-content").each(function() {
         if ($(this).hasClass("title")) {
-            content.push({ title: $(this).firstChild.firstChild.val() });
+            content.push({ title: $(this).children()[0].children()[0].val() });
         } else if ($(this).hasClass("paragraph")) {
-            content.push({ paragraph: $(this).lastChild.firstChild.firstChild.val() });
+            content.push({ paragraph: $(this).children()[1].children()[0].children()[0].val() });
         } else {
-            content.push({ picture: $(this).lastChild.firstChild.src })
+            content.push({ picture: $(this).children()[1].children()[0].src })
         }
         var cookiess = getcookie()
         const data = {
