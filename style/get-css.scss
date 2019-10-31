@@ -184,70 +184,76 @@
             //         display: flex;
             //     }
             // }
-            //เนฟบ---------------------------------------------------------------------------------------------------------------
-            // .ui.grid {
-            //     padding: 0 !important;
-            //     margin: 0!important;
-            // }
-            // .ui.grid {
-            //     border: 0;
-            //     .row {
-            //         padding: 0;
-            //         .column {
-            //             padding: 0;
-            //             .ui.menu {
-            //                 border-radius: 0;
-            //                 background: #333333;
-            //                 .item {
-            //                     color: #ffffff;
-            //                     border-radius: 0;
-            //                 }
-            //                 .item:hover {
-            //                     background: #F2BB13;
-            //                 }
-            //                 .item.nohover:hover {
-            //                     background: #333333;
-            //                 }
-            //             }
-            //             .bars.icon,
-            //             .bell.icon,
-            //             .user.icon,
-            //             .home.icon {
-            //                 margin: 0;
-            //             }
-            //         }
-            //     }
-            // }
-            // .pushable.segment {
-            //     margin: 0 !important;
-            // }
-            // div.homepage {
-            //     width: 100vw;
-            //     min-height: 93vh;
-            //     background: #eeeeee;
-            //     position: relative;
-            // }
-            // div.segment.noframe {
-            //     box-shadow: none;
-            //     border: 0;
-            //     padding: 0;
-            //     margin: 0;
-            // }
-            // i.icon {
-            //     font-size: 1.3em;
-            // }
-            // div.ui.search {
-            //     //แถบย่อเพราะตัวนี้
-            //     i.icon {
-            //         font-size: 0.9em;
-            //     }
-            //     .prompt {
-            //         padding-top: 0.2em;
-            //         padding-bottom: 0.2em;
-            //     }
-            // }
-            //เนฟบา---------------------------------------------------------------------------------------------------------------------
-            //other-profile.html
+            // เนฟบ---------------------------------------------------------------------------------------------------------------
+            .ui.grid {
+                padding: 0 !important;
+                margin: 0!important;
+            }
+            
+            .ui.grid {
+                border: 0;
+                .row {
+                    padding: 0;
+                    .column {
+                        padding: 0;
+                        .ui.menu {
+                            border-radius: 0;
+                            background: #333333;
+                            .item {
+                                color: #ffffff;
+                                border-radius: 0;
+                            }
+                            .item:hover {
+                                background: #F2BB13;
+                            }
+                            .item.nohover:hover {
+                                background: #333333;
+                            }
+                        }
+                        .bars.icon,
+                        .bell.icon,
+                        .user.icon,
+                        .home.icon {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            
+            .pushable.segment {
+                margin: 0 !important;
+            }
+            
+            div.homepage {
+                width: 100vw;
+                min-height: 93vh;
+                background: #eeeeee;
+                position: relative;
+            }
+            
+            div.segment.noframe {
+                box-shadow: none;
+                border: 0;
+                padding: 0;
+                margin: 0;
+            }
+            
+            i.icon {
+                font-size: 1.3em;
+            }
+            
+            div.ui.search {
+                //แถบย่อเพราะตัวนี้
+                i.icon {
+                    font-size: 0.9em;
+                }
+                .prompt {
+                    padding-top: 0.2em;
+                    padding-bottom: 0.2em;
+                }
+            }
+            
+            เนฟบา--------------------------------------------------------------------------------------------------------------------- //other-profile.html
             .profile-data {
                 .profile-image {
                     text-align: center;
@@ -297,6 +303,7 @@
             //otherprofile new
             .profile-data-new {
                 .title {
+                    font-size: 1.265em;
                     z-index: 10;
                     color: white;
                     margin-bottom: 0;
@@ -311,12 +318,18 @@
                 }
                 .profile-image {
                     text-align: center;
-                    .get-image {
-                        width: 10vw;
-                        height: 10vw;
-                        border: 10px solid #fff;
-                        border-radius: 50%;
-                        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    // .get-image {
+                    //     width: 10vw;
+                    //     height: 10vw;
+                    //     border: 10px solid #fff;
+                    //     border-radius: 50%;
+                    //     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    // }
+                }
+                .edit-profile-image {
+                    .ui.olive.button {
+                        border-radius: 10%;
+                        font-size: 1em;
                     }
                 }
                 .username-under-image {
@@ -335,9 +348,10 @@
             }
             
             //otherprofile new
-            // myprofile
+            // editprofile
             .editprofile-data-new {
                 .title {
+                    font-size: 1.265em;
                     z-index: 10;
                     color: white;
                     margin-bottom: 0;
@@ -387,26 +401,23 @@
                 ;
             }
             
-            .edit-profile-image {
-                .ui.olive.button {
-                    border-radius: 10%;
-                    font-size: 1.5em;
-                }
-            }
-            
             .submit-edit-profile-image {
                 .ui.olive.button {
                     border-radius: 10%;
-                    font-size: 1.5em;
+                    font-size: 1em;
                 }
             }
             
             input[type=text] {
-                background-color: #f9fafb;
+                background-color: white;
                 font-size: 1vw;
                 width: 50%;
                 border: none;
                 border-bottom: 1px solid black;
             }
             
-            // myprofile
+            .ui.placeholder.segment {
+                background-color: white;
+            }
+            
+            // editprofile
