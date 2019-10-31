@@ -47,7 +47,7 @@ $('#button-submit').click(function() {
         dataType: "json",
         success: function(result) {
             console.log(result);
-            window.location.href("https://projectstack.now.sh/user/edit")
+            window.location.href = "https://projectstack.now.sh/user/edit";
         },
         error: function(error) {
             console.log(error);

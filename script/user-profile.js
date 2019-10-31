@@ -15,12 +15,7 @@ $('.ui.icon.top.left.pointing.dropdown.button').dropdown({
 $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
 
 
-
-// success: function(result){
-// if (text) {
-//     $("#edit").addClass("d-none");
-// } 
-// if(text) {
-//     $("#edit").removeClass("d-none");
-// }
-// }
+$('#button-edit').click(function() {
+    // location.replace("../page/edit-profile.html");
+    window.location.href = '../page/edit-profile.html';
+})
