@@ -24,7 +24,7 @@ $('#input-submit').click(function() {
         job: allinput[7],
         workplace: allinput[8],
         password: allinput[9],
-        confirmpassword: allinput[10],
+        confirmpassword: allinput[10]
     };
     $.ajax({
         url: "https://projectstack.now.sh/register",
