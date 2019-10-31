@@ -17,7 +17,7 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 
 
 
-$('#edit-submit').click(function() {
+$('#button-submit').click(function() {
     var allinput = [];
     var valid = true;
     $('.user').each(function() {

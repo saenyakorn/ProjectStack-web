@@ -70,14 +70,18 @@
                         align-items: center;
                         flex-direction: column;
                         .Login_image {
+                            width: 100%;
                             font-size: 3vw;
+                            .logo-black {
+                                text-align: center;
+                            }
                         }
                         .Login_username {
                             display: flex;
                             justify-content: center;
                             width: 100%;
                             font-size: 1em;
-                            margin-top: 1.5em;
+                            margin-top: 2em;
                             input[type=text] {
                                 font-size: 1vw;
                                 width: 50%;
@@ -112,7 +116,7 @@
                             color: white;
                             padding: 0 1em;
                             cursor: pointer;
-                            transition: all 1s ease;
+                            transition: all 0.5 ease;
                             width: 50%;
                             height: 2em;
                         }
