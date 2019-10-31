@@ -256,6 +256,7 @@ div.Page_Login .forgot-password:hover {
   background-size: contain;
 }
 
+<<<<<<< HEAD
 .ui.grid {
   padding: 0 !important;
   margin: 0 !important;
@@ -331,6 +332,8 @@ div.ui.search .prompt {
 }
 
 เนฟบา---------------------------------------------------------------------------------------------------------------------
+=======
+>>>>>>> 2c1f1b7205a69eedca38f3687f5d5a677e9e3334
 .profile-data .profile-image {
   text-align: center;
 }

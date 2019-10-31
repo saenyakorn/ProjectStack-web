@@ -31,6 +31,16 @@
   border-radius: 0;
 }
 
+.ui.grid .row .column .ui.menu .item.guest {
+  display: none;
+}
+
+.ui.grid .row .column .ui.menu .item.logged-in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .ui.grid .row .column .ui.menu .item:hover {
   background: #F2BB13;
 }
@@ -238,11 +248,15 @@ div.ui.segment .project-detail .ui.header.centered {
   margin-bottom: 0;
 }
 
-div.ui.segment .project-detail .ui.sub.header.centered {
-  font-size: 1rem;
+div.ui.segment .project-detail div.ui.sub.header.centered {
   margin-top: 0.4em;
   margin-bottom: 0rem;
+  font-size: 1rem;
   color: #A1A1A1;
+}
+
+div.ui.segment .project-detail div.ui.sub.header.centered:hover {
+  color: #38ADEF;
 }
 
 div.ui.segment .project-detail .tag-container {
@@ -319,6 +333,19 @@ div.ui.segment a.ui.segment.project-detail-button div {
   font-size: 1.2rem;
 }
 
+div.ui.segment a.ui.segment.project-detail-button.noleft {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  background-color: #F2BB13;
+}
+
+div.ui.segment a.ui.segment.project-detail-button.noright {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+}
+
 div.ui.segment a.ui.segment.project-detail-button:hover {
   color: #333333;
 }
@@ -330,6 +357,7 @@ div.button-container {
 }
 
 div.button-container div {
+  border: 0;
   margin: 1em;
   background: #66BB6A;
   border-radius: 50em;
@@ -339,5 +367,37 @@ div.button-container div i {
   color: #ffffff;
   margin: 0;
   font-size: 2em;
+}
+
+div.nopadding {
+  padding: 0;
+}
+
+div.nomargin {
+  margin: 0;
+}
+
+div.ui.grid > .column.button-item {
+  padding: 0;
+}
+
+div.ui.yellow.segment.team:hover {
+  background: #F2BB13;
+  color: #ffffff;
+}
+
+div.ui.segment.username > a {
+  color: #333333;
+}
+
+div.ui.segment.username > a:hover {
+  color: #38ADEF;
+}
+
+div.ui.segment.noframe a > p {
+  color: #ffffff;
+  background: #66BB6A;
+  padding: 0.2em 0;
+  border-radius: 5em;
 }
 /*# sourceMappingURL=ustyle.css.map */
