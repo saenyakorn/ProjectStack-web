@@ -10,6 +10,20 @@
     <link rel="stylesheet" href="../style/get-css.css">
     <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
     <title>Project Stack</title>
+    <style>
+        .d-none {
+            display: none;
+        }
+        
+        .font-red {
+            color: #FB5F5F;
+        }
+        
+        .Login_password .invalid {
+            margin-top: -4.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
 
     <script>
         $('#login-click-here').click(function() {
@@ -50,10 +64,14 @@
                     <p>Login</p>
                 </div>
 
-                <div class='Login_username'> <input type='text' class='user' placeholder="USERNAME"></div>
-                <div class='Login_password'><input type='password' class='user' placeholder="PASSWORD"></div>
-
-
+                <div class='Login_username'> <input type='text' class='user' placeholder="USERNAME" required></div>
+                <div class='Login_password'><input type='password' class='user' placeholder="PASSWORD" required></div>
+                <div class="d-none invalid font-red" id="wrong-username">
+                    <h5 class="inline"> <i class="close icon"></i>Wrong username or email</h5>
+                </div>
+                <div class="d-none invalid font-red" id="wrong-password">
+                    <h5 class="inline"> <i class="close icon"></i>Wrong password</h5>
+                </div>
             </div>
             <div class='Login-button'>
                 <div class='button signup'>

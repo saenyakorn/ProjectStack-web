@@ -1,3 +1,9 @@
+//anos
+$('.ui.dropdown').dropdown();
+$('#date').calendar({
+    type: 'date'
+});
+//nut
 $('#input-submit').click(function() {
     var allinput = [];
     var valid = true;
@@ -21,27 +27,19 @@ $('#input-submit').click(function() {
         confirmpassword: allinput[10],
     };
     $.ajax({
-        url: "https://asia-east2-cunex-vote-uat.cloudfunctions.net/api/vote",
+        url: "https://projectstack.now.sh/register",
         type: "POST",
         data: data,
         dataType: "json",
         success: function(result) {
             console.log(result);
             if (result.success) {
-                $("#username-valid").removeClass("d-none");
-                $("#email-valid").removeClass("d-none");
-                $("password-valid").removeClass("d-none");
-
+                $(".valid").removeClass("d-none");
+                $(".valid").addClass("d-none");
+                window.location.href = "https://projectstack.now.sh/";
             } else {
-                $("#username-invalid").addClass("d-none");
-                $("#username-valid").addClass("d-none");
-                $("#email-invalid").addClass("d-none");
-                $("#email-valid").addClass("d-none");
-                $("#password-length").addClass("d-none");
-                $("password-noupper").addClass("d-none");
-                $("password-nolower").addClass("d-none");
-                $("password-unmatch").addClass("d-none");
-                $("password-valid").addClass("d-none");
+                $(".invalid").addClass("d-none");
+                $(".valid").addClass("d-none");
                 if (401 in result.val) {
                     $("#username-invalid").removeClass("d-none");
                 } else {
@@ -55,13 +53,13 @@ $('#input-submit').click(function() {
                 if (403 in result.val) {
                     $("#password-length").removeClass("d-none");
                 } else if (404 in result.val) {
-                    $("password-noupper").removeClass("d-none");
+                    $("#password-noupper").removeClass("d-none");
                 } else if (405 in result.val) {
-                    $("password-nolower").removeClass("d-none");
+                    $("#password-nolower").removeClass("d-none");
                 } else if (406 in result.val) {
-                    $("password-unmatch").removeClass("d-none");
+                    $("#password-unmatch").removeClass("d-none");
                 } else {
-                    $("password-valid").removeClass("d-none");
+                    $("#password-valid").removeClass("d-none");
                 }
             }
         },
@@ -69,4 +67,4 @@ $('#input-submit').click(function() {
             console.log(error);
         }
     });
-})
+});
