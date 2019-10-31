@@ -8,7 +8,15 @@ function getcookie() {
     }
     return y;
 };
-
+const cookie = getcookie();
+$('#username').html(cookie.username)
+if (!("username" in cookie)) {
+    $('.guest').css('display', 'flex');
+    $('.logged-in').css('display', 'none');
+} else {
+    $('.guest').css('display', 'none');
+    $('.logged-in').css('display', 'flex');
+}
 
 //before
 $('.ui.dropdown').dropdown();
@@ -122,10 +130,10 @@ $("#post-button").click(function() {
         } else {
             content.push({ picture: $(this).lastChild.firstChild.src })
         }
-        var cookie = getcookie()
+        var cookiess = getcookie()
         const data = {
             projectName: $('#project-name').val(),
-            ownerID: cookie.username,
+            ownerID: cookiess.username,
             description: $("#description").val(),
             tag: $("#project-tag").val(),
             content: content,

@@ -9,7 +9,15 @@ function getcookie() {
     return y;
 };
 
-
+const cookie = getcookie();
+$('#username').html(cookie.username)
+if (!("username" in cookie)) {
+    $('.guest').css('display', 'flex');
+    $('.logged-in').css('display', 'none');
+} else {
+    $('.guest').css('display', 'none');
+    $('.logged-in').css('display', 'flex');
+}
 //yu
 $('.ui.sidebar').sidebar({
     context: $('.ui.pushable.segment'),
