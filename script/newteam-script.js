@@ -30,12 +30,15 @@ $('.ui.search').search({
 });
 
 //nut
-
+$("#plus-member").click(function()) {
+if ($()) {}
+});
 $("#create").click(function() {
     var valid = true;
     if ($('#teamname').value() == null) return;
 
     var members_array = [];
+    $()
 
     const team_info = {
         teamName: $('#teamname').value(),
