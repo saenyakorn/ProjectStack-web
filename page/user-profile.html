@@ -114,7 +114,7 @@
                                         <p> <b>Name:</b> {{Name}}</p>
                                     </div>
                                     <div class=' full-name output '>
-                                        <p><b>Full name:</b> {{Full-name}}</p>
+                                        <p><b>Full name:</b> {{Fullname}}</p>
                                     </div>
                                     <div class='email-n output '>
                                         <p><b>Email:</b> {{Email}}</p>
@@ -231,16 +231,6 @@
 
 </body>
 
-<script>
-    $('.ui.sidebar').sidebar({
-        context: $('.ui.pushable.segment'),
-        transition: 'overlay'
-    }).sidebar('attach events', '#mobile_item');
-
-    $('.ui.sidebar').sidebar({
-        context: $('.ui.pushable.segment'),
-        transition: 'overlay'
-    }).sidebar('attach events', '#computer_item');
-</script>
+<script src="../script/user-profile.js"></script>
 
 </html>

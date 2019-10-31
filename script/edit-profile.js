@@ -8,6 +8,13 @@ $('.ui.sidebar').sidebar({
     transition: 'overlay'
 }).sidebar('attach events', '#computer_item');
 
+$('.ui.icon.top.left.pointing.dropdown.button').dropdown({
+    clearable: false
+});
+
+$('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
+
+
 
 
 $('#edit-submit').click(function() {
@@ -33,4 +40,16 @@ $('#edit-submit').click(function() {
         resume5: allinput[10],
         link: allinput[11],
     };
+    $.ajax({
+        url: "https://projectstack.now.sh/",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            console.log(result);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    })
 })
