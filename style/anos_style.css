@@ -73,10 +73,14 @@
 
 .fixed-bottom {
   position: fixed;
-  bottom: 10px;
-  width: 220px;
-  left: 50%;
-  margin-left: -110px;
+  bottom: 0;
+  width: 100vw;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+  background-image: linear-gradient(rgba(255, 255, 255, 0), white);
+}
+
+.fixed-bottom .button {
+  margin: 0 0.5rem 0.5rem;
 }
 
 .font-red {
@@ -286,14 +290,14 @@
 }
 
 @media (max-width: 768px) {
-  .pusher #content #project-name {
+  .pusher #content #project-name,
+  .pusher #content #team-name {
     width: 250px;
   }
   .pusher #content .positive.button {
     width: auto;
   }
   .pusher #content .edit {
-    max-width: 500px;
     margin: 2rem 0 !important;
   }
 }
@@ -314,10 +318,10 @@
 
 @media (min-width: 768px) {
   .pusher .newpost {
-    padding: 4rem 8rem;
+    padding: 4rem 4rem;
   }
   .pusher .newteam {
-    padding: 4rem 8rem 25rem;
+    padding: 4rem 4rem 25rem;
   }
   .pusher .newteam .image {
     width: 60px;

@@ -59,10 +59,12 @@
 
 .fixed-bottom {
     position: fixed;
-    bottom: 10px;
-    width: 220px;
-    left: 50%;
-    margin-left: -110px;
+    bottom: 0;
+    width: 100vw;
+    background-image: linear-gradient(rgba(256, 256, 256, 0), rgba(256, 256, 256, 1));
+    .button {
+        margin: 0 0.5rem 0.5rem;
+    }
 }
 
 $red: #FB5F5F;
@@ -244,14 +246,14 @@ $grey: #999999;
             }
         }
         @media (max-width: 768px) {
-            #project-name {
+            #project-name,
+            #team-name {
                 width: 250px;
             }
             .positive.button {
                 width: auto;
             }
             .edit {
-                max-width: 500px;
                 margin: 2rem 0!important;
             }
         }
@@ -269,10 +271,10 @@ $grey: #999999;
     }
     @media (min-width: 768px) {
         .newpost {
-            padding: 4rem 8rem;
+            padding: 4rem 4rem;
         }
         .newteam {
-            padding: 4rem 8rem 25rem;
+            padding: 4rem 4rem 25rem;
             .image {
                 width: 60px;
                 height: 60px;

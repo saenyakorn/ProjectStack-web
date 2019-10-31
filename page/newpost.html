@@ -85,99 +85,87 @@
                             <input id="project-name" class="text-center name" type="text" placeholder="Your Project Name">
                         </div>
                     </div>
-                    <!--div class="centered column row grid">
-                        <div class="ui right labeled left icon input">
-                            <i class="tags icon"></i>
-                            <input type="text" placeholder="Enter tags">
-                            <a class="ui tag label">Add Tag</a>
-                        </div>
-                    </div-->
-                    <div class="row">
-                        <div class="ui selection dropdown left icon" id="tag">
-                            <input name="tag" type="hidden">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">
-                                <i class="tag icon"></i>tag
-                            </div>
-                            <div class="menu"></div>
-                        </div>
-                    </div>
 
-                    <!--exmple title-->
-                    <div class="row title">
-                        <div class="ui transparent icon input">
-                            <input type="text" placeholder="title">
-                            <i class="close link red icon"></i>
-                        </div>
-                    </div>
-                    <!--exmaple paragraph-->
-                    <div class="row ui grid paragraph">
-                        <div class="field">
-                            <i class="close link red icon"></i>
-                        </div>
-                        <div class="ui row form">
-                            <div class="field">
-                                <textarea></textarea>
+                    <div class="equal width row">
+                        <div class="computer only four wide column"></div>
+                        <div class="tablet only three wide column"></div>
+                        <div class="column ui grid">
+                            <!--tag-->
+                            <div class="row">
+                                <div class="ui selection dropdown left icon" id="tag">
+                                    <input name="tag" type="hidden">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">
+                                        <i class="tag icon"></i>tag
+                                    </div>
+                                    <div class="menu"></div>
+                                </div>
+                            </div>
+                            <div class="ui form" style="padding: 0">
+                                <div class="field">
+                                    <label>Project Description</label>
+                                    <textarea rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <!--exmple title-->
+                            <div class="row title">
+                                <div class="ui transparent icon input">
+                                    <input type="text" placeholder="title">
+                                    <i class="close link red icon"></i>
+                                </div>
+                            </div>
+                            <!--exmaple paragraph-->
+                            <div class="row ui grid paragraph">
+                                <div class="field">
+                                    <i class="close link red icon"></i>
+                                </div>
+                                <div class="ui row form">
+                                    <div class="field">
+                                        <textarea></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--example image-->
+                            <div class="row centered one column grid picture">
+                                <div class="field">
+                                    <i class="close link red icon"></i>
+                                </div>
+                                <div class="ui placeholder column">
+                                    <div class="image" style="width: 200px; height: 200px"></div>
+                                </div>
+                            </div>
+                            <!--responsive computer-->
+                            <div class="row equal width row">
+                                <div class="text-center column">
+                                    <button class="ui positive button" id="add-text">
+                                        <i class="icon plus"></i>
+                                        Text
+                                    </button>
+                                </div>
+                                <div class="text-center column">
+                                    <button class="ui positive button" id="add-title">
+                                        <i class="icon heading"></i>
+                                        Title
+                                    </button>
+                                </div>
+                                <div class="text-center column">
+                                    <button class="ui positive button" id="add-image">
+                                        <i class="icon file image"></i>
+                                        Picture
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--example image-->
-                    <div class="row centered one column grid picture">
-                        <div class="field">
-                            <i class="close link red icon"></i>
-                        </div>
-                        <div class="ui placeholder column">
-                            <div class="image" style="width: 200px; height: 200px"></div>
-                        </div>
-                    </div>
-                    <!--responsive mobile-->
-                    <div class="mobile only tablet only row ui three column grid">
-                        <div class="column">
-                            <button class="ui positive button center" id="add-text">
-                                <i class="icon plus"></i>
-                                Text
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button class="ui positive button text-center" id="add-title">
-                                <i class="icon heading"></i>
-                                Title
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button class="ui positive button" id="add-image">
-                                <i class="icon file image"></i>
-                                Picture
-                            </button>
-                        </div>
-                    </div>
-                    <!--responsive computer-->
-                    <div class="computer only row ui six column grid">
-                        <div class="column">
-                            <button class="ui positive button" id="add-text">
-                                <i class="icon plus"></i>
-                                Text
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button class="ui positive button" id="add-title">
-                                <i class="icon heading"></i>
-                                Title
-                            </button>
-                        </div>
-                        <div class="column">
-                            <button class="ui positive button" id="add-image">
-                                <i class="icon file image"></i>
-                                Picture
-                            </button>
-                        </div>
+                        <div class="computer only four wide column"></div>
+                        <div class="tablet only three wide column"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--save button-->
-    <div class="ui right fixed-bottom flex-between">
+    <div class="right fixed-bottom flex-center">
         <button class="large ui button">Cancel</button>
         <button class="large ui blue button" id="post-button">Post</button>
     </div>
