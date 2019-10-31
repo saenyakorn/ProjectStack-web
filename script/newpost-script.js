@@ -1,3 +1,15 @@
+//cookie function
+function getcookie() {
+    var x = document.cookie.split(";");
+    var y = {}
+    for (var i = 0; i < x.length; i++) {
+        var z = x[i].split("=");
+        y[z[0]] = z[1];
+    }
+    return y;
+};
+
+
 //before
 $('.ui.dropdown').dropdown();
 $('#tag').dropdown({
@@ -110,6 +122,25 @@ $("#post-button").click(function() {
         } else {
             content.push({ picture: $(this).lastChild.firstChild.src })
         }
-
-    });
+        var cookie = getcookie()
+        const data = {
+            projectName: $('#project-name').val(),
+            ownerID: cookie.username,
+            description: $("#description").val(),
+            tag: $("#project-tag").val(),
+            content: content,
+        }
+        $.ajax({
+            url: "https://projectstack.now.sh/project/create",
+            data: data,
+            datatype: "json",
+            success: function(result) {
+                console.log(result);
+                window.location.href("https://projectstack.now.sh/project/" + result.projectID)
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    })
 });
