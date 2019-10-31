@@ -50,7 +50,7 @@ $('.ui.sidebar').sidebar({
 var content = [];
 var obj_username = {};
 $.ajax({
-    url: "https://projectstack.no.sh/user/all",
+    url: "https://projectstack.now.sh/user/all",
     type: "POST",
     data: {
         fields: ["username", "email", "profilepic_url"]
@@ -111,13 +111,13 @@ $("#create").click(function() {
         members: members_array
     };
     $.ajax({
-        url: "https://projectstack.no.sh/team/create",
+        url: "https://projectstack.now.sh/team/create",
         type: "POST",
         data: team_info,
         datatype: "json",
         success: function(result) {
             console.log(result);
-            window.location.href = "https://projectstack.no.sh"
+            window.location.href = "https://projectstack.now.sh"
         },
         error: function(error) {
             console.log(error);
