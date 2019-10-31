@@ -207,10 +207,13 @@ div.ui.segment {
         .ui.header.centered {
             font-size: 2rem;
             margin-bottom: 0;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
         }
         div.ui.sub.header.centered {
-            margin-top: 0.4em;
-            margin-bottom: 0rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
             font-size: 1rem;
             color: $darkgray;
             &:hover {
@@ -219,7 +222,7 @@ div.ui.segment {
         }
         .tag-container {
             margin-top: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2.5rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -329,10 +332,27 @@ div.ui.segment.username>a {
 }
 
 div.ui.segment.noframe {
-    a>p {
+    .edit-button {
+        font-weight: 100;
+        margin-top: 1em;
         color: $white;
         background: $green;
         padding: 0.2em 0;
         border-radius: 5em;
+        &:hover {
+            color: $black;
+        }
+    }
+    .request {
+        cursor: pointer;
+        font-weight: 100;
+        margin-top: 1em;
+        color: $white;
+        background: $red;
+        padding: 0.2em 0;
+        border-radius: 5em;
+        &:hover {
+            color: $black;
+        }
     }
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../Semantic-UI-CSS-master/semantic.min.css">
     <link rel="stylesheet" href="../style/ustyle.css">
     <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js" integrity="sha256-MPgtcamIpCPKRRm1ppJHkvtNBAuE71xcOM+MmQytXi8=" crossorigin="anonymous"></script>
     <title>Project Stack</title>
 </head>
 
@@ -19,8 +20,23 @@
         <div class="ui text loader">Loading</div>
     </div>-->
 
+    <!-- modal request -->
+    <div class="ui tiny modal request">
+        <h2 class="ui header center aligned">Join Request</h2>
+        <div class="content">
+            <h4 class="ui header">Individual</h4>
+            <div class="ui segments" id="request-indiv-generator">
+                <!-- team generator card -->
+            </div>
+            <h4 class="ui header">Team</h4>
+            <div class="ui segments" id="request-team-generator">
+                <!-- team generator card -->
+            </div>
+        </div>
+    </div>
+
     <!-- modal -->
-    <div class="ui modal">
+    <div class="ui tiny modal join">
         <h2 class="ui header center aligned">Select Your Team</h2>
         <div class="content">
             <div class="ui segments" id="team-generator">
@@ -93,38 +109,30 @@
         <div class="pusher">
             <div id="content" class="ui segment">
                 <div class="ui grid">
+
                     <!-- project detail -->
                     <div class="ui eleven wide computer sixteen wide mobile column container">
                         <div class="ui segment project-detail">
-                            <h1 class="ui header centered">{{projectName}}</h1>
-                            <a href="/profile/{{ownerUsername}}">
-                                <div class="ui sub header centered">
-                                    {{ownerUsername}}
-                                </div>
+                            <h1 class="ui header centered projectName"></h1>
+                            <a href="/profile/ownerID" class="ownerID">
+                                <div class="ui sub header centered ownerID"></div>
                             </a>
                             <p class="tag-container">
                                 <a href="#" class="tag">tag</a>
                             </p>
                             <div class="project-detail-container" id="project-detail-container">
-                                <h2 class="title">Title</h2>
-                                <p class="paragraph">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                                <img class="ui centered Huge image" src="/images/placeholder.png">
+                                <!-- content genertaor -->
                             </div>
                         </div>
                         <div class="ui grid">
-                            <div class="eight wide column button-item">
+                            <div class="eight wide column button-item" onclick="JoinIndiv()">
                                 <a href="#" class="ui segment project-detail-button noright">
                                     <div>join</div>
                                 </a>
                             </div>
                             <div class="eight wide column button-item" onclick="modalshow()">
                                 <a href="#" class="ui segment project-detail-button noleft">
-                                    <div>join as group</div>
+                                    <div>join as team</div>
                                 </a>
                             </div>
 
@@ -132,7 +140,7 @@
 
                     </div>
                     <!-- container -->
-                    <div class="ui five wide column computer only container">
+                    <div class="ui five wide computer sixteen wide mobile column container">
                         <div class="ui segment">
                             <h1 class="ui header">Trending</h1>
                             <div id="trending-generator">
@@ -145,13 +153,15 @@
                                 <!-- collaborator card generator-->
                             </div>
                         </div>
-                        <div class="ui segment noframe">
-                            <a href="../page/newpost.html">
+                        <a href="../page/newpost.html">
+                            <div class="ui segment noframe">
                                 <p class="ui header center aligned edit-button">edit</p>
-                            </a>
+                            </div>
+                        </a>
+                        <div class="ui segment noframe" onclick="modalshowrequest()">
+                            <p class="ui header center aligned request">pendding request</p>
                         </div>
                     </div>
-
 
                 </div>
             </div>

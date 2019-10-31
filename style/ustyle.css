@@ -247,11 +247,14 @@ div.ui.segment .project-detail {
 div.ui.segment .project-detail .ui.header.centered {
   font-size: 2rem;
   margin-bottom: 0;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.ui.segment .project-detail div.ui.sub.header.centered {
-  margin-top: 0.4em;
-  margin-bottom: 0rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   font-size: 1rem;
   color: #A1A1A1;
 }
@@ -262,7 +265,7 @@ div.ui.segment .project-detail div.ui.sub.header.centered:hover {
 
 div.ui.segment .project-detail .tag-container {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,10 +398,30 @@ div.ui.segment.username > a:hover {
   color: #38ADEF;
 }
 
-div.ui.segment.noframe a > p {
+div.ui.segment.noframe .edit-button {
+  font-weight: 100;
+  margin-top: 1em;
   color: #ffffff;
   background: #66BB6A;
   padding: 0.2em 0;
   border-radius: 5em;
+}
+
+div.ui.segment.noframe .edit-button:hover {
+  color: #333333;
+}
+
+div.ui.segment.noframe .request {
+  cursor: pointer;
+  font-weight: 100;
+  margin-top: 1em;
+  color: #ffffff;
+  background: #FB5F5F;
+  padding: 0.2em 0;
+  border-radius: 5em;
+}
+
+div.ui.segment.noframe .request:hover {
+  color: #333333;
 }
 /*# sourceMappingURL=ustyle.css.map */
