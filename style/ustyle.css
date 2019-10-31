@@ -158,12 +158,13 @@ div.ui.segment.project-card .project-row.top {
 
 div.ui.segment.project-card .project-row .item.project-name {
   margin-right: 0.3em;
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 500;
 }
 
 div.ui.segment.project-card .project-row .item.project-name a {
   color: #333333;
+  line-height: 1.3em;
 }
 
 div.ui.segment.project-card .project-row .item.project-name a:hover {

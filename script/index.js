@@ -1,3 +1,5 @@
+/* setting semantic ui */
+
 $('.ui.sidebar').sidebar({
     context: $('.ui.pushable.segment'),
     transition: 'overlay'
@@ -12,35 +14,65 @@ $('.ui.icon.top.left.pointing.dropdown.button').dropdown({
     clearable: false
 });
 
-$('#project-generator').html("");
-$('#trending-generator').html("");
 $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
 
-$.get('./generator/project-card.html', (result) => {
-    for (var i = 0; i < 20; i++) {
-        $('#project-generator').append(result);
-    }
-});
+/* end of setting semantic ui */
 
+$('#project-generator').html("");
+$('#trending-generator').html("");
 $.get('./generator/trending-card.html', (result) => {
     for (var i = 0; i < 5; i++) {
         $('#trending-generator').append(result);
     }
 });
 
-data = {
-    batch: 5
+function addMoreCard() {
+    data = {
+        batch: 5
+    }
+    $.ajax({
+        url: "https://projectstack.now.sh/project/all",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            console.log("success", result)
+            result.forEach((val, inx, arr) => {
+                $.get('./generator/project-card-mustache.html', (html) => {
+                    var output = Mustache.render(html, val);
+                    $('#project-generator').append(output);
+                })
+            })
+            $('.ui.active.dimmer').css("display", "none");
+        },
+        error: function(error) {
+            console.log("error", error)
+        }
+    })
 }
 
-$.ajax({
-    url: "https://projectstack.now.sh/project/all",
-    type: "POST",
-    data: data,
-    dataType: "json",
-    success: function(result) {
-        console.log("success", result)
-    },
-    error: function(error) {
-        console.log("error", error)
+function TrendingCard() {
+    data = {
+        batch: 5
     }
-})
+    $.ajax({
+        url: "https://projectstack.now.sh/trending/all",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            console.log("success", result)
+            for (var i = 0; i < result.length; i++) {
+                $.get('./generator/trending-card-mustache.html', (html) => {
+                    var output = Mustache.render(html, result[i]);
+                    $('#trending-generator').append(output);
+                });
+            }
+        },
+        error: function(error) {
+            console.log("error", error)
+        }
+    })
+}
+
+addMoreCard();
