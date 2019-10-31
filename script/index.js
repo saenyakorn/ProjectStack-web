@@ -31,10 +31,9 @@ function getcookie() {
 function addMoreCard() {
     $('.ui.active.dimmer').css("display", "flex");
     data = {
-            currentsize: $('.ui.segment.project-card').length,
-            batch: 5
-        }
-        //console.log(data.currentsize, data.batch);
+        currentsize: $('.ui.segment.project-card').length,
+        batch: 5
+    }
     $.ajax({
         url: "https://projectstack.now.sh/project/all",
         type: "POST",
