@@ -433,6 +433,10 @@ div.ui.search .prompt {
   margin-bottom: 1.5em;
 }
 
+.editprofile-data-new .ui.segment:first-child {
+  margin-top: 0 !important;
+}
+
 .editprofile-data-new .title {
   font-size: 1.265em;
   z-index: 10;
@@ -442,6 +446,10 @@ div.ui.search .prompt {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-color: #F2BB13;
+}
+
+.editprofile-data-new .head-of-button-summit {
+  background-color: #EEEEEE;
 }
 
 .editprofile-data-new .title-information.ui.placeholder.segment {
@@ -492,7 +500,7 @@ div.edit.edit-profile.output {
 
 .submit-edit-profile-image .ui.olive.button {
   border-radius: 10%;
-  font-size: 0.8em;
+  font-size: 1.3em;
 }
 
 input[type=text] {

@@ -356,6 +356,9 @@
             //otherprofile new
             // editprofile
             .editprofile-data-new {
+                .ui.segment:first-child {
+                    margin-top: 0!important;
+                }
                 .title {
                     font-size: 1.265em;
                     z-index: 10;
@@ -365,6 +368,9 @@
                     border-bottom-left-radius: 0;
                     border-bottom-right-radius: 0;
                     background-color: #F2BB13;
+                }
+                .head-of-button-summit {
+                    background-color: #EEEEEE;
                 }
                 .title-information.ui.placeholder.segment {
                     border-top-left-radius: 0;
@@ -411,7 +417,7 @@
             .submit-edit-profile-image {
                 .ui.olive.button {
                     border-radius: 10%;
-                    font-size: 0.8em;
+                    font-size: 1.3em;
                 }
             }
             

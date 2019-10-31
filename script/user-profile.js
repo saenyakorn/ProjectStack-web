@@ -13,5 +13,3 @@ $('.ui.icon.top.left.pointing.dropdown.button').dropdown({
 });
 
 $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
-
-$(#edit)
