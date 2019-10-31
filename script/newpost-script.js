@@ -98,18 +98,17 @@ $("#add-image").click(function() {
 $(".close.link.red.icon").click(function() {
     $("#content-column").remove($(this).parentNode.parentNode);
 });
-
 $("#post-button").click(function() {
     if ($('#project-name').val() == null) return;
     if ($('#description').val() == null) return;
     var content = [];
     $(".all-content").each(function() {
         if ($(this).hasClass("title")) {
-
+            content.push({ title: $(this).firstChild.firstChild.val() });
         } else if ($(this).hasClass("paragraph")) {
-
+            content.push({ paragraph: $(this).lastChild.firstChild.firstChild.val() });
         } else {
-
+            content.push({ picture: $(this).lastChild.firstChild.src })
         }
 
     });

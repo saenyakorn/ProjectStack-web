@@ -10,6 +10,7 @@ $('#input-submit').click(function() {
     $('.user').each(function() {
         if ($(this).prop('required') && $(this).val() == null)
             valid = false;
+
         allinput.push($(this).val());
     })
     if (!valid) return;
