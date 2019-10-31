@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../Semantic-UI-CSS-master/semantic.min.css">
     <link rel="stylesheet" href="../style/get-css.css">
     <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="../script/login-script.js"></script>
     <title>Project Stack</title>
     <style>
         .d-none {
@@ -24,33 +25,6 @@
             margin-bottom: 1.5rem;
         }
     </style>
-
-    <script>
-        $('#login-click-here').click(function() {
-            var allinput = [];
-            $('.user').each(function() {
-                allinput.push(this.value);
-            })
-            const data = {
-                username: allinput[0],
-                password: allinput[1],
-            }
-            $.ajax({
-                url: "https://asia-east2-cunex-vote-uat.cloudfunctions.net/api/vote",
-                type: "POST",
-                data: data,
-                dataType: "json",
-                success: function(result) {
-                    console.log(result);
-                    location.replace("https://www.w3schools.com");
-                },
-                error: function(error) {
-                    console.log(error);
-                }
-            })
-        })
-    </script>
-
 </head>
 
 <body>

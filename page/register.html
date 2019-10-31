@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!--script src="../Semantic-UI-CSS-master/semantic.min.js"></script-->
     <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    <script src="../script/register-script.js"></script>
     <title>Project Stack</title>
 </head>
 
@@ -104,47 +105,5 @@
         </button>
     </div>
 </body>
-
-<script>
-    $('.ui.dropdown').dropdown();
-    $('#date').calendar({
-        type: 'date'
-    });
-    $('#input-submit').click(function() {
-        var allinput = [];
-        var valid = true;
-        $('.user').each(function() {
-            if ($(this).prop('required') && $(this).value == null)
-                valid = false;
-            allinput.push(this.value);
-        })
-        if (!valid) return;
-        const data = {
-            username: allinput[0],
-            title: allinput[1],
-            firstname: allinput[2],
-            lastname: allinput[3],
-            birthdate: allinput[4],
-            email: allinput[5],
-            tel: allinput[6],
-            job: allinput[7],
-            workplace: allinput[8],
-            password: allinput[9],
-            confirmpassword: allinput[10],
-        }
-        $.ajax({
-            url: "https://asia-east2-cunex-vote-uat.cloudfunctions.net/api/vote",
-            type: "POST",
-            data: data,
-            dataType: "json",
-            success: function(result) {
-                console.log(result);
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        })
-    })
-</script>
 
 </html>
