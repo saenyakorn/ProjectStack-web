@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="../style/get-css.css">
     <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
     <title>Project Stack</title>
-
 </head>
 
 <body>
+
+    <!-- Navigation Bar -->
     <div class="ui grid menu">
 
         <div class="computer only row">
             <div class="column">
                 <div class="ui menu">
-                    <a class="item left"><i class="home icon"></i></i></a>
+                    <a id="computer_item" class="item left"><i class="bars icon"></i></a>
                     <a class="item nohover">
                         <div class="ui category search">
                             <div class="ui icon input">
@@ -30,8 +31,18 @@
                             <div class="results"></div>
                         </div>
                     </a>
-                    <a class="item"><i class="bell icon"></i></a>
-                    <a class="item"><i class="user icon"></i></a>
+                    <a href="#" class="item logged-in"><i class="bell icon"></i></a>
+                    <a href="#" class="item profile logged-in">
+                        <div class="ui icon top left pointing dropdown button proflie">
+                            <i class="user icon"></i><span style="margin:0 1em" id="username">username</span>
+                            <div class="menu">
+                                <div class="item" onclick='window.location.href="./page/user-profile.html"'>My Account</div>
+                                <div class="item" onclick='window.location.href="./page/Login.html"'>Log out</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./page/Login.html" class="item guest"><span class="sign-in">sign in</span></a>
+                    <a href="./page/register.html" class="item guest"><span class="sign-up">sign up</span></a>
                 </div>
             </div>
         </div>
@@ -40,7 +51,18 @@
             <div class="column">
                 <div class="ui menu">
                     <a id="mobile_item" class="item left"><i class="bars icon"></i></a>
-                    <a class="item"><i class="bell icon"></i></a>
+                    <a class="item logged-in"><i class="bell icon"></i></a>
+                    <a href="#" class="item profile logged-in">
+                        <div class="ui icon top left pointing dropdown button proflie">
+                            <i class="user icon"></i><span style="margin:0 1em" id="username">username</span>
+                            <div class="menu">
+                                <div class="item" onclick='window.location.href="./page/user-profile.html"'>My Account</div>
+                                <div class="item" onclick='window.location.href="./page/Login.html"'>Log out</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./page/Login.html" class="item guest"><span class="sign-in">sign in</span></a>
+                    <a href="./page/register.html" class="item guest"><span class="sign-up">sign up</span></a>
                 </div>
             </div>
         </div>
@@ -49,24 +71,19 @@
 
     <div class="ui pushable segment">
         <div class="ui sidebar vertical menu">
-            <a class="item"><i class="home icon"></i> Home</a>
-            <a class="item"><i class="search icon"></i>Search</a>
-            <a class="item"><i class="user icon"></i>Account</a>
+            <a href="./index.html" class="item"><i class="home icon"></i> Home</a>
+            <a href="./page/user-profile.html" class="item"><i class="user icon"></i>My Account</a>
+            <a href="./page/newteam.html" class="item"><i class="users icon"></i>Create Team</a>
+            <a href="./page/newpost.html" class="item"><i class="edit icon"></i>Create Post</a>
         </div>
         <div class="pusher">
-            <div id="orther-profile" class="profile-data-new ui segment" style="background-color: #EEEEEE;">
-
-
-
-
-
-
-
-            </div>
 
         </div>
     </div>
+
+
 </body>
+
 <script src="../script/index.js"></script>
 
 </html>

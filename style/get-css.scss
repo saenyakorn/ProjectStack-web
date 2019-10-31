@@ -253,7 +253,8 @@
                 }
             }
             
-            เนฟบา--------------------------------------------------------------------------------------------------------------------- //other-profile.html
+            //          เนฟบา--------------------------------------------------------------------------------------------------------------------- //
+            //other-profile.html
             .profile-data {
                 .profile-image {
                     text-align: center;
@@ -318,6 +319,7 @@
                 }
                 .profile-image {
                     text-align: center;
+                    margin-top: 2em;
                     // .get-image {
                     //     width: 10vw;
                     //     height: 10vw;
@@ -329,14 +331,14 @@
                 .edit-profile-image {
                     .ui.olive.button {
                         border-radius: 10%;
-                        font-size: 1em;
+                        font-size: 0.8em;
                     }
                 }
                 .username-under-image {
                     font-size: 1.2em;
                 }
                 .output {
-                    margin: 1em 2em 2.5em 1.5em;
+                    margin: 1.5em 2em 2.5em 1.5em;
                 }
                 .ui.grid>.column:not(.row) {
                     padding-top: 0rem;
@@ -365,6 +367,7 @@
                     border-top-right-radius: 0;
                 }
                 .profile-image {
+                    margin-top: 2em;
                     text-align: center;
                     .user-image {
                         width: 10vw;
@@ -378,7 +381,7 @@
                     font-size: 1.2em;
                 }
                 .output {
-                    margin: 1em 2em 2.5em 1.5em;
+                    margin: 1.5em 2em 2.5em 1.5em;
                 }
                 .ui.grid>.column:not(.row) {
                     padding-top: 0rem;
@@ -404,7 +407,7 @@
             .submit-edit-profile-image {
                 .ui.olive.button {
                     border-radius: 10%;
-                    font-size: 1em;
+                    font-size: 0.8em;
                 }
             }
             
@@ -413,11 +416,15 @@
                 font-size: 1vw;
                 width: 50%;
                 border: none;
-                border-bottom: 1px solid black;
+                //border-bottom: 1px solid black;
             }
             
             .ui.placeholder.segment {
                 background-color: white;
+            }
+            
+            .ui.segment {
+                border: 0;
             }
             
             // editprofile

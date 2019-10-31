@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -256,7 +255,6 @@ div.Page_Login .forgot-password:hover {
   background-size: contain;
 }
 
-<<<<<<< HEAD
 .ui.grid {
   padding: 0 !important;
   margin: 0 !important;
@@ -331,14 +329,10 @@ div.ui.search .prompt {
   padding-bottom: 0.2em;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
-=======
->>>>>>> 2c1f1b7205a69eedca38f3687f5d5a677e9e3334
 .profile-data .profile-image {
   text-align: center;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .profile-image .get-image {
   width: 150px;
   height: 150px;
@@ -348,12 +342,10 @@ div.ui.search .prompt {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .output {
   margin: 1em 2em 2.5em 1.5em;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .title {
   height: 1.5em;
   margin-left: 2em;
@@ -363,28 +355,23 @@ div.ui.search .prompt {
   border-radius: 8%;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .title-project {
   background-color: #F2BB13;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .data {
   margin-top: -1em;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .title-information.ui.placeholder.segment {
   border-radius: 5%;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .title-information {
   background-color: #F2BB13;
   font-size: 1em;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .text-information {
   width: 100%;
   background-color: #ffffff;
@@ -393,7 +380,6 @@ div.ui.search .prompt {
       align-self: center;
 }
 
-เนฟบา---------------------------------------------------------------------------------------------------------------------
 .profile-data .title-resume {
   background-color: #F2BB13;
   font-size: 1em;
@@ -417,11 +403,12 @@ div.ui.search .prompt {
 
 .profile-data-new .profile-image {
   text-align: center;
+  margin-top: 2em;
 }
 
 .profile-data-new .edit-profile-image .ui.olive.button {
   border-radius: 10%;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .profile-data-new .username-under-image {
@@ -429,7 +416,7 @@ div.ui.search .prompt {
 }
 
 .profile-data-new .output {
-  margin: 1em 2em 2.5em 1.5em;
+  margin: 1.5em 2em 2.5em 1.5em;
 }
 
 .profile-data-new .ui.grid > .column:not(.row) {
@@ -458,6 +445,7 @@ div.ui.search .prompt {
 }
 
 .editprofile-data-new .profile-image {
+  margin-top: 2em;
   text-align: center;
 }
 
@@ -475,7 +463,7 @@ div.ui.search .prompt {
 }
 
 .editprofile-data-new .output {
-  margin: 1em 2em 2.5em 1.5em;
+  margin: 1.5em 2em 2.5em 1.5em;
 }
 
 .editprofile-data-new .ui.grid > .column:not(.row) {
@@ -499,7 +487,7 @@ div.edit.edit-profile.output {
 
 .submit-edit-profile-image .ui.olive.button {
   border-radius: 10%;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 input[type=text] {
@@ -507,10 +495,13 @@ input[type=text] {
   font-size: 1vw;
   width: 50%;
   border: none;
-  border-bottom: 1px solid black;
 }
 
 .ui.placeholder.segment {
   background-color: white;
+}
+
+.ui.segment {
+  border: 0;
 }
 /*# sourceMappingURL=get-css.css.map */
