@@ -107,32 +107,33 @@
                                     <textarea rows="5"></textarea>
                                 </div>
                             </div>
-
-                            <!--exmple title-->
-                            <div class="row title">
-                                <div class="ui transparent icon input">
-                                    <input type="text" placeholder="title">
-                                    <i class="close link red icon"></i>
-                                </div>
-                            </div>
-                            <!--exmaple paragraph-->
-                            <div class="row ui grid paragraph">
-                                <div class="field">
-                                    <i class="close link red icon"></i>
-                                </div>
-                                <div class="ui row form">
-                                    <div class="field">
-                                        <textarea></textarea>
+                            <div id="colum-content">
+                                <!--exmple title-->
+                                <div class="row title">
+                                    <div class="ui transparent icon input">
+                                        <input type="text" placeholder="title">
+                                        <i class="close link red icon"></i>
                                     </div>
                                 </div>
-                            </div>
-                            <!--example image-->
-                            <div class="row centered one column grid picture">
-                                <div class="field">
-                                    <i class="close link red icon"></i>
+                                <!--exmaple paragraph-->
+                                <div class="row ui grid paragraph">
+                                    <div class="field">
+                                        <i class="close link red icon"></i>
+                                    </div>
+                                    <div class="ui row form">
+                                        <div class="field">
+                                            <textarea></textarea>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="ui placeholder column">
-                                    <div class="image" style="width: 200px; height: 200px"></div>
+                                <!--example image-->
+                                <div class="row centered one column grid picture">
+                                    <div class="field">
+                                        <i class="close link red icon"></i>
+                                    </div>
+                                    <div class="ui placeholder column">
+                                        <div class="image" style="width: 200px; height: 200px"></div>
+                                    </div>
                                 </div>
                             </div>
                             <!--responsive computer-->
@@ -172,82 +173,6 @@
 
 </body>
 
-<script>
-    $('.ui.dropdown').dropdown();
-    $('#tag').dropdown({
-        values: [{
-            name: 'Education',
-            value: 'Education'
-        }, {
-            name: 'Medical',
-            value: 'Medical'
-        }, {
-            name: 'Technology',
-            value: 'Technology'
-        }, {
-            name: 'Software',
-            value: 'Software'
-        }, {
-            name: 'Engineering',
-            value: 'Engineering'
-        }, {
-            name: 'Experiment',
-            value: 'Experiment'
-        }, {
-            name: 'Theory',
-            value: 'Theory'
-        }, {
-            name: 'Art',
-            value: 'Art'
-        }, {
-            name: 'Archetechure',
-            value: 'Archetechure'
-        }, {
-            name: 'Mechanic',
-            value: 'Mechanic'
-        }, {
-            name: 'Language',
-            value: 'Language'
-        }, {
-            name: 'Culture',
-            value: 'Culture'
-        }, {
-            name: 'Food',
-            value: 'Food'
-        }, {
-            name: 'Survice',
-            value: 'Survice'
-        }, {
-            name: 'Survey',
-            value: 'Survey'
-        }, {
-            name: 'Music',
-            value: 'Music'
-        }, {
-            name: 'etc.',
-            value: 'etc'
-        }]
-    });
-    $('.ui.sidebar').sidebar({
-        context: $('.ui.pushable.segment'),
-        transition: 'overlay'
-    }).sidebar('attach events', '#mobile_item');
-
-    $('.ui.sidebar').sidebar({
-        context: $('.ui.pushable.segment'),
-        transition: 'overlay'
-    }).sidebar('attach events', '#mobile_item');
-
-    $('.ui.sidebar').sidebar({
-        context: $('.ui.pushable.segment'),
-        transition: 'overlay'
-    }).sidebar('attach events', '#computer_item');
-
-    $('.ui.icon.top.left.pointing.dropdown.button').dropdown({
-        clearable: false
-    });
-
-    $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
-</script>
+<script src="../script/newpost-script.js"></script>
 
 </html>
