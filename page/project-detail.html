@@ -13,6 +13,12 @@
 </head>
 
 <body>
+
+    <!-- loader -->
+    <!--<div class="ui active dimmer">
+        <div class="ui text loader">Loading</div>
+    </div>-->
+
     <!-- modal -->
     <div class="ui modal">
         <h2 class="ui header center aligned">Select Your Team</h2>
@@ -49,7 +55,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="../page/Login.html" class="item guest"><span class="sign-in">sign in</span></a>
+                    <a href="../page/Login.html" class="item guest"><span class="sign-in">log in</span></a>
                     <a href="../page/register.html" class="item guest"><span class="sign-up">sign up</span></a>
                 </div>
             </div>
@@ -69,7 +75,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="../page/Login.html" class="item guest"><span class="sign-in">sign in</span></a>
+                    <a href="../page/Login.html" class="item guest"><span class="sign-in">log in</span></a>
                     <a href="../page/register.html" class="item guest"><span class="sign-up">sign up</span></a>
                 </div>
             </div>
@@ -90,24 +96,16 @@
                     <!-- project detail -->
                     <div class="ui eleven wide computer sixteen wide mobile column container">
                         <div class="ui segment project-detail">
-                            <h1 class="ui header centered">Project Name</h1>
-                            <a href="">
+                            <h1 class="ui header centered">{{projectName}}</h1>
+                            <a href="/profile/{{ownerUsername}}">
                                 <div class="ui sub header centered">
-                                    Owner
+                                    {{ownerUsername}}
                                 </div>
                             </a>
                             <p class="tag-container">
                                 <a href="#" class="tag">tag</a>
                             </p>
                             <div class="project-detail-container" id="project-detail-container">
-                                <h2 class="title">Title</h2>
-                                <p class="paragraph">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                                <img class="ui centered Huge image" src="/images/placeholder.png">
                                 <h2 class="title">Title</h2>
                                 <p class="paragraph">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
@@ -133,7 +131,7 @@
                         </div>
 
                     </div>
-                    <!-- trending container -->
+                    <!-- container -->
                     <div class="ui five wide column computer only container">
                         <div class="ui segment">
                             <h1 class="ui header">Trending</h1>

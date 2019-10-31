@@ -35,7 +35,6 @@ function addMoreCard() {
                     $('#project-generator').append(output);
                 })
             })
-            $('.ui.active.dimmer').css("display", "none");
         },
         error: function(error) {
             console.log("error", error)
