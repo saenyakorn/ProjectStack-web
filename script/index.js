@@ -34,6 +34,7 @@ function addMoreCard() {
         currentsize: $('.ui.segment.project-card').length,
         batch: 5
     }
+    console.log($('.ui.segment.project-card').length);
     $.ajax({
         url: "https://projectstack.now.sh/project/all",
         type: "POST",
@@ -48,6 +49,9 @@ function addMoreCard() {
                 })
                 $('.ui.active.dimmer').css("display", "none");
             })
+            if (result.length == 0) {
+                $('.ui.active.dimmer').css("display", "none");
+            }
         },
         error: function(error) {
             console.log("error", error)
