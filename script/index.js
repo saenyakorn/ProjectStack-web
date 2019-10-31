@@ -27,3 +27,20 @@ $.get('./generator/trending-card.html', (result) => {
         $('#trending-generator').append(result);
     }
 });
+
+data = {
+    batch: 5
+}
+
+$.ajax({
+    url: "https://projectstack.now.sh/project/all",
+    type: "POST",
+    data: data,
+    dataType: "json",
+    success: function(result) {
+        console.log("success", result)
+    },
+    error: function(error) {
+        console.log("error", error)
+    }
+})
