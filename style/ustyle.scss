@@ -31,6 +31,12 @@ $white: #ffffff;
                     color: $white;
                     border-radius: 0;
                 }
+                .item.guest {
+                    display: none;
+                }
+                .item.logged-in {
+                    display: flex;
+                }
                 .item:hover {
                     background: $yellow;
                 }
@@ -201,11 +207,14 @@ div.ui.segment {
             font-size: 2rem;
             margin-bottom: 0;
         }
-        .ui.sub.header.centered {
-            font-size: 1rem;
+        div.ui.sub.header.centered {
             margin-top: 0.4em;
             margin-bottom: 0rem;
+            font-size: 1rem;
             color: $darkgray;
+            &:hover {
+                color: $aqua;
+            }
         }
         .tag-container {
             margin-top: 1rem;
@@ -260,6 +269,17 @@ div.ui.segment {
             color: inherit;
             font-size: 1.2rem;
         }
+        &.noleft {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left: 0;
+            background-color: $yellow;
+        }
+        &.noright {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-right: 0;
+        }
         &:hover {
             color: $black;
         }
@@ -271,6 +291,7 @@ div.button-container {
     right: 0;
     bottom: 0;
     div {
+        border: 0;
         margin: 1em;
         background: $green;
         border-radius: 50em;
@@ -279,5 +300,38 @@ div.button-container {
             margin: 0;
             font-size: 2em;
         }
+    }
+}
+
+div.nopadding {
+    padding: 0;
+}
+
+div.nomargin {
+    margin: 0;
+}
+
+div.ui.grid>.column.button-item {
+    padding: 0;
+}
+
+div.ui.yellow.segment.team:hover {
+    background: $yellow;
+    color: $white;
+}
+
+div.ui.segment.username>a {
+    color: $black;
+    &:hover {
+        color: $aqua;
+    }
+}
+
+div.ui.segment.noframe {
+    a>p {
+        color: $white;
+        background: $green;
+        padding: 0.2em 0;
+        border-radius: 5em;
     }
 }
