@@ -260,7 +260,7 @@ const cookie = getcookie();
 if (!("username" in cookie)) {
     $('.guest').css('display', 'flex');
     $('.logged-in').css('display', 'none');
-    $('.ui.grid.button-container').css('display', 'flex');
+    $('.ui.grid.button-container').css('display', 'none');
     $('.edit').css('display', 'none');
     $('.request').css('display', 'none');
 } else {
