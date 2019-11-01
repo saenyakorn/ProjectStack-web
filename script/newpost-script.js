@@ -129,6 +129,7 @@ $("#add-image").click(function() {
 });
 
 $("#post-button").click(function() {
+    console.log($('#project-name').val(),$('#description').val());
     if ($('#project-name').val() == null) return;
     if ($('#description').val() == null) return;
     var content = [];
@@ -140,27 +141,29 @@ $("#post-button").click(function() {
         } else {
             content.push({ picture: $(this).find(".cont").src })
         }
-        var cookiess = getcookie()
-        const data = {
-            projectName: $('#project-name').val(),
-            ownerID: cookiess.username,
-            description: $("#description").val(),
-            tag: $("#project-tag").val(),
-            content: content,
-        }
-        $.ajax({
-            url: "https://projectstack.now.sh/project/create",
-            data: data,
-            datatype: "json",
-            success: function(result) {
-                console.log(result);
-                window.location.href = "https://projectstack.now.sh/project/" + result.projectID;
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
     })
+
+    var cookiess = getcookie()
+    const data = {
+        projectName: $('#project-name').val(),
+        ownerID: cookiess.username,
+        description: $("#description").val(),
+        tag: $("#project-tag").val(),
+        content: content,
+    }
+    $.ajax({
+        url: "/project/create",
+        type: "POST",
+        data: data,
+        datatype: "json",
+        success: function(result) {
+            console.log(result);
+            window.location.href = "/project/" + result.projectID;
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
 });
 $("#cancel-button").click(function() {
     window.history.back();

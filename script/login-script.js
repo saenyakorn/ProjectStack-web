@@ -22,14 +22,14 @@ $('#login-click-here').click(function() {
         password: allinput[1],
     };
     $.ajax({
-        url: "https://projectstack.now.sh/login",
+        url: "/login",
         type: "POST",
         data: data,
         dataType: "json",
         success: function(result) {
             console.log(result);
             if (result.success) {
-                window.location.href = "https://projectstack.now.sh/";
+                window.location.href = "/";
             } else {
                 if (result.val.includes(402)) {
                     console.log($("#wrong-username"));

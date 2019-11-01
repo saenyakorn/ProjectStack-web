@@ -38,5 +38,5 @@ if (!("username" in cookie)) {
 
 $('#button-edit').click(function() {
     // location.replace("../page/edit-profile.html");
-    window.location.href = '../page/edit-profile.html';
+    window.location.href = '/editprofile';
 })

@@ -35,7 +35,7 @@ function getQueryStringArgs() {
 }
 
 function getProjectID() {
-    var url = "https://projectstack.now.sh/project/pvJRlOA7i7uZ9ZIAmEEi";
+    var url = window.location.href;
     var items = url.split('/');
     var last = items[items.length - 1];
     if (last.includes('?')) {
@@ -119,7 +119,7 @@ function TeamCard() {
 
 function ProjectDetail() {
     data = {
-        projectID: "pvJRlOA7i7uZ9ZIAmEEi"
+        projectID: projectID
     }
     $.ajax({
         url: "https://projectstack.now.sh/project/info",
@@ -282,11 +282,11 @@ if (!("username" in cookie)) {
                 $('.edit').css('display', 'block');
                 $('.request').css('display', 'block');
                 $('.ui.grid.button-container').css('display', 'none');
-            } else if (cookie.username in result.members) {
+            } else if (result.members.includes(cookie.username)) {
                 $('.edit').css('display', 'none');
                 $('.request').css('display', 'none');
                 $('.ui.grid.button-container').css('display', 'none');
-            } else if (cookie.username in requests) {
+            } else if (result.requests.includes(cookie.username)) {
                 $('.edit').css('display', 'none');
                 $('.request').css('display', 'none');
                 $('.ui.grid.button-container').css('display', 'none');
