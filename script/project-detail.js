@@ -119,7 +119,7 @@ function TeamCard() {
 
 function ProjectDetail() {
     data = {
-        projectID: "pvJRlOA7i7uZ9ZIAmEEi"
+        projectID: projectID
     }
     $.ajax({
         url: "https://projectstack.now.sh/project/info",
