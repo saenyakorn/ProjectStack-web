@@ -204,8 +204,7 @@ function clickRequestTeam(teamID, accept) {
         dataType: "json",
         success: function(result) {
             //console.log("success", result)
-            var url = window.location.href;
-            window.location.href = url;
+            window.location.href = '/project/' + projectID;
         },
         error: function(error) {
             //console.log("error", error)
@@ -225,8 +224,7 @@ function JoinIndiv() {
         dataType: "json",
         success: function(result) {
             //console.log("success", result)
-            var url = window.location.href;
-            window.location.href = url;
+            window.location.href = '/project/' + projectID;
         },
         error: function(error) {
             //console.log("error", error)
