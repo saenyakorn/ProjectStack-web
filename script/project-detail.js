@@ -168,6 +168,14 @@ function ProjectDetail() {
                     $('#request-indiv-generator').append(output);
                 })
             }
+            temp = result.requests_team;
+            for (var i = 0; i < temp.length; i++) {
+                const val = temp[i];
+                await $.get('../generator/request-card-team-mustache.html', (html) => {
+                    var output = Mustache.render(html, val);
+                    $('#request-team-generator').append(output);
+                })
+            }
             $('.ui.active.dimmer').css("display", "none");
         },
         error: function(error) {
