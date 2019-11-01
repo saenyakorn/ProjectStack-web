@@ -21,7 +21,7 @@ function getcookie() {
     var y = {}
     for (var i = 0; i < x.length; i++) {
         var z = x[i].split("=");
-        y[z[0]] = z[1];
+        y[z[0].trim()] = z[1].trim();
     }
     return y;
 };

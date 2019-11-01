@@ -4,7 +4,7 @@ function getcookie() {
     var y = {}
     for (var i = 0; i < x.length; i++) {
         var z = x[i].split("=");
-        y[z[0]] = z[1];
+        y[z[0].trim()] = z[1].trim();
     }
     return y;
 };
@@ -19,9 +19,6 @@ if (!("username" in cookie)) {
     $('.logged-in').css('display', 'flex');
 }
 
-$(".delete-but").click(function() {
-    alert($(this).parent().parent().html());
-});
 
 //before
 $('.ui.dropdown').dropdown();
@@ -128,10 +125,6 @@ $("#add-image").click(function() {
         });
     });
 });
-
-function kuay() {
-    alert("kuay");
-}
 
 $("#post-button").click(function() {
     if ($('#project-name').val() == null) return;

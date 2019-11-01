@@ -4,7 +4,7 @@ function getcookie() {
     var y = {}
     for (var i = 0; i < x.length; i++) {
         var z = x[i].split("=");
-        y[z[0]] = z[1];
+        y[z[0].trim()] = z[1].trim();
     }
     return y;
 };
@@ -35,9 +35,7 @@ $('.ui.icon.top.left.pointing.dropdown.button').dropdown({
 
 $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
 
-$(".delete-but").click(function() {
-    alert($(this).parent().parent().html());
-});
+
 
 // anos-script
 $('.ui.dropdown').dropdown();
@@ -75,6 +73,9 @@ $.ajax({
             var output = Mustache.render(html, val);
             $('#leader-generator').append(output);
         });
+        $(".delete-but").click(function() {
+            alert($(this).parent().parent().html());
+        });
     },
     error: function(error) {
         console.log(error);
@@ -92,12 +93,11 @@ $("#plus-member").click(function() {
         $.get('../generator/member-card-mustache.html', (html) => {
             var output = Mustache.render(html, val);
             $('#member-generator').append(output);
-        });
+        });;
     };
-    $("#new-member-name").val() = null;
+    $("#new-mmber-name").val() = null;
     $(".delete-but").click(function() {
-        $(this).parent().parent().detach();
-
+        alert($(this).parent().parent().html);
     });
 });
 
