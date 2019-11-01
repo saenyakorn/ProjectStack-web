@@ -73,12 +73,12 @@ $.ajax({
         console.log(error);
     }
 });
-try {
-    var ln = cookie.username;
-    $("#leader-name").text(ln);
-    $("#leader-email").text("Email : " + obj_username[ln].email);
-    $("#leader-pic").src(obj_username[ln].profilepic_url);
-} catch (err) {};
+
+var ln = cookie.username;
+$("#leader-name").text(ln);
+$("#leader-email").text("Email : " + obj_username[$("leader-name").val()].email);
+$("#leader-pic").src(obj_username[$("leader-name").val()].profilepic_url);
+
 
 
 //nut
@@ -106,16 +106,10 @@ $("#plus-member").click(function() {
 
 $("#create").click(function() {
     if ($('#team-name').val() == null) return;
-
-    var members_array = [];
-    $('.member-username').each(function() {
-        members_array.push($(this).val());
-    });
-
     const team_info = {
         teamName: $('#team-name').val(),
-        leaderID: $('#leader-name').val(),
-        members: members_array
+        leaderID: $('#leader-name').text(),
+        members: rmb_member
     };
     $.ajax({
         url: "https://projectstack.now.sh/team/create",
