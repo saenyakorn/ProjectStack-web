@@ -161,6 +161,13 @@ function ProjectDetail() {
                 }
             }
             temp = result.requests;
+            for (var i = 0; i < temp.length; i++) {
+                const val = temp[i];
+                await $.get('../generator/request-card-indiv-mustache.html', (html) => {
+                    var output = Mustache.render(html, { username: val });
+                    $('#request-indiv-generator').append(output);
+                })
+            }
             $('.ui.active.dimmer').css("display", "none");
         },
         error: function(error) {
