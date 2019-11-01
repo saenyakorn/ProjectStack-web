@@ -16,9 +16,9 @@ $('#input-submit').click(function() {
     if (!valid) return;
     const data = {
         username: allinput[0],
-        title: allinput[1],
-        firstname: allinput[2],
-        lastname: allinput[3],
+        gender: allinput[1],
+        firstName: allinput[2],
+        lastName: allinput[3],
         birthdate: allinput[4],
         email: allinput[5],
         tel: allinput[6],
@@ -37,7 +37,7 @@ $('#input-submit').click(function() {
             if (result.success) {
                 $(".valid").removeClass("d-none");
                 $(".invalid").addClass("d-none");
-                window.location.href = "https://projectstack.now.sh/";
+                window.location.href = "/";
             } else {
                 $(".invalid").addClass("d-none");
                 $(".valid").addClass("d-none");
