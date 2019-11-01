@@ -76,6 +76,9 @@ div.Page_Login {
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            h5 {
+                font-size: 1vw;
+            }
             @media screen and (max-width: 600px) {
                 .Login_image {
                     display: none;

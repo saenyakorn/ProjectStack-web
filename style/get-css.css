@@ -122,6 +122,10 @@ div.Page_Login .Login-form .Login-input {
           flex-direction: column;
 }
 
+div.Page_Login .Login-form .Login-input h5 {
+  font-size: 1vw;
+}
+
 @media screen and (max-width: 600px) {
   div.Page_Login .Login-form .Login-input .Login_image {
     display: none;
