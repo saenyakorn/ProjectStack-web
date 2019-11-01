@@ -41,23 +41,23 @@ $('#input-submit').click(function() {
             } else {
                 $(".invalid").addClass("d-none");
                 $(".valid").addClass("d-none");
-                if (401 in result.val) {
+                if (result.val.includes(401)) {
                     $("#username-invalid").removeClass("d-none");
                 } else {
                     $("#username-valid").removeClass("d-none");
                 }
-                if (402 in result.val) {
+                if (result.val.includes(402)) {
                     $("#email-invalid").removeClass("d-none");
                 } else {
                     $("#email-valid").removeClass("d-none");
                 }
-                if (403 in result.val) {
+                if (result.val.includes(403)) {
                     $("#password-length").removeClass("d-none");
-                } else if (404 in result.val) {
+                } else if (result.val.includes(404)) {
                     $("#password-noupper").removeClass("d-none");
-                } else if (405 in result.val) {
+                } else if (result.val.includes(405)) {
                     $("#password-nolower").removeClass("d-none");
-                } else if (406 in result.val) {
+                } else if (result.val.includes(406)) {
                     $("#password-unmatch").removeClass("d-none");
                 } else {
                     $("#password-valid").removeClass("d-none");

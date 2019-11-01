@@ -113,7 +113,7 @@ $("#add-text").click(function() {
 $("#add-title").click(function() {
     $.get('../generator/post-generator/title-card.html', (html) => {
         $('#content-column').append(html);
-        $(".kill-but").click(function() {
+        $('.kill-but').click(function() {
             $(this).parent().parent().detach();
         });
     });
