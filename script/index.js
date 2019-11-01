@@ -93,6 +93,7 @@ console.log("COOKIE: " + document.cookie);
 const cookie = getcookie();
 console.log("COOKIE: " + cookie);
 $('#username').html(cookie.username)
+$('#username_mobile').html(cookie.username)
 if (!("username" in cookie)) {
     $('.guest').css('display', 'flex');
     $('.logged-in').css('display', 'none');

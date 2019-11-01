@@ -315,6 +315,7 @@ if (!("username" in cookie)) {
     })
 }
 $('#username').html(cookie.username)
+$('#username_mobile').html(cookie.username)
 TeamCard();
 TrendingCard();
 ProjectDetail();

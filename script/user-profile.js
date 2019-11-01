@@ -28,6 +28,7 @@ function getcookie() {
 
 const cookie = getcookie();
 $('#username').html(cookie.username)
+$('#username_mobile').html(cookie.username)
 if (!("username" in cookie)) {
     $('.guest').css('display', 'flex');
     $('.logged-in').css('display', 'none');

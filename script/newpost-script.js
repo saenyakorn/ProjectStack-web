@@ -13,6 +13,7 @@ function getcookie() {
 
 const cookie = getcookie();
 $('#username').html(cookie.username)
+$('#username_mobile').html(cookie.username)
 if (!("username" in cookie)) {
     $('.guest').css('display', 'flex');
     $('.logged-in').css('display', 'none');
@@ -129,7 +130,7 @@ $("#add-image").click(function() {
 });
 
 $("#post-button").click(function() {
-    console.log($('#project-name').val(),$('#description').val());
+    console.log($('#project-name').val(), $('#description').val());
     if ($('#project-name').val() == null) return;
     if ($('#description').val() == null) return;
     var content = [];
