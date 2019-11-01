@@ -28,7 +28,7 @@ $('#input-submit').click(function() {
         confirmpassword: allinput[10]
     };
     $.ajax({
-        url: "https://projectstack.now.sh/register",
+        url: "/register",
         type: "POST",
         data: data,
         dataType: "json",
@@ -51,15 +51,24 @@ $('#input-submit').click(function() {
                 } else {
                     $("#email-valid").removeClass("d-none");
                 }
+                let ch = true;
                 if (result.val.includes(403)) {
+                    ch = false;
                     $("#password-length").removeClass("d-none");
-                } else if (result.val.includes(404)) {
+                }
+                if (result.val.includes(404)) {
+                    ch = false;
                     $("#password-noupper").removeClass("d-none");
-                } else if (result.val.includes(405)) {
+                }
+                if (result.val.includes(405)) {
+                    ch = false;
                     $("#password-nolower").removeClass("d-none");
-                } else if (result.val.includes(406)) {
+                }
+                if (result.val.includes(406)) {
+                    ch = false;
                     $("#password-unmatch").removeClass("d-none");
-                } else {
+                } 
+                if (ch) {
                     $("#password-valid").removeClass("d-none");
                 }
             }
