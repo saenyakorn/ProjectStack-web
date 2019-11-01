@@ -36,7 +36,7 @@ $('#input-submit').click(function() {
             console.log(result);
             if (result.success) {
                 $(".valid").removeClass("d-none");
-                $(".valid").addClass("d-none");
+                $(".invalid").addClass("d-none");
                 window.location.href = "https://projectstack.now.sh/";
             } else {
                 $(".invalid").addClass("d-none");

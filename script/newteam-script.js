@@ -35,7 +35,9 @@ $('.ui.icon.top.left.pointing.dropdown.button').dropdown({
 
 $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
 
-
+$(".delete-but").click(function() {
+    alert($(this).parent().parent().html());
+});
 
 // anos-script
 $('.ui.dropdown').dropdown();
@@ -91,11 +93,14 @@ $("#plus-member").click(function() {
             var output = Mustache.render(html, val);
             $('#member-generator').append(output);
         });
-        $("#new-member-name").val() = null;
-    } else {
-        $("#new-member-name").val() = null;
-    }
+    };
+    $("#new-member-name").val() = null;
+    $(".delete-but").click(function() {
+        $(this).parent().parent().detach();
+
+    });
 });
+
 $("#create").click(function() {
     var valid = true;
     if ($('#team-name').val() == null) return;
@@ -126,10 +131,7 @@ $("#create").click(function() {
     });
 });
 
-$(".delete-but").click(function() {
-    $("#member-generator").remove($(this).parent().parent());
-});
 
 $("#cancel").click(function() {
     window.history.back();
-})
+});

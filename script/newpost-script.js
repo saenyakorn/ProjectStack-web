@@ -8,6 +8,7 @@ function getcookie() {
     }
     return y;
 };
+
 const cookie = getcookie();
 $('#username').html(cookie.username)
 if (!("username" in cookie)) {
@@ -17,6 +18,10 @@ if (!("username" in cookie)) {
     $('.guest').css('display', 'none');
     $('.logged-in').css('display', 'flex');
 }
+
+$(".delete-but").click(function() {
+    alert($(this).parent().parent().html());
+});
 
 //before
 $('.ui.dropdown').dropdown();
@@ -101,23 +106,33 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 $("#add-text").click(function() {
     $.get('../generator/post-generator/paragraph-card.html', (html) => {
         $('#content-column').append(html);
+        $(".kill-but").click(function() {
+            $(this).parent().parent().detach();
+        });
     });
 });
 $("#add-title").click(function() {
     $.get('../generator/post-generator/title-card.html', (html) => {
-        $('#content-column').append(html)
+        $('#content-column').append(html);
+        $(".kill-but").click(function() {
+            $(this).parent().parent().detach();
+        });
     });
 });
 
 $("#add-image").click(function() {
     $.get('../generator/post-generator/image-card.html', (html) => {
         $('#content-column').append(html);
+        $(".kill-but").click(function() {
+            $(this).parent().parent().detach();
+        });
     });
 });
 
-$(".close.link.red.icon").click(function() {
-    $("#content-column").remove($(this).parent().parent());
-});
+function kuay() {
+    alert("kuay");
+}
+
 $("#post-button").click(function() {
     if ($('#project-name').val() == null) return;
     if ($('#description').val() == null) return;
