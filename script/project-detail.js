@@ -262,7 +262,7 @@ if (!("username" in cookie)) {
     $('.logged-in').css('display', 'none');
     $('.ui.grid.button-container').css('display', 'none');
     $('.edit').css('display', 'none');
-    $('.request').css('display', 'none');
+    $('.pendding-request').css('display', 'none');
 } else {
     $('.guest').css('display', 'none');
     $('.logged-in').css('display', 'flex');
@@ -280,19 +280,19 @@ if (!("username" in cookie)) {
             //console.log("success", result)
             if (result.ownerID == cookie.username) {
                 $('.edit').css('display', 'block');
-                $('.request').css('display', 'block');
+                $('.pendding-request').css('display', 'block');
                 $('.ui.grid.button-container').css('display', 'none');
             } else if (result.members.includes(cookie.username)) {
                 $('.edit').css('display', 'none');
-                $('.request').css('display', 'none');
+                $('.pendding-request').css('display', 'none');
                 $('.ui.grid.button-container').css('display', 'none');
             } else if (result.requests.includes(cookie.username)) {
                 $('.edit').css('display', 'none');
-                $('.request').css('display', 'none');
+                $('.pendding-request').css('display', 'none');
                 $('.ui.grid.button-container').css('display', 'none');
             } else {
                 $('.edit').css('display', 'none');
-                $('.request').css('display', 'none');
+                $('.pendding-request').css('display', 'none');
                 $('.ui.grid.button-container').css('display', 'flex');
             }
         },
@@ -301,7 +301,7 @@ if (!("username" in cookie)) {
         }
     })
 }
-
+$('#username').html(cookie.username)
 TeamCard();
 TrendingCard();
 ProjectDetail();
