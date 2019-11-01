@@ -354,25 +354,6 @@ div.ui.segment a.ui.segment.project-detail-button:hover {
   color: #333333;
 }
 
-div.button-container {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-}
-
-div.button-container div {
-  border: 0;
-  margin: 1em;
-  background: #66BB6A;
-  border-radius: 50em;
-}
-
-div.button-container div i {
-  color: #ffffff;
-  margin: 0;
-  font-size: 2em;
-}
-
 div.nopadding {
   padding: 0;
 }

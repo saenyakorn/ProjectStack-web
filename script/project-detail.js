@@ -258,7 +258,7 @@ const cookie = getcookie();
 if (!("username" in cookie)) {
     $('.guest').css('display', 'flex');
     $('.logged-in').css('display', 'none');
-    $('.ui.grid.button-container').css('display', 'none');
+    $('.ui.grid.button-container').css('display', 'flex');
     $('.edit').css('display', 'none');
     $('.request').css('display', 'none');
 } else {
@@ -291,15 +291,15 @@ if (!("username" in cookie)) {
             } else {
                 $('.edit').css('display', 'none');
                 $('.request').css('display', 'none');
-                $('.ui.grid.button-container').css('display', 'block');
+                $('.ui.grid.button-container').css('display', 'flex');
             }
         },
         error: function(error) {
             //console.log("error", error)
         }
     })
-
 }
+
 TeamCard();
 TrendingCard();
 ProjectDetail();

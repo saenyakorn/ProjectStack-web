@@ -290,23 +290,6 @@ div.ui.segment {
     }
 }
 
-div.button-container {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    div {
-        border: 0;
-        margin: 1em;
-        background: $green;
-        border-radius: 50em;
-        i {
-            color: $white;
-            margin: 0;
-            font-size: 2em;
-        }
-    }
-}
-
 div.nopadding {
     padding: 0;
 }
