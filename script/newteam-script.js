@@ -76,8 +76,8 @@ $.ajax({
 
 var ln = cookie.username;
 $("#leader-name").text(ln);
-$("#leader-email").text("Email : " + obj_username[$("leader-name").val()].email);
-$("#leader-pic").src(obj_username[$("leader-name").val()].profilepic_url);
+// $("#leader-email").text("Email : " + obj_username[$("leader-name").val()].email);
+// $("#leader-pic").src(obj_username[$("leader-name").val()].profilepic_url);
 
 
 
