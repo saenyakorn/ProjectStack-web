@@ -106,16 +106,10 @@ $("#plus-member").click(function() {
 
 $("#create").click(function() {
     if ($('#team-name').val() == null) return;
-
-    var members_array = [];
-    $('.member-username').each(function() {
-        members_array.push($(this).val());
-    });
-
     const team_info = {
         teamName: $('#team-name').val(),
-        leaderID: $('#leader-name').val(),
-        members: members_array
+        leaderID: $('#leader-name').text(),
+        members: rmb_member
     };
     $.ajax({
         url: "https://projectstack.now.sh/team/create",
