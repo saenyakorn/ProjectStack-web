@@ -39,6 +39,7 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 
 
 
+
 // anos-script
 $('.ui.dropdown').dropdown();
 $('.ui.sidebar').sidebar({
@@ -67,44 +68,40 @@ $.ajax({
         $('.ui.search').search({
             source: content
         });
-        //leader generator
-        var leader_cookie = getcookie()
-        var nln = leader_cookie.username;
-        var val = { username: nln, email: obj_username[nln].email, p_pic_url: obj_username[nln].profilepic_url };
-        $.get('../generator/member-card-mustache.html', (html) => {
-            var output = Mustache.render(html, val);
-            $('#leader-generator').append(output);
-        });
-        $(".delete-but").click(function() {
-            alert($(this).parent().parent().html());
-        });
     },
     error: function(error) {
         console.log(error);
     }
 });
-
-
+try {
+    var ln = cookie.username;
+    $("#leader-name").text(ln);
+    $("#leader-email").text("Email : " + obj_username[ln].email);
+    $("#leader-pic").src(obj_username[ln].profilepic_url);
+} catch (err) {};
 
 
 //nut
+var rmb_member = [];
 $("#plus-member").click(function() {
-    if ($("#new-member-name").val() in obj_username) {
-        var nmn = $("#new-member-name").val()
+    var nmn = $("#new-member-name").val()
+    if (nmn in obj_username && !(rmb_member.includes(nmn)) && nmn != ln) {
         var val = { username: nmn, email: obj_username[nmn].email, p_pic_url: obj_username[nmn].profilepic_url };
+        rmb_member.push(nmn);
         $.get('../generator/member-card-mustache.html', (html) => {
             var output = Mustache.render(html, val);
             $('#member-generator').append(output);
-        });;
-    };
-    $("#new-mmber-name").val() = null;
-    $(".delete-but").click(function() {
-        alert($(this).parent().parent().html);
+        });
+    }
+    $("#new-member-name").val(null);
+    $(".delbut").click(function() {
+        rmb_member.pop($(this).parent().find(".member-username").val());
+        $(this).parent().parent().detach();
+        alert("kuy");
     });
 });
 
 $("#create").click(function() {
-    var valid = true;
     if ($('#team-name').val() == null) return;
 
     var members_array = [];
