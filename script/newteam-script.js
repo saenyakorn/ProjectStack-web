@@ -35,7 +35,9 @@ $('.ui.icon.top.left.pointing.dropdown.button').dropdown({
 
 $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
 
-
+$(".delete-but").click(function() {
+    alert($(this).parent().parent().html());
+});
 
 // anos-script
 $('.ui.dropdown').dropdown();
@@ -90,6 +92,9 @@ $("#plus-member").click(function() {
         $.get('../generator/member-card-mustache.html', (html) => {
             var output = Mustache.render(html, val);
             $('#member-generator').append(output);
+            $(".delete-but").click(function() {
+                $(this).parent().parent().detach();
+            });
         });
         $("#new-member-name").val() = null;
     } else {
@@ -126,9 +131,6 @@ $("#create").click(function() {
     });
 });
 
-$(".delete-but").click(function() {
-    $("#member-generator").remove($(this).parent().parent());
-});
 
 $("#cancel").click(function() {
     window.history.back();
