@@ -91,13 +91,16 @@ $("#plus-member").click(function() {
         $.get('../generator/member-card-mustache.html', (html) => {
             var output = Mustache.render(html, val);
             $('#member-generator').append(output);
+            $(".delbut").click(function() {
+                rmb_member.pop($(this).parent().find(".member-username").val());
+                $(this).parent().parent().detach();
+            });
         });
-    }
+    };
     $("#new-member-name").val(null);
     $(".delbut").click(function() {
         rmb_member.pop($(this).parent().find(".member-username").val());
         $(this).parent().parent().detach();
-        alert("kuy");
     });
 });
 
