@@ -3,8 +3,10 @@ function getcookie() {
     var x = document.cookie.split(";");
     var y = {}
     for (var i = 0; i < x.length; i++) {
-        var z = x[i].split("=");
-        y[z[0]] = z[1];
+        try {
+            var z = x[i].split("=");
+            y[z[0].trim()] = z[1].trim();
+        } catch (err) {}
     }
     return y;
 };
@@ -50,7 +52,7 @@ $('.ui.sidebar').sidebar({
 var content = [];
 var obj_username = {};
 $.ajax({
-    url: "https://projectstack.no.sh/user/all",
+    url: "https://projectstack.now.sh/user/all",
     type: "POST",
     data: {
         fields: ["username", "email", "profilepic_url"]
@@ -73,6 +75,9 @@ $.ajax({
             var output = Mustache.render(html, val);
             $('#leader-generator').append(output);
         });
+        $(".delete-but").click(function() {
+            alert($(this).parent().parent().html());
+        });
     },
     error: function(error) {
         console.log(error);
@@ -90,12 +95,14 @@ $("#plus-member").click(function() {
         $.get('../generator/member-card-mustache.html', (html) => {
             var output = Mustache.render(html, val);
             $('#member-generator').append(output);
-        });
-        $("#new-member-name").val() = null;
-    } else {
-        $("#new-member-name").val() = null;
-    }
+        });;
+    };
+    $("#new-mmber-name").val() = null;
+    $(".delete-but").click(function() {
+        alert($(this).parent().parent().html);
+    });
 });
+
 $("#create").click(function() {
     var valid = true;
     if ($('#team-name').val() == null) return;
@@ -111,13 +118,13 @@ $("#create").click(function() {
         members: members_array
     };
     $.ajax({
-        url: "https://projectstack.no.sh/team/create",
+        url: "https://projectstack.now.sh/team/create",
         type: "POST",
         data: team_info,
         datatype: "json",
         success: function(result) {
             console.log(result);
-            window.location.href = "https://projectstack.no.sh"
+            window.location.href = "https://projectstack.now.sh"
         },
         error: function(error) {
             console.log(error);
@@ -126,10 +133,7 @@ $("#create").click(function() {
     });
 });
 
-$(".delete-but").click(function() {
-    $("#member-generator").remove($(this).parentNode.parentNode);
-});
 
 $("#cancel").click(function() {
     window.history.back();
-})
+});

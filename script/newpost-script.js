@@ -3,11 +3,14 @@ function getcookie() {
     var x = document.cookie.split(";");
     var y = {}
     for (var i = 0; i < x.length; i++) {
-        var z = x[i].split("=");
-        y[z[0]] = z[1];
+        try {
+            var z = x[i].split("=");
+            y[z[0].trim()] = z[1].trim();
+        } catch (err) {}
     }
     return y;
 };
+
 const cookie = getcookie();
 $('#username').html(cookie.username)
 if (!("username" in cookie)) {
@@ -17,6 +20,7 @@ if (!("username" in cookie)) {
     $('.guest').css('display', 'none');
     $('.logged-in').css('display', 'flex');
 }
+
 
 //before
 $('.ui.dropdown').dropdown();
@@ -101,34 +105,40 @@ $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu')
 $("#add-text").click(function() {
     $.get('../generator/post-generator/paragraph-card.html', (html) => {
         $('#content-column').append(html);
+        $(".kill-but").click(function() {
+            $(this).parent().parent().detach();
+        });
     });
 });
 $("#add-title").click(function() {
     $.get('../generator/post-generator/title-card.html', (html) => {
-        $('#content-column').append(html)
+        $('#content-column').append(html);
+        $(".kill-but").click(function() {
+            $(this).parent().parent().detach();
+        });
     });
 });
 
 $("#add-image").click(function() {
     $.get('../generator/post-generator/image-card.html', (html) => {
         $('#content-column').append(html);
+        $(".kill-but").click(function() {
+            $(this).parent().parent().detach();
+        });
     });
 });
 
-$(".close.link.red.icon").click(function() {
-    $("#content-column").remove($(this).parentNode.parentNode);
-});
 $("#post-button").click(function() {
     if ($('#project-name').val() == null) return;
     if ($('#description').val() == null) return;
     var content = [];
     $(".all-content").each(function() {
         if ($(this).hasClass("title")) {
-            content.push({ title: $(this).firstChild.firstChild.val() });
+            content.push({ title: $(this).find(".cont").val() });
         } else if ($(this).hasClass("paragraph")) {
-            content.push({ paragraph: $(this).lastChild.firstChild.firstChild.val() });
+            content.push({ paragraph: $(this).find(".cont").val() });
         } else {
-            content.push({ picture: $(this).lastChild.firstChild.src })
+            content.push({ picture: $(this).find(".cont").src })
         }
         var cookiess = getcookie()
         const data = {

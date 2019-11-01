@@ -11,14 +11,14 @@
     <!--script src="../Semantic-UI-CSS-master/semantic.min.js"></script-->
     <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
 
-    <title>Project Stack</title>
+    <title>Sign up</title>
 </head>
 
 <body>
     <div class="signup col">
-        <h1 class="head">Registration</h1>
         <div class="formbox col">
             <form class="form col-start">
+                <img class="ui centered medium image" src="../images/ProjectStack-logo-black.svg">
                 <h2>Username</h2>
                 <input class="user" type="text" name="Username" placeholder="Username" aria-required="true" data-ok="false" required/>
                 <div class="d-none invalid font-red" id="username-invalid">
@@ -36,23 +36,23 @@
                     <div class="menu">
                         <div class="item" data-value="male">Male</div>
                         <div class="item" data-value="female">Female</div>
-                        <div class="item" data-value="none">Prefer not to disclose</div>
+                        <div class="item" data-value="none">Rather not specify</div>
                     </div>
                     <i class="dropdown icon"></i>
                 </div>
                 <div class="flex">
                     <div class="first half">
-                        <h2>Name</h2>
+                        <h2>First Name</h2>
                         <input class="user" type="text" name="FirstName" placeholder="Name" required/>
                     </div>
                     <div class="half">
-                        <h2>Surname</h2>
+                        <h2>Last Name</h2>
                         <input class="user" type="text" name="SurName" placeholder="Surname" required/>
                     </div>
                 </div>
                 <div class="flex">
                     <div class="first half">
-                        <h2>Birthdate</h2>
+                        <h2>Date of Birth</h2>
                         <div class="calendar" id="date">
                             <input class="user" type="text" placeholder="month dd, yyyy" required/>
                         </div>
@@ -68,11 +68,11 @@
                     <i class="check icon"></i>
                     <h5 class="inline">Valid email</h5>
                 </div>
-                <h2>Telephone</h2>
+                <h2>Phone Number</h2>
                 <input class="user" type="tel" name="Tel" placeholder="08X-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
-                <h2>Status</h2>
+                <h2>Occupation</h2>
                 <input class="user" type="text" name="Status" placeholder="Student / Worker / Manager" />
-                <h2>Work at</h2>
+                <h2>Workplace</h2>
                 <input class="user" type="text" name="Work" placeholder="Apple.inc / Line" />
                 <h2>Password</h2>
                 <input class="user" type="password" name="Password" placeholder="Password" required/>
@@ -80,15 +80,15 @@
                 <input class="user" type="password" name="ConfirmPassword" placeholder="Confirm Password" required/>
                 <div class="d-none invalid font-red" id="password-length">
                     <i class="close icon"></i>
-                    <h5 class="inline">Password length is less than 8 characters</h5>
+                    <h5 class="inline">Password must be longer than 8 characters.</h5>
                 </div>
                 <div class="d-none invalid font-red" id="password-noupper">
                     <i class="close icon"></i>
-                    <h5 class="inline">Password must have at least one uppercase letter</h5>
+                    <h5 class="inline">Password must have at least one uppercase letter.</h5>
                 </div>
                 <div class="d-none invalid font-red" id="password-nolower">
                     <i class="close icon"></i>
-                    <h5 class="inline">Password must have at least one lowercase letter</h5>
+                    <h5 class="inline">Password must have at least one lowercase letter.</h5>
                 </div>
                 <div class="d-none invalid font-red" id="password-unmatch">
                     <i class="close icon"></i>

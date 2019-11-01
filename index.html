@@ -11,6 +11,17 @@
     <script src="./Semantic-UI-CSS-master/semantic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js" integrity="sha256-MPgtcamIpCPKRRm1ppJHkvtNBAuE71xcOM+MmQytXi8=" crossorigin="anonymous"></script>
     <title>Project Stack</title>
+    <script>
+        function getcookie() {
+            var x = document.cookie.split(";");
+            var y = {}
+            for (var i = 0; i < x.length; i++) {
+                var z = x[i].split("=");
+                y[z[0].trim()] = z[1].trim();
+            }
+            return y;
+        };
+    </script>
 </head>
 
 <body>
@@ -41,13 +52,13 @@
                         <div class="ui icon top left pointing dropdown button proflie">
                             <i class="user icon"></i><span style="margin:0 1em" id="username">username</span>
                             <div class="menu">
-                                <div class="item" onclick='window.location.href="./page/user-profile.html"'>My Account</div>
-                                <div class="item" onclick='window.location.href="./page/Login.html"'>Log out</div>
+                                <div class="item" onclick='var cookie=getcookie();window.location.href="/profile/"+cookie.username'>My Account</div>
+                                <div class="item" onclick='window.location.href="/logout"'>Log out</div>
                             </div>
                         </div>
                     </a>
-                    <a href="./page/Login.html" class="item guest"><span class="sign-in">log in</span></a>
-                    <a href="./page/register.html" class="item guest"><span class="sign-up">sign up</span></a>
+                    <a href="/login" class="item guest"><span class="sign-in">Login</span></a>
+                    <a href="/signup" class="item guest"><span class="sign-up">Sign up</span></a>
                 </div>
             </div>
         </div>
@@ -103,9 +114,10 @@
                     </div>
 
                 </div>
-                <div class="ui center aligned segment noframe">
+                <div class="ui segment center aligned noframe more">
                     <div class="ui yellow button" onclick="addMoreCard()">more</div>
                 </div>
+
             </div>
         </div>
     </div>

@@ -48,8 +48,10 @@ function getcookie() {
     var x = document.cookie.split(";");
     var y = {}
     for (var i = 0; i < x.length; i++) {
-        var z = x[i].split("=");
-        y[z[0]] = z[1];
+        try {
+            var z = x[i].split("=");
+            y[z[0].trim()] = z[1].trim();
+        } catch (err) {}
     }
     return y;
 };
@@ -76,7 +78,7 @@ function TrendingCard() {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             result.forEach((val, inx, arr) => {
                 $.get('../generator/trending-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
@@ -85,7 +87,7 @@ function TrendingCard() {
             })
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -101,7 +103,7 @@ function TeamCard() {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             result.teams.forEach((val, inx, arr) => {
                 $.get('../generator/team-card-mustache.html', (html) => {
                     var output = Mustache.render(html, val);
@@ -110,7 +112,7 @@ function TeamCard() {
             })
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -125,7 +127,7 @@ function ProjectDetail() {
         data: data,
         dataType: "json",
         success: async function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             $('.projectName').html(result.projectName);
             $('div.ownerID').html(result.ownerID)
             $('a.ownerID').attr('href', '/profile/' + result.ownerID);
@@ -162,7 +164,7 @@ function ProjectDetail() {
             $('.ui.active.dimmer').css("display", "none");
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -179,12 +181,12 @@ function clickRequestIndiv(username, accept) {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             var url = window.location.href;
             window.location.href = url;
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -201,12 +203,12 @@ function clickRequestTeam(teamID, accept) {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             var url = window.location.href;
             window.location.href = url;
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -222,12 +224,12 @@ function JoinIndiv() {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             var url = window.location.href;
             window.location.href = url;
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -243,12 +245,12 @@ function JoinAsTeam(teamID) {
         data: data,
         dataType: "json",
         success: function(result) {
-            console.log("success", result)
+            //console.log("success", result)
             var url = window.location.href;
             window.location.href = url;
         },
         error: function(error) {
-            console.log("error", error)
+            //console.log("error", error)
         }
     })
 }
@@ -258,11 +260,49 @@ const cookie = getcookie();
 if (!("username" in cookie)) {
     $('.guest').css('display', 'flex');
     $('.logged-in').css('display', 'none');
+    $('.ui.grid.button-container').css('display', 'none');
+    $('.edit').css('display', 'none');
+    $('.request').css('display', 'none');
 } else {
     $('.guest').css('display', 'none');
     $('.logged-in').css('display', 'flex');
+    const ownerID = ""
+    data = {
+        projectID: projectID,
+        fields: ['ownerID', 'requests', 'members']
+    }
+    $.ajax({
+        url: "https://projectstack.now.sh/project/info",
+        type: "POST",
+        data: data,
+        dataType: "json",
+        success: function(result) {
+            //console.log("success", result)
+            if (result.ownerID == cookie.username) {
+                $('.edit').css('display', 'block');
+                $('.request').css('display', 'block');
+                $('.ui.grid.button-container').css('display', 'none');
+            } else if (cookie.username in result.members) {
+                $('.edit').css('display', 'none');
+                $('.request').css('display', 'none');
+                $('.ui.grid.button-container').css('display', 'none');
+            } else if (cookie.username in requests) {
+                $('.edit').css('display', 'none');
+                $('.request').css('display', 'none');
+                $('.ui.grid.button-container').css('display', 'none');
+            } else {
+                $('.edit').css('display', 'none');
+                $('.request').css('display', 'none');
+                $('.ui.grid.button-container').css('display', 'block');
+            }
+        },
+        error: function(error) {
+            //console.log("error", error)
+        }
+    })
+
 }
 TeamCard();
 TrendingCard();
 ProjectDetail();
-console.log(getProjectID());
+//console.log(getProjectID());
