@@ -108,7 +108,7 @@ $("#create").click(function() {
     if ($('#team-name').val() == null) return;
     const team_info = {
         teamName: $('#team-name').val(),
-        leaderID: $('#leader-name').text(),
+        leaderID: $('#leader-name').val(),
         members: rmb_member
     };
     $.ajax({
