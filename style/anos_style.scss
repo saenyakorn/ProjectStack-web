@@ -115,6 +115,9 @@ $grey: #999999;
         max-width: 90%;
         height: auto;
         border-radius: 3rem 3rem 0 0;
+        img {
+            margin-bottom: 2rem;
+        }
         .form {
             padding: 4rem 0;
             h2 {
@@ -151,7 +154,7 @@ $grey: #999999;
         }
         .valid,
         .invalid {
-            margin-top: -4.5rem;
+            margin-top: 0;
             margin-bottom: 1.5rem;
         }
     }

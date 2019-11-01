@@ -35,12 +35,12 @@
                         <div class="ui icon top left pointing dropdown button proflie">
                             <i class="user icon"></i><span style="margin:0 1em" id="username">username</span>
                             <div class="menu">
-                                <div class="item" onclick='window.location.href="../page/user-profile.html"'>My Account</div>
-                                <div class="item" onclick='window.location.href="../page/Login.html"'>Log out</div>
+                                <div class="item" onclick='window.location.href="/myaccount"'>My Account</div>
+                                <div class="item" onclick='window.location.href="/logout"'>Log out</div>
                             </div>
                         </div>
                     </a>
-                    <a href="../page/Login.html" class="item guest"><span class="sign-in">Log in</span></a>
+                    <a href="../page/Login.html" class="item guest"><span class="sign-in">Login</span></a>
                     <a href="../page/register.html" class="item guest"><span class="sign-up">Sign up</span></a>
                 </div>
             </div>
@@ -89,33 +89,31 @@
                         <div class="tablet only three wide column"></div>
                         <div class="column">
                             <h2 class="header">Leader</h2>
-                            <div id="leader-generator">
-                                <!-- <div class="ui secondary segment">
-                                    <div class="ui middle aligned equal width grid">
-                                        <div class="four wide text-center column"> -->
-                                <!--div class="ui active inline loader"></div-->
-                                <!-- <img id="leader-pic" class="ui circular image">
-                                        </div>
-                                        <div class="column">
-                                            <div class="ui grid">
-                                                <div class="row">
-                                                    <h2 id="leader-name">Seanyakorn Seangsanor</h2>
-                                                </div>
-                                                <div class="row">
-                                                    <p id="leader-email">Email : Seanyakorn@pornhub.com</p>
-                                                </div>
+                            <div class="ui secondary segment">
+                                <div class="ui middle aligned equal width grid">
+                                    <div class="four wide text-center column">
+                                        <!--div class="ui active inline loader"></div-->
+                                        <img id="leader-pic" class="ui circular image">
+                                    </div>
+                                    <div class="column">
+                                        <div class="ui grid">
+                                            <div class="row">
+                                                <h2 id="leader-name"></h2>
+                                            </div>
+                                            <div class="row">
+                                                <p id="leader-email"></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
-                                <h2 class="header">Member</h2>
-                                <div id="member-generator">
-                                    <!-- <div class="ui secondary segment">
+                            </div>
+                            <h2 class="header">Member</h2>
+                            <div id="member-generator"></div>
+                            <!-- <div class="ui secondary segment">
                                         <div class="ui middle aligned equal width grid">
                                             <div class="four wide text-center column"> -->
-                                    <!--div class="ui active inline loader"></div-->
-                                    <!-- <img id="leader-pic" class="ui circular image">
+                            <!--div class="ui active inline loader"></div-->
+                            <!-- <img id="leader-pic" class="ui circular image">
                                             </div>
                                             <div class="column">
                                                 <div class="ui grid">
@@ -130,29 +128,30 @@
                                             <i class="red link close icon"></i>
                                         </div>
                                     </div>
-                                </div> -->
-
-                                    <div class="ui secondary search text-center segment">
-                                        <h2>New Member</h2>
-                                        <div class="ui icon input">
-                                            <input class="prompt" type="text" placeholder="Search by username" id="new-member-name">
-                                            <i class="plus link icon" id="plus-member"></i>
-                                        </div>
-                                        <div class="results"></div>
-                                    </div>
                                 </div>
-                                <div class="computer only six wide column"></div>
-                                <div class="tablet only three wide column"></div>
+                            -->
+
+                            <div class="ui secondary search text-center segment">
+                                <h2>New Member</h2>
+                                <div class="ui icon input">
+                                    <input class="prompt" type="text" placeholder="Search by username" id="new-member-name">
+                                    <i class="plus link icon" id="plus-member"></i>
+                                </div>
+                                <div class="results"></div>
                             </div>
                         </div>
+                        <div class="computer only six wide column"></div>
+                        <div class="tablet only three wide column"></div>
                     </div>
                 </div>
             </div>
-            <!--save button-->
-            <div class="right fixed-bottom flex-center">
-                <button class="large ui button" id="cancel">Cancel</button>
-                <button class="large ui blue button" id="create">Create</button>
-            </div>
+        </div>
+    </div>
+    <!--save button-->
+    <div class="right fixed-bottom flex-center">
+        <button class="large ui button" id="cancel">Cancel</button>
+        <button class="large ui blue button" id="create">Create</button>
+    </div>
 </body>
 
 <script src="../script/newteam-script.js"></script>

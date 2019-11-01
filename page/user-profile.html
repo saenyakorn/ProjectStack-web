@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../style/ustyle.css">
     <link rel="stylesheet" href="../style/get-css.css">
     <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
-    <title>Project Stack</title>
+    <title>{{username}}</title>
 </head>
 
 <body>
@@ -41,8 +41,8 @@
                             </div>
                         </div>
                     </a>
-                    <a href="Login.html" class="item guest"><span class="sign-in">sign in</span></a>
-                    <a href="register.html" class="item guest"><span class="sign-up">sign up</span></a>
+                    <a href="/login" class="item guest"><span class="sign-in">Login</span></a>
+                    <a href="/signup" class="item guest"><span class="sign-up">Sign up</span></a>
                 </div>
             </div>
         </div>
@@ -51,18 +51,18 @@
             <div class="column">
                 <div class="ui menu">
                     <a id="mobile_item" class="item left"><i class="bars icon"></i></a>
-                    <a class="item logged-in"><i class="bell icon"></i></a>
+                    <a href="#" class="item logged-in"><i class="bell icon"></i></a>
                     <a href="#" class="item profile logged-in">
                         <div class="ui icon top left pointing dropdown button proflie">
                             <i class="user icon"></i><span style="margin:0 1em" id="username">username</span>
                             <div class="menu">
-                                <div class="item" onclick='window.location.href="./page/user-profile.html"'>My Account</div>
-                                <div class="item" onclick='window.location.href="./page/Login.html"'>Log out</div>
+                                <div class="item" onclick='window.location.href="/myaccount"'>My Account</div>
+                                <div class="item" onclick='window.location.href="/logout"'>Log out</div>
                             </div>
                         </div>
                     </a>
-                    <a href="Login.html" class="item guest"><span class="sign-in">sign in</span></a>
-                    <a href="register.html" class="item guest"><span class="sign-up">sign up</span></a>
+                    <a href="/login" class="item guest"><span class="sign-in">Login</span></a>
+                    <a href="/signup" class="item guest"><span class="sign-up">Sign up</span></a>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
                                         <img class='ui small circular image get-image centered' src="../get-images/user-profile.png">
                                     </div>
                                     <div class="username-under-image">
-                                        <p style="text-align: center;"><b>username</b></p>
+                                        <p style="text-align: center;"><b>{{username}}</b></p>
                                     </div>
                                     <br> {{#isCurrentUser}}
                                     <div id='edit' class='edit-profile-image '>
@@ -117,22 +117,22 @@
 
                                 <div class=" ui eight wide computer sixteen wide mobile column continer">
                                     <div class='name output'>
-                                        <p> <b>Name:</b> {{Name}}</p>
+                                        <p> <b>Username:</b> {{username}}</p>
                                     </div>
                                     <div class=' full-name output '>
-                                        <p><b>Full name:</b> {{Fullname}}</p>
+                                        <p><b>Full name: </b>{{firstName}} {{lastName}}</p>
                                     </div>
                                     <div class='email-n output '>
-                                        <p><b>Email:</b> {{Email}}</p>
+                                        <p><b>E-mail:</b> {{email}}</p>
                                     </div>
                                     <div class="tel output">
-                                        <p><b>Tel:</b> {{Tel}}</p>
+                                        <p><b>Tel:</b> {{tel}}</p>
                                     </div>
                                     <div class="url output">
-                                        <p><b>url:</b> {{url}}</p>
+                                        <p><b>Url:</b> {{url}}</p>
                                     </div>
                                     <div class='status output '>
-                                        <p><b>Status:</b> {{Status}}</p>
+                                        <p><b>Job:</b> {{job}}</p>
                                     </div>
                                 </div>
                             </div>

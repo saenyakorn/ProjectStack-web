@@ -9,19 +9,25 @@
     <link rel="stylesheet" href="../Semantic-UI-CSS-master/semantic.min.css">
     <link rel="stylesheet" href="../style/style.css">
     <script src="../Semantic-UI-CSS-master/semantic.min.js"></script>
-    <title>Project Stack</title>
+    <title>Thank you!</title>
 
     <link rel="stylesheet" href="../style/get-css.css">
-    <title>Project Stack</title>
+    <title>Thank you!</title>
 </head>
 
 <body>
     <div class="regist-compelete">
         <div class="regist-compelete-title">Thank You for register</div>
         <div class="regist-compelete-subtitle">Please check your email and verify your account</div>
-        <div class="regist-compelete-button">login</div>
+        <div id='button-edit' class="regist-compelete-button">login</div>
     </div>
 
 </body>
+<script>
+    $('#button-edit').click(function() {
+        // location.replace("../page/edit-profile.html");
+        window.location.href = 'Login.html';
+    })
+</script>
 
 </html>

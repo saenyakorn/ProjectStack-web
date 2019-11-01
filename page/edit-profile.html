@@ -36,13 +36,13 @@
                         <div class="ui icon top left pointing dropdown button proflie">
                             <i class="user icon"></i><span style="margin:0 1em" id="username">username</span>
                             <div class="menu">
-                                <div class="item" onclick='window.location.href="user-profile.html"'>My Account</div>
-                                <div class="item" onclick='window.location.href="Login.html"'>Log out</div>
+                                <div class="item" onclick='window.location.href="/myaccount"'>My Account</div>
+                                <div class="item" onclick='window.location.href="/logout"'>Log out</div>
                             </div>
                         </div>
                     </a>
-                    <a href="Login.html" class="item guest"><span class="sign-in">sign in</span></a>
-                    <a href="register.html" class="item guest"><span class="sign-up">sign up</span></a>
+                    <a href="/login" class="item guest"><span class="sign-in">Login</span></a>
+                    <a href="/signup" class="item guest"><span class="sign-up">Sign up</span></a>
                 </div>
             </div>
         </div>
@@ -112,27 +112,27 @@
                                 <div class=" ui eight wide computer sixteen wide mobile column continer">
                                     <div class='name output '>
 
-                                        <p> <b>User name:</b>{{Username}} </p>
+                                        <p> <b>Username:</b>{{Username}} </p>
                                     </div>
                                     <div class=' full-name output '>
 
-                                        <p><b>Full name: </b><input type='text' class='user' value="{{Fullname}}" required></p>
+                                        <p><b>Full name: </b><input type='text' class='user' value="{{firstName}} {{lastName}}" required></p>
                                     </div>
                                     <div class='email-n output '>
 
-                                        <p><b>Email: </b><input type='text' class='user' value="{{Eamil}}" required></p>
+                                        <p><b>E-mail: </b><input type='text' class='user' value="{{email}}" required></p>
                                     </div>
                                     <div class="tel output">
 
-                                        <p><b>Tel: </b><input type='text' class='user' value="{{Tel}}" required></p>
+                                        <p><b>Tel: </b><input type='text' class='user' value="{{tel}}" required></p>
                                     </div>
                                     <div class="url output">
 
-                                        <p><b>url: </b><input type='text' class='user' value="{{url}}"></p>
+                                        <p><b>Url: </b><input type='text' class='user' value="{{url}}"></p>
                                     </div>
                                     <div class='status output '>
 
-                                        <p><b>Status:</b><input type='text' class='user' value="{{Status}}"></p>
+                                        <p><b>Occupation:</b><input type='text' class='user' value="{{job}}"></p>
                                     </div>
                                     <!-- <div class='edit edit-profile output'>
                                                 <button class="ui icon button">

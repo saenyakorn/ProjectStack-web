@@ -35,12 +35,12 @@
                         <div class="ui icon top left pointing dropdown button proflie">
                             <i class="user icon"></i><span style="margin:0 1em" id="username">username</span>
                             <div class="menu">
-                                <div class="item" onclick='window.location.href="../page/user-profile.html"'>My Account</div>
-                                <div class="item" onclick='window.location.href="../page/Login.html"'>Log out</div>
+                                <div class="item" onclick='window.location.href="/myaccount"'>My Account</div>
+                                <div class="item" onclick='window.location.href="/logout"'>Log out</div>
                             </div>
                         </div>
                     </a>
-                    <a href="../page/Login.html" class="item guest"><span class="sign-in">Log in</span></a>
+                    <a href="../page/Login.html" class="item guest"><span class="sign-in">Login</span></a>
                     <a href="../page/register.html" class="item guest"><span class="sign-up">Sign up</span></a>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="equal width row">
-                        <div class="computer only four wide column"></div>
+                        <div class="computer only four wide column "></div>
                         <div class="tablet only three wide column"></div>
                         <div class="column ui grid">
                             <!--tag-->
@@ -107,16 +107,16 @@
                                     <textarea rows="5" id="description"></textarea>
                                 </div>
                             </div>
-                            <div id="content-column">
-                                <!-- exmple title-->
-                                <!-- <div class="row title">
+                            <div id="content-column"></div>
+                            <!-- exmple title-->
+                            <!-- <div class="row title">
                                     <div class="ui transparent icon input">
                                         <input type="text" placeholder="title">
                                         <i class="close link red icon"></i>
                                     </div>
                                 </div> -->
-                                <!--exmaple paragraph-->
-                                <!-- <div class="row ui grid paragraph">
+                            <!--exmaple paragraph-->
+                            <!-- <div class="row ui grid paragraph">
                                     <div class="field">
                                         <i class="close link red icon"></i>
                                     </div>
@@ -126,8 +126,8 @@
                                         </div>
                                     </div>
                                 </div> -->
-                                <!--example image-->
-                                <!-- <div class="row centered one column grid picture">
+                            <!--example image-->
+                            <!-- <div class="row centered one column grid picture">
                                     <div class="field">
                                         <i class="close link red icon"></i>
                                     </div>
@@ -136,40 +136,40 @@
                                     </div>
                                 </div>
                             </div>  -->
-                                <!--responsive computer-->
-                                <div class="row equal width row">
-                                    <div class="text-center column">
-                                        <button class="ui positive button" id="add-text">
+                            <!--responsive computer-->
+                            <div class="row equal width row">
+                                <div class="text-center column">
+                                    <button class="ui positive button" id="add-text">
                                         <i class="icon plus"></i>
                                         Text
                                     </button>
-                                    </div>
-                                    <div class="text-center column">
-                                        <button class="ui positive button" id="add-title">
+                                </div>
+                                <div class="text-center column">
+                                    <button class="ui positive button" id="add-title">
                                         <i class="icon heading"></i>
                                         Title
                                     </button>
-                                    </div>
-                                    <div class="text-center column">
-                                        <button class="ui positive button" id="add-image">
+                                </div>
+                                <div class="text-center column">
+                                    <button class="ui positive button" id="add-image">
                                         <i class="icon file image"></i>
                                         Picture
                                     </button>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="computer only four wide column"></div>
-                            <div class="tablet only three wide column"></div>
                         </div>
+                        <div class="computer only four wide column"></div>
+                        <div class="tablet only three wide column"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--save button-->
-        <div class="right fixed-bottom flex-center">
-            <button class="large ui button" id="cancel-button">Cancel</button>
-            <button class="large ui blue button" id="post-button">Post</button>
-        </div>
+    </div>
+    <!--save button-->
+    <div class="right fixed-bottom flex-center">
+        <button class="large ui button" id="cancel-button">Cancel</button>
+        <button class="large ui blue button" id="post-button">Post</button>
+    </div>
 
 </body>
 

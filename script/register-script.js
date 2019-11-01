@@ -16,9 +16,9 @@ $('#input-submit').click(function() {
     if (!valid) return;
     const data = {
         username: allinput[0],
-        title: allinput[1],
-        firstname: allinput[2],
-        lastname: allinput[3],
+        gender: allinput[1],
+        firstName: allinput[2],
+        lastName: allinput[3],
         birthdate: allinput[4],
         email: allinput[5],
         tel: allinput[6],
@@ -28,7 +28,7 @@ $('#input-submit').click(function() {
         confirmpassword: allinput[10]
     };
     $.ajax({
-        url: "https://projectstack.now.sh/register",
+        url: "/register",
         type: "POST",
         data: data,
         dataType: "json",
@@ -36,30 +36,39 @@ $('#input-submit').click(function() {
             console.log(result);
             if (result.success) {
                 $(".valid").removeClass("d-none");
-                $(".valid").addClass("d-none");
-                window.location.href = "https://projectstack.now.sh/";
+                $(".invalid").addClass("d-none");
+                window.location.href = "/";
             } else {
                 $(".invalid").addClass("d-none");
                 $(".valid").addClass("d-none");
-                if (401 in result.val) {
+                if (result.val.includes(401)) {
                     $("#username-invalid").removeClass("d-none");
                 } else {
                     $("#username-valid").removeClass("d-none");
                 }
-                if (402 in result.val) {
+                if (result.val.includes(402)) {
                     $("#email-invalid").removeClass("d-none");
                 } else {
                     $("#email-valid").removeClass("d-none");
                 }
-                if (403 in result.val) {
+                let ch = true;
+                if (result.val.includes(403)) {
+                    ch = false;
                     $("#password-length").removeClass("d-none");
-                } else if (404 in result.val) {
+                }
+                if (result.val.includes(404)) {
+                    ch = false;
                     $("#password-noupper").removeClass("d-none");
-                } else if (405 in result.val) {
+                }
+                if (result.val.includes(405)) {
+                    ch = false;
                     $("#password-nolower").removeClass("d-none");
-                } else if (406 in result.val) {
+                }
+                if (result.val.includes(406)) {
+                    ch = false;
                     $("#password-unmatch").removeClass("d-none");
-                } else {
+                } 
+                if (ch) {
                     $("#password-valid").removeClass("d-none");
                 }
             }

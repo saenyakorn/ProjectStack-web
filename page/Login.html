@@ -39,26 +39,33 @@
 
                 </div>
 
-                <div class='Login_username'> <input type='text' class='user' placeholder="USERNAME" required></div>
+
+                <div class='Login_username'><input type='text' class='user' placeholder="USERNAME" required></div>
                 <div class='Login_password'><input type='password' class='user' placeholder="PASSWORD" required></div>
                 <div class="d-none invalid font-red" id="wrong-username">
-                    <h5 class="inline"> <i class="close icon"></i>Wrong username or email</h5>
+                    <h5 class="inline"> <i class="close icon"></i>Username not found</h5>
+                </div>
+                <div class="d-none invalid font-red" id="no-username">
+                    <h5 class="inline"> <i class="close icon"></i>Please put in username</h5>
                 </div>
                 <div class="d-none invalid font-red" id="wrong-password">
                     <h5 class="inline"> <i class="close icon"></i>Wrong password</h5>
                 </div>
+                <div class="d-none invalid font-red" id="no-password">
+                    <h5 class="inline"> <i class="close icon"></i>Please put in password</h5>
+                </div>
             </div>
             <div class='Login-button'>
                 <div class='button signup'>
-                    <p> <a href="register.html">sign-up</a> </p>
+                    <p> <a href="/signup">Sign up</a> </p>
                 </div>
-                <div class='button login'>
-                    <p id='login-click-here'>log-in</p>
+                <div class='button login' id='login-click-here'>
+                    <p>Login</p>
                 </div>
             </div>
             <div class='forgot-password'>
 
-                <p>forgot password?</p>
+                <p>Forgot password?</p>
 
             </div>
         </div>
