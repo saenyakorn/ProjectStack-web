@@ -17,11 +17,17 @@ $('.ui.icon.top.left.pointing.dropdown.button').dropdown({
 $('div.ui.pushable.segment').css("height", $(window).height() - $('div.ui.menu').height() - 1);
 
 function getcookie() {
+    console.log(document.cookie);
     var x = document.cookie.split(";");
+    console.log(x.length);
     var y = {}
     for (var i = 0; i < x.length; i++) {
-        var z = x[i].split("=");
-        y[z[0].trim()] = z[1].trim();
+        try {
+            var z = x[i].split("=");
+            y[z[0].trim()] = z[1].trim();
+        } catch (err) {
+
+        }
     }
     return y;
 };
@@ -83,7 +89,9 @@ function TrendingCard() {
 
 addMoreCard();
 TrendingCard();
+console.log("COOKIE: " + document.cookie);
 const cookie = getcookie();
+console.log("COOKIE: " + cookie);
 $('#username').html(cookie.username)
 if (!("username" in cookie)) {
     $('.guest').css('display', 'flex');

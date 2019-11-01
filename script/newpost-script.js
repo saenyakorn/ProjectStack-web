@@ -3,8 +3,10 @@ function getcookie() {
     var x = document.cookie.split(";");
     var y = {}
     for (var i = 0; i < x.length; i++) {
-        var z = x[i].split("=");
-        y[z[0].trim()] = z[1].trim();
+        try {
+            var z = x[i].split("=");
+            y[z[0].trim()] = z[1].trim();
+        } catch (err) {}
     }
     return y;
 };
@@ -132,11 +134,11 @@ $("#post-button").click(function() {
     var content = [];
     $(".all-content").each(function() {
         if ($(this).hasClass("title")) {
-            content.push({ title: $(this).children()[0].children()[0].val() });
+            content.push({ title: $(this).find(".cont").val() });
         } else if ($(this).hasClass("paragraph")) {
-            content.push({ paragraph: $(this).children()[1].children()[0].children()[0].val() });
+            content.push({ paragraph: $(this).find(".cont").val() });
         } else {
-            content.push({ picture: $(this).children()[1].children()[0].src })
+            content.push({ picture: $(this).find(".cont").src })
         }
         var cookiess = getcookie()
         const data = {

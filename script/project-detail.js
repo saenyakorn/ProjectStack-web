@@ -48,8 +48,10 @@ function getcookie() {
     var x = document.cookie.split(";");
     var y = {}
     for (var i = 0; i < x.length; i++) {
-        var z = x[i].split("=");
-        y[z[0].trim()] = z[1].trim();
+        try {
+            var z = x[i].split("=");
+            y[z[0].trim()] = z[1].trim();
+        } catch (err) {}
     }
     return y;
 };
